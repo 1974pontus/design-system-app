@@ -12,20 +12,6 @@ import { DeleteOutlined } from '@ant-design/icons';
 
 function OrderTotal() {
   return (
-    // <div className="order">
-    //   <Layout>
-    //     <Header>
-    //       <p>Produkt<span>Antal</span></p>
-    //     </Header>
-    //     <Content>
-    //       <ul>
-    //         <li><Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-    //         </li>
-    //       </ul>
-    //     </Content>
-    //     <Footer></Footer>
-    //   </Layout>
-    // </div>
     <div>
     <Row gutter={[8, 16]}>
       <Col span={20}>Produkter</Col>
