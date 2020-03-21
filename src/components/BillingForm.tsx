@@ -1,42 +1,9 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Form, Input, Cascader, Select, Checkbox, Button } from "antd";
+import { Form, Input, Select, Checkbox, Button } from "antd";
 
 const { Option } = Select;
-const residences = [
-  {
-    value: "Sweden",
-    label: "Sweden",
-    children: [
-      {
-        value: "Västra Götaland",
-        label: "Västra Götaland",
-        children: [
-          {
-            value: "Göteborg",
-            label: "Göteborg"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    value: "jiangsu",
-    label: "Jiangsu",
-    children: [
-      {
-        value: "nanjing",
-        label: "Nanjing",
-        children: [
-          {
-            value: "zhonghuamen",
-            label: "Zhong Hua Men"
-          }
-        ]
-      }
-    ]
-  }
-];
+
 const formItemLayout = {
   labelCol: {
     xs: {
@@ -83,6 +50,7 @@ const BillingForm = () => {
         }}
       >
         <Option value="46">+46</Option>
+        <Option value="45">+47</Option>
         <Option value="47">+47</Option>
       </Select>
     </Form.Item>
@@ -125,19 +93,38 @@ const BillingForm = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
-        name="Adress"
-        label="Adress"
-        rules={[
-          {
-            type: "array",
-            required: true,
-            message: "Fyll i din adress!"
-          }
-        ]}
-      >
-        <Cascader options={residences} />
+      <Form.Item label="Address">
+        <Input.Group compact>
+          <Form.Item
+            name={['address', 'country']}
+            noStyle
+            rules={[{ required: true, message: 'country is required' }]}
+          >
+            <Select placeholder="Select country">
+              <Option value="Sverige">Sverige</Option>
+              <Option value="Norge">Norge</Option>
+              <Option value="Danmark">Danmark</Option>
+            </Select>
+          </Form.Item>
+
+          <Form.Item
+            name={['address', 'street']}
+            noStyle
+            rules={[{ required: true, message: 'Street is required' }]}
+          >
+            <Input style={{ width: '100%' }} placeholder="Gatuadress" />
+          </Form.Item>
+          <Form.Item
+            name={['city', 'postnummer']}
+            noStyle
+            rules={[{ required: true, message: 'city and postnummer required' }]}
+          >
+            <Input style={{ width: '100%' }} placeholder="Stad och Postnummer " />
+          </Form.Item>
+        </Input.Group>
       </Form.Item>
+
+      
 
       <Form.Item
         name="phone"
