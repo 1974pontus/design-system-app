@@ -57,6 +57,7 @@ const BillingForm = () => {
   );
 
   return (
+    <div className="billing">
     <Form
       {...formItemLayout}
       form={form}
@@ -159,6 +160,7 @@ const BillingForm = () => {
         </Button>
       </Form.Item>
     </Form>
+    </div>
   );
 };
 

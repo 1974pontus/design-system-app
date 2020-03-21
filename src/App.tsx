@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       
-      {/* <BillingForm /> */}
+      <BillingForm />
       <OrderTotal />
     </div>
   );
