@@ -69,6 +69,7 @@ const BillingForm = () => {
       }}
       scrollToFirstError
     >
+      <br/>
       <Form.Item
         name="email"
         label="E-mail"
@@ -151,7 +152,7 @@ const BillingForm = () => {
         {...tailFormItemLayout}
       >
         <Checkbox>
-          I have read the <a href="">agreement</a>
+          I have read the <a href="https://cheezburger.com/10501125/fuzzberta-peekachu-jones-is-definitely-the-cutest-guinea-pig-on-instagram">agreement</a>
         </Checkbox>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>

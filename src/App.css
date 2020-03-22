@@ -5,20 +5,26 @@
   align-items: center;
   justify-content: center;
   margin: 3rem;
-  border: black solid 1px;
+  background-color: lightgray;
 }
 
 
 
 .order-wrapper {
   margin: 3rem;
-  border: grey solid 1px;
+  background-color: lightgray;
+  text-decoration-line: underline;
 }
 
 .order-title {
-  border-bottom: grey solid 1px;
+ 
 }
 
 .order-items {
-  border-bottom: grey solid 1px;
+
 }
+
+.order-footer {
+  
+}
+
