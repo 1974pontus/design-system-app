@@ -5,7 +5,7 @@ import MainLayout from "./MainLayout";
 // import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
 // import { Monkey } from "./monkey";
 
-export default App;
+
 
 
 
