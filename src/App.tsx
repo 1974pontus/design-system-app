@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
-import MainLayout from "./MainLayout";
+import MainLayout from "./MainLayout"
+import { BrowserRouter as Router } from 'react-router-dom';
+
 // import { WelcomeScreen } from "./Welcomescreen";
 // import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
 // import { Monkey } from "./monkey";
 
-export default App;
+
 
 
 
@@ -27,17 +29,17 @@ function App() {
 
       return (
         // <Suspense fallback={<Spinner/>}>
-        //   <Router>
-        //     <ErrorBoundary>
-        //       {this.WelcomScreen}
-        //         <Suspense fallback={<Monkey/>}>
+          <Router>
+             {/* <ErrorBoundary> */}
+               {/* {this.WelcomScreen}
+                 <Suspense fallback={<Monkey/>}> */}
                   <div className='App'>     
                     <MainLayout />
                   </div>
-      //           </Suspense>
-      //       </ErrorBoundary>
-      //     </Router>
-      //   </Suspense> 
+                {/* </Suspense>
+            </ErrorBoundary> */}
+          </Router>
+         /* </Suspense>  */
        );
     }
   
