@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Button, Badge } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
-import thumbNail from "../pngguru.com.png";
+import thumbNail from "../img/hink.png";
 import {
   DeleteOutlined,
   MinusCircleOutlined,
