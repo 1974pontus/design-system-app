@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import MainLayout from "./MainLayout";
+import ShippingForm from "./components/ShippingForm";
 // import { WelcomeScreen } from "./Welcomescreen";
 // import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
 // import { Monkey } from "./monkey";
@@ -32,6 +33,7 @@ function App() {
         //         <Suspense fallback={<Monkey/>}>
                   <div className='App'>     
                     <MainLayout />
+                    <ShippingForm />
                   </div>
       //           </Suspense>
       //       </ErrorBoundary>
