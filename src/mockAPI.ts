@@ -8,86 +8,86 @@ export interface ProductData {
     roomImg: string
     alt: string;
     size: string
-    titel: string;
+    åtgång: string
     stock: string
     price: number;
 }
 
 const productData: ProductData[] = [
     {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
+        productImg: require("./img/hink.png"),
+        colorImg: require("./img/grön.png"),
+        roomImg: require("./img/greenroom.png"),
+        size: '10 liter',
+        alt: "Jotun Lady, Avocado Bliss Halvmatt",
+        åtgång: "Täcker ca 15 kvm",
+        stock: "Finns i lager",
+        price: 395, 
+    },
+
+    {
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
         productImg: require("./img/pngguru.com.png"),
         colorImg: require("./img/grön.png"),
         roomImg: require("./img/greenroom.png"),
-        size: '10l',
+        size: '10 liter',
         alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
+        åtgång: "Täcker ca 15 kvm",
         stock: "Finns i lager",
         price: 395, 
     },
 
     {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
-        productImg: require(".img//pngguru.com.png"),
-        colorImg: require("./img/grön.png"),
-        roomImg: require("./img/greenroom.png"),
-        size: '10l',
-        alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
-        stock: "Finns i lager",
-        price: 395, 
-    },
-
-    {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
-        productImg: require(".img//pngguru.com.png"),
-        colorImg: require("./img/grön.png"),
-        roomImg: require("./img/greenroom.png"),
-        size: '10l',
-        alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
-        stock: "Finns i lager",
-        price: 395, 
-    },
-
-    {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
         productImg: require("./img/pngguru.com.png"),
         colorImg: require("./img/grön.png"),
         roomImg: require("./img/greenroom.png"),
-        size: '10l',
+        size: '10 liter',
         alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
+        åtgång: "Täcker ca 15 kvm",
         stock: "Finns i lager",
         price: 395, 
     },
 
     {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
-        productImg: require("../pngguru.com.png"),
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
+        productImg: require("./img/pngguru.com.png"),
         colorImg: require("./img/grön.png"),
         roomImg: require("./img/greenroom.png"),
-        size: '10l',
+        size: '10 liter',
         alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
+        åtgång: "Täcker ca 15 kvm",
         stock: "Finns i lager",
         price: 395, 
     },
 
     {
-        productName: "Innomhusfärg",
-        productInfo: "Jotun Lady, Avocado Bliss Halvmatt",
-        productImg: require("../pngguru.com.png"),
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
+        productImg: require("./img/pngguru.com.png"),
         colorImg: require("./img/grön.png"),
         roomImg: require("./img/greenroom.png"),
-        size: '10l',
+        size: '10 liter',
         alt: "Jotun Lady, Avocado Bliss Halvmatt",
-        titel: "Jotun Lady",
+        åtgång: "Täcker ca 15 kvm",
+        stock: "Finns i lager",
+        price: 395, 
+    },
+
+    {
+        productName: "Jotun Lady, Avocado Bliss Halvmatt",
+        productInfo: "ekologisk matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri.",
+        productImg: require("./img/pngguru.com.png"),
+        colorImg: require("./img/grön.png"),
+        roomImg: require("./img/greenroom.png"),
+        size: '10 liter',
+        alt: "Jotun Lady, Avocado Bliss Halvmatt",
+        åtgång: "Täcker ca 15 kvm",
         stock: "Finns i lager",
         price: 395, 
     },
@@ -96,3 +96,5 @@ const productData: ProductData[] = [
 ]
 
 export default productData;
+
+
