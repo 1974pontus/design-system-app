@@ -5,6 +5,7 @@ import AddingProducts from './AddingProducts';
 import pic from './tres_commas.jpg'
 
 
+
 function MainLayout() {
     return (
       <div className='App'>     
@@ -20,7 +21,6 @@ function MainLayout() {
          <AddingProducts />
         </Col>
       </Row>
-   
       </div>
     );
   }
