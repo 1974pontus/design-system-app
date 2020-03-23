@@ -4,6 +4,8 @@ import Header from './Header';
 import AddingProducts from './AddingProducts';
 import pic from './tres_commas.jpg'
 
+
+
 function MainLayout() {
     return (
       <div className='App'>     
