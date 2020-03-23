@@ -1,8 +1,8 @@
 import React from 'react'
 import 'antd/dist/antd.css';
 import { List, Avatar, Radio } from 'antd';
-import postnord from '../postnord.jpeg'
-import dhl from '../DHL.jpg'
+import postnord from '../img/postnord.jpeg'
+import dhl from '../img/DHL.jpg'
 
 
 const data = [
