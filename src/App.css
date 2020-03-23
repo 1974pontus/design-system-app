@@ -1,5 +1,30 @@
 @import '~antd/dist/antd.css';
 
-.App {
-  text-align: center;
+.billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  background-color: lightgray;
 }
+
+
+
+.order-wrapper {
+  margin: 3rem;
+  background-color: lightgray;
+  text-decoration-line: underline;
+}
+
+.order-title {
+ 
+}
+
+.order-items {
+
+}
+
+.order-footer {
+  
+}
+
