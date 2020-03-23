@@ -1,17 +1,43 @@
 import React from "react";
-import { Button } from 'antd'
 import "./App.css";
-import pic from './tres_commas.jpg'
+import MainLayout from "./MainLayout";
+// import { WelcomeScreen } from "./Welcomescreen";
+// import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
+// import { Monkey } from "./monkey";
+
+
+
 
 function App() {
-  return (
-    <div className='App'>
-      <h1>design-system-app</h1>
-      <h3>Trés Commás</h3>
-      <Button type='default'>Buy Me!</Button>
-      <img src={pic} alt="Trés Commás"/>
-    </div>
-  );
-}
+  // state: State = {
+  //   isWelcomeScreenEnabled: false 
+  // }
 
-export default App;
+  // private removeWelcomeScreen = () => {
+  //   this.setState({ isWelcomeScreenEnabled: false})
+  // }
+  // setState: any;
+
+  // private get WelcomScreen() {
+  //   if (this.state.isWelcomeScreenEnabled) {
+  //     return <WelcomeScreen dismissed={this.removeWelcomeScreen}/>
+  //   }
+  // }
+
+      return (
+        // <Suspense fallback={<Spinner/>}>
+        //   <Router>
+        //     <ErrorBoundary>
+        //       {this.WelcomScreen}
+        //         <Suspense fallback={<Monkey/>}>
+                  <div className='App'>     
+                    <MainLayout />
+                  </div>
+      //           </Suspense>
+      //       </ErrorBoundary>
+      //     </Router>
+      //   </Suspense> 
+       );
+    }
+  
+ export default App
