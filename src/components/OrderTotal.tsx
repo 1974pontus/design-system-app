@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Button, Badge } from "antd";
+import "antd/dist/antd.css";
 import "../App.css";
 import thumbNail from "../pngguru.com.png";
 import {
@@ -8,7 +9,7 @@ import {
   PlusCircleOutlined
 } from "@ant-design/icons";
 
-// const { Header, Footer, Content } = La
+
 
 class OrderTotal extends React.Component {
   state = {
@@ -55,9 +56,11 @@ class OrderTotal extends React.Component {
               <MinusCircleOutlined onClick={this.decline} />
               <PlusCircleOutlined onClick={this.increase} />
               <Badge count={this.state.count}></Badge>
+              {/* <Text count={this.state.count} strong>
+                1
+              </Text> */}
             </Col>
-           
-            
+
             <Col span={3}>399 kr</Col>
             <Col span={2}>
               <DeleteOutlined />
