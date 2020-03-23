@@ -1,28 +1,25 @@
-import React from 'react'
-import { Row, Col } from 'antd';
-import Header from './Header';
-import AddingProducts from './AddingProducts';
-import pic from './tres_commas.jpg'
+import React from "react";
+import { Row, Col } from "antd";
+import Header from "./Header";
+import StartPage from "./StartPage";
+import AddingProducts from "./AddingProducts";
+import { Layout } from 'antd';
+import Footer from './Footer';
 
 
 
 function MainLayout() {
-    return (
-      <div className='App'>     
-        <Row>
-        <Col span={24}> 
+  return (
+    <div className="App">
+      <Layout>
           <Header />
-        </Col>
-        <Col span={12}> 
-          <img style={{objectFit: 'cover'}} src={pic} alt="Trés Commás"/>
-        </Col>
-  
-        <Col span={12}>
-         <AddingProducts />
-        </Col>
-      </Row>
-      </div>
-    );
-  }
+          <StartPage />
+          <Footer />
+        </Layout>
+        
+    </div>
 
-export default MainLayout
+  );
+}
+
+export default MainLayout;
