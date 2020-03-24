@@ -8,14 +8,27 @@ import {
   MinusCircleOutlined,
   PlusCircleOutlined
 } from "@ant-design/icons";
+import { ProductData } from "../mockAPI";
+
+interface Props {
+  product: ProductData
+}
+
+interface State {
+  count: number,
+  show: boolean
+}
 
 
+class OrderTotal extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
 
-class OrderTotal extends React.Component {
-  state = {
-    count: 1,
-    show: true
-  };
+    this.state = {
+      count: 1,
+      show: false
+    }
+  }
 
   increase = () => {
     const count = this.state.count + 1;

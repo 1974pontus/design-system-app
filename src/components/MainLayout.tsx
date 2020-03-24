@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Col, Layout } from 'antd';
 import Header from './Header';
 // import pic from './img/tres_commas.jpg'
@@ -10,8 +10,34 @@ import ProductInfo from './ProductInfo';
 // import ShopingCard from './ShopingCart';
 import Footer from './Footer';
 import StartPage from "./StartPage";
+import productData, { ProductData } from '../mockAPI';
 
-function MainLayout() {
+
+
+
+const MainLayout = () => {
+  const [product, setProduct] = useState<ProductData>(productData[0])
+
+  const handleProductSelected = (product: ProductData) => {
+    setProduct(product)
+  }
+
+  useState(() => {
+    if (product.productName !== "Sommarmalva") {
+      localStorage.setItem("product",JSON.stringify(product))
+      console.log(product)
+    }
+
+  }, );
+
+  useEffect(() => {
+    const product: ProductData | null = JSON.parse(
+      localStorage.getItem("product") || "null"
+    );
+    console.log(product)
+    setProduct(product || productData[0])
+
+  }, []) 
     return (
       //everything that is insite Router will have the abillity to use routing
     <Router>
@@ -32,7 +58,10 @@ function MainLayout() {
               <Link to="/"> 
                 <Header />
               </Link>
-              <ProductCartView />
+              <ProductCartView 
+                onProductSelected={handleProductSelected}
+                product={product}
+              />
               <Footer />
             </Col>
             

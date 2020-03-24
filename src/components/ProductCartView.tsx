@@ -2,12 +2,19 @@ import React from 'react'
 import OrderTotal from './OrderTotal';
 import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
+import { ProductData } from '../mockAPI';
 
-function ProductCartView() {
+interface Props {
+  onProductSelected: (product: ProductData) => void;
+  product: ProductData;
+  
+}
+
+function ProductCartView(props: Props) {
     return (
       <div>
           <h1>Kassa</h1>
-          <OrderTotal />
+          <OrderTotal product={props.product}/>
           <h1>Dina uppgifter</h1>
           <BillingForm />
           <h1>Fraktsätt</h1>
