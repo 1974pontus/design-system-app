@@ -18,9 +18,7 @@ class ShopCounter extends React.Component {
       <div>
         <div>
           <Badge style={{ backgroundColor: '#52c41a' }} count={this.state.count}>
-          <ShoppingOutlined style={{fontSize: '1.7rem'}}/>
-            
-            {/* <a href="#" className="head-example" /> */}
+            <ShoppingOutlined style={{fontSize: '1.7rem'}}/>
           </Badge>
         </div>
       </div>
