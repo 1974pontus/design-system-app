@@ -35,7 +35,7 @@ function App() {
                  <Suspense fallback={<Monkey/>}> */}
                   <div className='App'>     
                     <MainLayout />
-                    <ShippingForm />
+                    {/* <ShippingForm /> */}
                   </div>
                 {/* </Suspense>
             </ErrorBoundary> */}
