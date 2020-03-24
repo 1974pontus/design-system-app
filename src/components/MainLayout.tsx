@@ -1,11 +1,12 @@
 import React from 'react'
-import { Col, Switch, Layout } from 'antd';
+import { Col, Layout } from 'antd';
 import Header from './Header';
 // import pic from './img/tres_commas.jpg'
 //as renames BrowserRouter to Router
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import ProductCartView from './ProductCartView';
+import ProductInfo from './ProductInfo';
 // import ShopingCard from './ShopingCart';
 import Footer from './Footer';
 import StartPage from "./StartPage";
@@ -32,8 +33,17 @@ function MainLayout() {
                 <Header />
               </Link>
               <ProductCartView />
+              <Footer />
             </Col>
-            <Footer />
+            
+          </Route>
+
+          {/* Here should the detailView of the product be */}
+          <Route path="/ProductInfo">
+              <Link to="/"> 
+                <Header />
+              </Link>
+              <ProductInfo />
           </Route>
 
 
@@ -44,6 +54,9 @@ function MainLayout() {
            {/* Behöver man inte ha något i switchen? */}
           </Route>
           <Route path="/OrderTotal">
+              {/* Behöver man inte ha något i switchen? */}
+          </Route>
+          <Route path="/ProductInfo">
               {/* Behöver man inte ha något i switchen? */}
           </Route>
         </Switch>
