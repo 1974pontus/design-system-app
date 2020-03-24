@@ -6,6 +6,7 @@ import Header from './Header';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import ProductCartView from './ProductCartView';
+import ProductInfo from './ProductInfo';
 // import ShopingCard from './ShopingCart';
 
 
@@ -31,6 +32,14 @@ function MainLayout() {
             </Col>
           </Route>
 
+          {/* Here should the detailView of the product be */}
+          <Route path="/ProductInfo">
+              <Link to="/"> 
+                <Header />
+              </Link>
+              <ProductInfo />
+          </Route>
+
 
         {/* A <Switch> looks through its children <Route>s and
         renders the first one that matches the current URL. */}
@@ -41,6 +50,9 @@ function MainLayout() {
           <Route path="/OrderTotal">
               {/* Behöver man inte ha något i switchen? */}
           </Route>
+          <Route path="/ProductInfo">
+              {/* Behöver man inte ha något i switchen? */}
+          </Route>
         </Switch>
       </div>
       </Router>
@@ -48,5 +60,4 @@ function MainLayout() {
     );
     
   }
-
 export default MainLayout
