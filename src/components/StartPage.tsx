@@ -47,7 +47,7 @@ class StartPage extends React.Component<Props, State> {
           </Col>
         </Row>
 
-        <Row justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+        <Row style={{ textAlign: "center", margin: "2rem"}} justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
             Produkt 1
           </Col>
