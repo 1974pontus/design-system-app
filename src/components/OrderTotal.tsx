@@ -62,9 +62,9 @@ class OrderTotal extends React.Component<Props, State> {
         <div className="order-items">
           <Row gutter={[8, 16]}>
             <Col span={2}>
-              <img src={thumbNail} alt="bucket" />
+              <img src={this.props.product.productImg} alt={this.props.product.alt} />
             </Col>
-            <Col span={14}>Jotun Lady, Avocado Bliss Halvmatt</Col>
+            <Col span={14}></Col>
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
               <PlusCircleOutlined onClick={this.increase} />
