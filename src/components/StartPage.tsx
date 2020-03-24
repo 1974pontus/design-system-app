@@ -22,7 +22,7 @@ class StartPage extends React.Component<Props, State> {
             ></img>
           </Col>
         </Row>
-        <Row style={{ textAlign: "center"}}>
+        <Row style={{ textAlign: "center", margin: "2rem"}}>
           <Col span={20} offset={2}>
             Mini Colorini är tillverkare av ekologiska färger och
             ytbehandlingar. Vi utvecklar, producerar och levererar ekologisk
@@ -35,7 +35,7 @@ class StartPage extends React.Component<Props, State> {
             dig och din omvärld.
           </Col>
         </Row>
-        <Row style={{ textAlign: "center"}}>
+        <Row style={{ textAlign: "center", margin: "2rem"}}>
           <Col span={20} offset={2}>
             Vår färgskalan bygger på gamla tiders färgsättning och är framtagen
             med äldre tapeter som förlagor, från sent 1800-tal till senfunkis.
