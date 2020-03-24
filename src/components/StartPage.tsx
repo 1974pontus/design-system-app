@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import React, { Component, CSSProperties } from "react";
+import React from "react";
 
 interface Props {}
 

@@ -1,4 +1,4 @@
-import React, { Component, CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import {  Row, Col } from 'antd'
 
 
@@ -13,7 +13,7 @@ class Footer extends React.Component<Props, State> {
        
  render() {
     return (
-       <div>
+       <div style={footer}>
             <Row>
                 <Col> Detta är en footer</Col>
             </Row>
@@ -23,3 +23,11 @@ class Footer extends React.Component<Props, State> {
 }
 
 export default Footer
+
+const footer: CSSProperties = {
+    background: 'pink',
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '2.5rem '
+  }

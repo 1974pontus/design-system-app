@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from "react";
 import { Col, Layout } from 'antd';
 import Header from './Header';
 // import pic from './img/tres_commas.jpg'
@@ -15,7 +15,7 @@ function MainLayout() {
     return (
       //everything that is insite Router will have the abillity to use routing
     <Router>
-      <div className='App'> 
+      <div className='App' style={overallStyle}> 
       <Layout style={{ height: '100vh' }}> 
            {/* Here should all the components for the home/shoping page be */}
         
@@ -44,6 +44,7 @@ function MainLayout() {
                 <Header />
               </Link>
               <ProductInfo />
+              <Footer />
           </Route>
 
 
@@ -72,6 +73,10 @@ export default MainLayout
 
 
 
+const overallStyle: CSSProperties = {
+  position: 'relative',
+  minHeight: '100vh'
+}
 
 
  
