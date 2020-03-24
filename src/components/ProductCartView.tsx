@@ -10,8 +10,9 @@ function ProductCartView() {
           <OrderTotal />
           <h1>Dina uppgifter</h1>
           <BillingForm />
-          <h1>Frakt sätt</h1>
+          <h1>Fraktsätt</h1>
           <ShippingForm />
+          <h1>Betalsätt</h1>
       </div>
     );
   }
