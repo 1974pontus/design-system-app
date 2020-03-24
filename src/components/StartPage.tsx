@@ -19,7 +19,6 @@ class StartPage extends React.Component<Props, State> {
         <Row justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
@@ -27,7 +26,6 @@ class StartPage extends React.Component<Props, State> {
           </Col>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
@@ -35,7 +33,6 @@ class StartPage extends React.Component<Props, State> {
           </Col>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
@@ -43,7 +40,6 @@ class StartPage extends React.Component<Props, State> {
           </Col>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
@@ -51,7 +47,6 @@ class StartPage extends React.Component<Props, State> {
           </Col>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
@@ -59,7 +54,6 @@ class StartPage extends React.Component<Props, State> {
           </Col>
           <Col
             xs={{ span: 24 }}
-            sm={{ span: 24 }}
             md={{ span: 12 }}
             lg={{ span: 8 }}
           >
