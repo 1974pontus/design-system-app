@@ -9,54 +9,61 @@ class StartPage extends React.Component<Props, State> {
   render() {
     return (
       <div>
+        <Row justify="center">
+          <Col span={24}>Intro Img</Col>
+        </Row>
+        <Row justify="center">
+          <Col span={24}>Intro Text</Col>
+        </Row>
+
         <Row justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col
-            xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
           >
-            col
+            Produkt 1
           </Col>
           <Col
-            xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
           >
-            col
+            Produkt 2
           </Col>
           <Col
-            xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
           >
-            col
-          </Col>
-     <Col
-          xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
-          >
-            col
+            Produkt 3
           </Col>
           <Col
-          xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
           >
-            col
+            Produkt 4
           </Col>
           <Col
-          xs={{ span: 24}}
-            sm={{ span: 24}}
-            md={{ span: 12}}
-            lg={{ span: 8}}
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
           >
-            col
+            Produkt 5
+          </Col>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
+          >
+            Produkt 6
           </Col>
         </Row>
       </div>
