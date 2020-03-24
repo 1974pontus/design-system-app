@@ -15,13 +15,13 @@ function MainLayout() {
       //everything that is insite Router will have the abillity to use routing
     <Router>
       <div className='App'> 
-      <Layout>
+      <Layout style={{ height: '100vh' }}> 
            {/* Here should all the components for the home/shoping page be */}
-           <Header />
-           <StartPage />
-        <Footer />
+        
           <Route exact path="/">
                 <Header />
+                <StartPage />
+                <Footer />
                 {/* <img style={{objectFit: 'cover'}} src={pic} alt="Trés Commás"/> */}
           </Route>
           
@@ -33,6 +33,7 @@ function MainLayout() {
               </Link>
               <ProductCartView />
             </Col>
+            <Footer />
           </Route>
 
 
@@ -46,7 +47,7 @@ function MainLayout() {
               {/* Behöver man inte ha något i switchen? */}
           </Route>
         </Switch>
-        </Layout>
+        </Layout> 
       </div>
       </Router>
   
@@ -55,9 +56,6 @@ function MainLayout() {
   }
 
 export default MainLayout
-
-
-import AddingProducts from "./AddingProducts";
 
 
 
