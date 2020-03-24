@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Switch } from 'antd';
+import { Col, Switch, Layout } from 'antd';
 import Header from './Header';
 // import pic from './img/tres_commas.jpg'
 //as renames BrowserRouter to Router
@@ -7,15 +7,19 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import ProductCartView from './ProductCartView';
 // import ShopingCard from './ShopingCart';
-
-
+import Footer from './Footer';
+import StartPage from "./StartPage";
 
 function MainLayout() {
     return (
       //everything that is insite Router will have the abillity to use routing
     <Router>
       <div className='App'> 
+      <Layout>
            {/* Here should all the components for the home/shoping page be */}
+           <Header />
+           <StartPage />
+        <Footer />
           <Route exact path="/">
                 <Header />
                 {/* <img style={{objectFit: 'cover'}} src={pic} alt="Trés Commás"/> */}
@@ -42,6 +46,7 @@ function MainLayout() {
               {/* Behöver man inte ha något i switchen? */}
           </Route>
         </Switch>
+        </Layout>
       </div>
       </Router>
   
@@ -50,3 +55,23 @@ function MainLayout() {
   }
 
 export default MainLayout
+
+
+import AddingProducts from "./AddingProducts";
+
+
+
+
+
+ 
+
+/* return (
+  <div className="App">
+    <Layout>
+        <Header />
+        <StartPage />
+        <Footer />
+      </Layout>
+      
+  </div> */
+
