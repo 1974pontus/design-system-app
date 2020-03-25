@@ -1,9 +1,10 @@
 import { Row, Col, Button } from 'antd';
-import React from 'react';
+import React, { CSSProperties } from 'react';
+import { ProductData } from '../mockAPI'
 
 interface Props {
-    
-}
+    Product: (ProductData)
+  }
 
 interface State {
  
@@ -15,20 +16,20 @@ class ProductInfo extends React.Component<Props, State>{
             <div>
             <Row>
                 <Col span={12}>
-                    <div style={{width: '12rem',height: '13rem', background: 'black', margin: '0 2rem'  }}> </div>
+                    <img style={productImage} src={this.props.Product.productImg} alt={this.props.Product.alt}/>);
+                    <img style={productImage} src={this.props.Product.colorImg} alt={this.props.Product.alt}/>);
+                    <img style={productImage} src={this.props.Product.roomImg} alt={this.props.Product.alt}/>);
                 </Col>
 
                 <Col span={12}> 
-                    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus consectetur repellat, tempore voluptatibus earum est sit aliquam. Reiciendis necessitatibus qui sed aspernatur saepe velit voluptas rem officiis tenetur quis.</p>
-                    <h3>Pris</h3>
-                <Button block>Lägg i varukorg</Button>
-                <Col span={6}> 
-                
-                </Col>
-                
-                  
-          
+                    <h1>{this.props.Product.productName}</h1>
+                    <p>{this.props.Product.artNr}</p>
+                    <p>{this.props.Product.productInfo}</p>
+                    <p>{this.props.Product.size}</p>
+                    <p>{this.props.Product.consumption}</p>
+                    <p>{this.props.Product.stock}</p>
+                    <h3>{this.props.Product.price}</h3>
+                    <Button block>Lägg i varukorg</Button>
                 </Col>
             </Row>
             </div>
@@ -38,4 +39,9 @@ class ProductInfo extends React.Component<Props, State>{
 
 export default ProductInfo
 
-
+const productImage: CSSProperties = {
+    width: '12rem',
+    height: '13rem',
+    margin: '0 2rem',
+    objectFit: 'cover'
+  }

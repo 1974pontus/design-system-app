@@ -18,6 +18,7 @@ class StartPage extends React.Component<Props, State> {
                 height: "25rem",
                 width: "100%"
               }}
+              alt="bedroom with a warm yellow painted wall"
               src="https://www.auro.se/fileadmin/_processed_/csm_Varmgul_Anne_Jeppson_e0200f7f6e.jpg"
             ></img>
           </Col>

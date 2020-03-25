@@ -1,23 +1,36 @@
 import React, { CSSProperties } from "react";
 import { Col, Layout } from 'antd';
 import Header from './Header';
-// import pic from './img/tres_commas.jpg'
 //as renames BrowserRouter to Router
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import ProductCartView from './ProductCartView';
 import ProductInfo from './ProductInfo';
-// import ShopingCard from './ShopingCart';
 import Footer from './Footer';
 import StartPage from "./StartPage";
+import { ProductData } from "../mockAPI";
 
-function MainLayout() {
-    return (
+
+interface Props {
+  Product:ProductData
+}
+
+interface State {
+  onProductSelected: () => void
+}
+class MainLayout extends React.Component<Props, State>{
+  constructor(props: Readonly<Props>) {
+    super(props)
+    this.state = {onProductSelected}
+  }
+  
+  render() {
+    return(
       //everything that is insite Router will have the abillity to use routing
-    <Router>
+      <Router>
       <div className='App' style={overallStyle}> 
       <Layout style={{ height: '100vh' }}> 
-           {/* Here should all the components for the home/shoping page be */}
+            {/* Here should all the components for the home/shoping page be */}
         
           <Route exact path="/">
                 <Header />
@@ -43,7 +56,8 @@ function MainLayout() {
               <Link to="/"> 
                 <Header />
               </Link>
-              <ProductInfo />
+              
+              <ProductInfo Product={this.props.Product} />
               <Footer />
           </Route>
 
@@ -52,7 +66,7 @@ function MainLayout() {
         renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/">
-           {/* Behöver man inte ha något i switchen? */}
+            {/* Behöver man inte ha något i switchen? */}
           </Route>
           <Route path="/OrderTotal">
               {/* Behöver man inte ha något i switchen? */}
@@ -64,10 +78,10 @@ function MainLayout() {
         </Layout> 
       </div>
       </Router>
-  
-    );
-    
-  }
+    )
+
+  } 
+}
 
 export default MainLayout
 
