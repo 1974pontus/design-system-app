@@ -1,11 +1,24 @@
 import { Row, Col } from "antd";
 import React, { Component, CSSProperties } from "react";
+import { ProductData } from "../mockAPI";
 
-interface Props {}
+interface Props {
+  product: ProductData
+}
 
-interface State {}
+interface State {
+
+}
 
 class StartPage extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+
+
+  }
+
+
+
   render() {
     return (
       <div>
@@ -49,7 +62,7 @@ class StartPage extends React.Component<Props, State> {
 
         <Row style={{ textAlign: "center", margin: "2rem"}} justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 1
+            <img src={this.props.product.roomImg}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
             Produkt 2

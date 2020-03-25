@@ -2,12 +2,31 @@ import React from 'react'
 import OrderTotal from './OrderTotal';
 import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
+import { ProductData } from '../mockAPI';
 
-function ProductCartView() {
+interface Props {
+  onProductSelected: (product: ProductData) => void;
+  product: ProductData;  
+}
+
+interface State {
+
+}
+
+class ProductCartView extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+
+    this.state = {
+
+    }
+  }
+
+  render() {
     return (
       <div>
           <h1>Kassa</h1>
-          <OrderTotal />
+          <OrderTotal product={this.props.product}/>
           <h1>Dina uppgifter</h1>
           <BillingForm />
           <h1>Fraktsätt</h1>
@@ -16,5 +35,6 @@ function ProductCartView() {
       </div>
     );
   }
+}
 
 export default ProductCartView
