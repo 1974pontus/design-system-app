@@ -16,6 +16,7 @@ interface Props {
 interface State {
   count: number,
   show: boolean
+  sum: number
 }
 
 
@@ -24,9 +25,17 @@ class OrderTotal extends React.Component<Props, State> {
     super(props)
 
     this.state = {
-      count: 1,
-      show: false
+      count: 1, 
+      show: false,
+      sum: 765
     }
+  }
+
+  totalCost = () => {
+    let a = this.props.product.price
+    let b = this.props.product.price
+    const sum =  a + b
+    this.setState({ sum })
   }
 
   increase = () => {
@@ -73,7 +82,7 @@ class OrderTotal extends React.Component<Props, State> {
               </Text> */}
             </Col>
 
-            <Col span={3}>{this.props.product.price}</Col>
+            <Col span={3}>{this.props.product.price} kr</Col>
             <Col span={2}>
               <DeleteOutlined />
             </Col>
@@ -88,7 +97,7 @@ class OrderTotal extends React.Component<Props, State> {
               </Button>
             </Col>
             <Col span={3}>Summa:</Col>
-            <Col span={3}>399 kr</Col>
+            <Col span={3}>{this.state.sum} kr</Col>
             <Col span={2}></Col>
           </Row>
         </div>

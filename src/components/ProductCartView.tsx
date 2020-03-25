@@ -5,7 +5,7 @@ import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
 
 interface Props {
-  onProductSelected: (product: ProductData) => void;
+  // onProductSelected: (product: ProductData) => void;
   product: ProductData;  
 }
 
