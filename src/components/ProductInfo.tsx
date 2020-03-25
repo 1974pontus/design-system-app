@@ -1,43 +1,36 @@
-import { Menu, Dropdown, message, Row, Col } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
-import React from 'react';
+import { Row, Col, Button } from 'antd';
+import React, { CSSProperties } from 'react';
+import { ProductData } from '../mockAPI'
+import { findByLabelText } from '@testing-library/react';
 
 interface Props {
-
-}
+    Product: (ProductData)
+  }
 
 interface State {
  
 }
 
-//this gives a to the colors in dropDown
-const onClick = ({ key } : {key: any}) => {
-  message.info(`Click on item ${key}`);
-};
-
-const menu = (
-  <Menu onClick={onClick}>
-    <Menu.Item key="1">Färg-1</Menu.Item>
-    <Menu.Item key="2">Färg-2</Menu.Item>
-    <Menu.Item key="3">Färg-3</Menu.Item>
-  </Menu>
-);
-
 class ProductInfo extends React.Component<Props, State>{
     render(){
         return(
-            <div>
+            <div style={infoWrapper} >
             <Row>
-                <Col span={12}>
-                    <div style={{width: '12rem',height: '13rem', background: 'black', margin: '0 2rem'  }}> </div>
+                <Col xs={{ span: 24}} md={{ span: 24 }} lg={{ span: 12 }}>
+                    <img style={productImage} src={this.props.Product.productImg} alt={this.props.Product.alt}/>
+                    <img style={productImage} src={this.props.Product.colorImg} alt={this.props.Product.alt}/>
+                    <img style={productImage} src={this.props.Product.roomImg} alt={this.props.Product.alt}/>
                 </Col>
-                <Col span={12}> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus consectetur repellat, tempore voluptatibus earum est sit aliquam. Reiciendis necessitatibus qui sed aspernatur saepe velit voluptas rem officiis tenetur quis.</p>
-                <Dropdown overlay={menu}>
-                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                    Färger<DownOutlined />
-                </a>
-                </Dropdown>
+
+                <Col xs={{ span: 18 }} md={{ span: 24 }} lg={{ span: 12 }}>
+                    <h1>{this.props.Product.productName}</h1>
+                    <p>{this.props.Product.artNr}</p>
+                    <p>{this.props.Product.productInfo}</p>
+                    <p>{this.props.Product.size}</p>
+                    <p>{this.props.Product.consumption}</p>
+                    <p>{this.props.Product.stock}</p>
+                    <h3>Pris {this.props.Product.price} kr/st</h3>
+                    <Button block>Lägg i varukorg</Button>
                 </Col>
             </Row>
             </div>
@@ -47,4 +40,14 @@ class ProductInfo extends React.Component<Props, State>{
 
 export default ProductInfo
 
+const productImage: CSSProperties = {
+    width: '15rem',
+    height: '14rem',
+    objectFit: 'cover'
+  }
 
+  const infoWrapper: CSSProperties = {
+    margin:'3rem',
+  }
+  
+ 

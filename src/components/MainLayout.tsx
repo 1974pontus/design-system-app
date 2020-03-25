@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, CSSProperties } from 'react'
 import { Col, Layout } from 'antd';
 import Header from './Header';
-// import pic from './img/tres_commas.jpg'
 //as renames BrowserRouter to Router
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import ProductCartView from './ProductCartView';
 import ProductInfo from './ProductInfo';
-// import ShopingCard from './ShopingCart';
 import Footer from './Footer';
 import StartPage from "./StartPage";
 import productData, { ProductData } from '../mockAPI';
@@ -40,10 +38,10 @@ const MainLayout = () => {
   }, []) 
     return (
       //everything that is insite Router will have the abillity to use routing
-    <Router>
-      <div className='App'> 
+      <Router>
+      <div className='App' style={overallStyle}> 
       <Layout style={{ height: '100vh' }}> 
-           {/* Here should all the components for the home/shoping page be */}
+            {/* Here should all the components for the home/shoping page be */}
         
           <Route exact path="/">
                 <Header />
@@ -72,7 +70,9 @@ const MainLayout = () => {
               <Link to="/"> 
                 <Header />
               </Link>
-              <ProductInfo />
+              
+              <ProductInfo Product={product} />
+              <Footer />
           </Route>
 
 
@@ -80,7 +80,7 @@ const MainLayout = () => {
         renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/">
-           {/* Behöver man inte ha något i switchen? */}
+            {/* Behöver man inte ha något i switchen? */}
           </Route>
           <Route path="/OrderTotal">
               {/* Behöver man inte ha något i switchen? */}
@@ -92,15 +92,19 @@ const MainLayout = () => {
         </Layout> 
       </div>
       </Router>
-  
-    );
-    
-  }
+    )
+
+  } 
+
 
 export default MainLayout
 
 
 
+const overallStyle: CSSProperties = {
+  position: 'relative',
+  minHeight: '100vh'
+}
 
 
  
