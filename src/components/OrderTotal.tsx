@@ -74,7 +74,7 @@ class OrderTotal extends React.Component<Props, State> {
               </Text> */}
             </Col>
 
-            <Col span={3}>399 kr</Col>
+            <Col span={3}>{this.props.product.price}</Col>
             <Col span={2}>
               <DeleteOutlined />
             </Col>
