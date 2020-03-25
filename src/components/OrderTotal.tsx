@@ -2,7 +2,6 @@ import React from "react";
 import { Row, Col, Button, Badge } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
-import thumbNail from "../img/hink.png";
 import {
   DeleteOutlined,
   MinusCircleOutlined,
@@ -62,9 +61,9 @@ class OrderTotal extends React.Component<Props, State> {
         <div className="order-items">
           <Row gutter={[8, 16]}>
             <Col span={2}>
-              <img src={this.props.product.productImg} alt={this.props.product.alt} />
+              <img src={this.props.product.productThumbImg} alt={this.props.product.alt} />
             </Col>
-            <Col span={14}></Col>
+            <Col span={14}>{this.props.product.productInfo}</Col>
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
               <PlusCircleOutlined onClick={this.increase} />

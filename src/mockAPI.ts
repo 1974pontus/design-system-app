@@ -1,4 +1,4 @@
-import sommarmalvaThumb from "./img/sommarmalvaThumb.jpg"
+import sommarmalvaThumb from "./img/sommarmalvaThumb.png"
 
 export interface ProductData {
     productName: string;
