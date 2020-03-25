@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { useState, useEffect } from 'react'
 import { Col, Layout } from 'antd';
 import Header from './Header';
 //as renames BrowserRouter to Router
@@ -8,24 +8,35 @@ import ProductCartView from './ProductCartView';
 import ProductInfo from './ProductInfo';
 import Footer from './Footer';
 import StartPage from "./StartPage";
-import { ProductData } from "../mockAPI";
+import productData, { ProductData } from '../mockAPI';
 
 
-interface Props {
-  Product:ProductData
-}
 
-interface State {
-  onProductSelected: () => void
-}
-class MainLayout extends React.Component<Props, State>{
-  constructor(props: Readonly<Props>) {
-    super(props)
-    this.state = {onProductSelected}
+
+const MainLayout = () => {
+  const [product, setProduct] = useState<ProductData>(productData[0])
+
+  const handleProductSelected = (product: ProductData) => {
+    setProduct(product)
   }
-  
-  render() {
-    return(
+
+  useState(() => {
+    if (product.productName !== "Sommarmalva") {
+      localStorage.setItem("product",JSON.stringify(product))
+      console.log(product)
+    }
+
+  }, );
+
+  useEffect(() => {
+    const product: ProductData | null = JSON.parse(
+      localStorage.getItem("product") || "null"
+    );
+    console.log(product)
+    setProduct(product || productData[0])
+
+  }, []) 
+    return (
       //everything that is insite Router will have the abillity to use routing
       <Router>
       <div className='App' style={overallStyle}> 
@@ -34,7 +45,7 @@ class MainLayout extends React.Component<Props, State>{
         
           <Route exact path="/">
                 <Header />
-                <StartPage />
+                <StartPage product={product}/>
                 <Footer />
                 {/* <img style={{objectFit: 'cover'}} src={pic} alt="Trés Commás"/> */}
           </Route>
@@ -45,7 +56,10 @@ class MainLayout extends React.Component<Props, State>{
               <Link to="/"> 
                 <Header />
               </Link>
-              <ProductCartView />
+              <ProductCartView 
+                onProductSelected={handleProductSelected}
+                product={product}
+              />
               <Footer />
             </Col>
             

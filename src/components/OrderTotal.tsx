@@ -2,20 +2,32 @@ import React from "react";
 import { Row, Col, Button, Badge } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
-import thumbNail from "../img/hink.png";
 import {
   DeleteOutlined,
   MinusCircleOutlined,
   PlusCircleOutlined
 } from "@ant-design/icons";
+import { ProductData } from "../mockAPI";
+
+interface Props {
+  product: ProductData
+}
+
+interface State {
+  count: number,
+  show: boolean
+}
 
 
+class OrderTotal extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
 
-class OrderTotal extends React.Component {
-  state = {
-    count: 1,
-    show: true
-  };
+    this.state = {
+      count: 1,
+      show: false
+    }
+  }
 
   increase = () => {
     const count = this.state.count + 1;
@@ -49,9 +61,9 @@ class OrderTotal extends React.Component {
         <div className="order-items">
           <Row gutter={[8, 16]}>
             <Col span={2}>
-              <img src={thumbNail} alt="bucket" />
+              <img src={this.props.product.productThumbImg} alt={this.props.product.alt} />
             </Col>
-            <Col span={14}>Jotun Lady, Avocado Bliss Halvmatt</Col>
+            <Col span={14}>{this.props.product.productName}{this.props.product.productInfo}</Col>
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
               <PlusCircleOutlined onClick={this.increase} />
@@ -61,7 +73,7 @@ class OrderTotal extends React.Component {
               </Text> */}
             </Col>
 
-            <Col span={3}>399 kr</Col>
+            <Col span={3}>{this.props.product.price}</Col>
             <Col span={2}>
               <DeleteOutlined />
             </Col>
