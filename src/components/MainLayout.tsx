@@ -47,7 +47,7 @@ const MainLayout = () => {
         
           <Route exact path="/">
                 <Header />
-                <StartPage />
+                <StartPage product={product}/>
                 <Footer />
                 {/* <img style={{objectFit: 'cover'}} src={pic} alt="Trés Commás"/> */}
           </Route>
