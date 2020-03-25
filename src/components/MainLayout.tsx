@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, CSSProperties } from 'react'
 import { Col, Layout } from 'antd';
 import Header from './Header';
 //as renames BrowserRouter to Router
@@ -71,7 +71,7 @@ const MainLayout = () => {
                 <Header />
               </Link>
               
-              <ProductInfo Product={this.props.Product} />
+              <ProductInfo Product={product} />
               <Footer />
           </Route>
 
@@ -95,7 +95,7 @@ const MainLayout = () => {
     )
 
   } 
-}
+
 
 export default MainLayout
 
