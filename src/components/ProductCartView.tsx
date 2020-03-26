@@ -6,7 +6,7 @@ import { ProductData } from '../mockAPI';
 // import { Slider, Form } from 'antd';
 
 interface Props {
-  onProductSelected: (product: ProductData) => void;
+  // onProductSelected: (product: ProductData) => void;
   product: ProductData;  
 }
 
