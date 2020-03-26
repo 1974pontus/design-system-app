@@ -1,5 +1,5 @@
 import { Row, Col } from "antd";
-import React, { Component, CSSProperties } from "react";
+import React from "react";
 import { ProductData } from "../mockAPI";
 
 interface Props {
@@ -11,8 +11,8 @@ interface State {
 }
 
 class StartPage extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
+  // constructor(props: Props) {
+  //   super(props)
 
   }
 
@@ -28,6 +28,7 @@ class StartPage extends React.Component<Props, State> {
                 height: "25rem",
                 width: "100%"
               }}
+              alt="bedroom with a warm yellow painted wall"
               src="https://www.auro.se/fileadmin/_processed_/csm_Varmgul_Anne_Jeppson_e0200f7f6e.jpg"
             ></img>
           </Col>
