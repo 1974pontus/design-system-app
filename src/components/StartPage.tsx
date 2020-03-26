@@ -14,10 +14,7 @@ class StartPage extends React.Component<Props, State> {
   // constructor(props: Props) {
   //   super(props)
 
-
-  // }
-
-
+  }
 
   render() {
     return (
@@ -63,7 +60,8 @@ class StartPage extends React.Component<Props, State> {
 
         <Row style={{ textAlign: "center", margin: "2rem"}} justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            <img src={this.props.product.roomImg} alt={this.props.product.alt}/>
+            <img src={this.props.product.roomImg}/>
+            <button>ADD TO CART</button>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
             Produkt 2
