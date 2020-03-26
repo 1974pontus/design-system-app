@@ -68,8 +68,8 @@ const MainLayout = () => {
           <Route path="/ProductInfo">
             <Link to="/">
               <Header />
-            </Link>
-            {/* <ProductInfo /> */}
+            </Link> 
+            <ProductInfo Product={product} />
           </Route>
 
           {/* A <Switch> looks through its children <Route>s and
