@@ -27,7 +27,7 @@ class OrderTotal extends React.Component<Props, State> {
     this.state = {
       count: 1, 
       show: false,
-      sum: 765
+      sum: 0
     }
   }
 
@@ -35,7 +35,7 @@ class OrderTotal extends React.Component<Props, State> {
     let a = this.props.product.price
     let b = this.props.product.price
     const sum =  a + b
-    this.setState({ sum })
+    console.log(sum)
   }
 
   increase = () => {
@@ -56,6 +56,7 @@ class OrderTotal extends React.Component<Props, State> {
   };
 
   render() {
+    this.totalCost()
     return (
       <div className="order-wrapper">
         <div className="order-title">
@@ -97,7 +98,7 @@ class OrderTotal extends React.Component<Props, State> {
               </Button>
             </Col>
             <Col span={3}>Summa:</Col>
-            <Col span={3}>{this.state.sum} kr</Col>
+            <Col span={3}> kr</Col>
             <Col span={2}></Col>
           </Row>
         </div>
