@@ -2,16 +2,16 @@ import sommarmalvaThumb from "./img/sommarmalvaThumb.png"
 
 export interface ProductData {
     productName: string;
-    artNr: string;
-    productInfo: string;
-    size: string
-    consumption: string
-    stock: string
+    artNr?: string;
+    productInfo?: string;
+    size?: string
+    consumption?: string
+    stock?: string
     price: number;
     productImg: string;
-    productThumbImg: string
-    colorImg: string;
-    roomImg: string;
+    productThumbImg?: string
+    colorImg?: string;
+    roomImg?: string;
     alt: string;
 }
 
@@ -62,18 +62,18 @@ const productData: ProductData[] = [
     },
 
     {
-        productName: "Sommarmalva",
-        artNr: "Art. nr: 458-216",
+        productName: "Varmgul",
+        artNr: "Art. nr: 458-181",
         productInfo: "Ekologisk vattenlöslig matt tak- och väggfärg. Tål våtavtorkning och har hög täckförmåga. Färgen är biologiskt nedbrytbar och certifierat emissionsfri. Färgen framställs av växtextrakt, krita, mineraler och jordpigment, med vårt patenterade bindemedel Replebin® som består av alkohol från växter och organiska syror. För målning på både målade och omålade ytor; puts, betong, väv, tapet och gips. Färgen är vattenlöslig och kan målas på ytor tidigare målade med plastfärg (vanlig vattenburen väggfärg). Lättmålad, ger inget stänk vid målning och har ingen tendens att gulna med tiden. Färgen avger inga kemikalier efterhand och har ingen negativ påverkan på naturen. Bra för både människa och natur.",
         size: '1 liter',
         consumption: "Täcker ca 9 kvm",
         stock: "Tillverkas på beställning",
-        price: 385,
-        productImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-216-vaggfarg-555-sommarmalva_8b7838588e.jpg"),
+        price: 445,
+        productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-181-vaggfarg-555-varmgul.jpg"),
         productThumbImg: `url(${sommarmalvaThumb})`,
-        colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-216-vaggfarg-555-sommarmalva.png"),
-        roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_sommarmalva-matrum_2d55cec0c7.jpg"),
-        alt: "Väggfärg Sommarmalva",
+        colorImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-181-vaggfarg-555-varmgul-2_ae15390422.png"),
+        roomImg: ("https://i.pinimg.com/564x/19/1b/1f/191b1fabac1ef624a166957c22e5c035.jpg"),
+        alt: "Väggfärg Varmgul",
     },
 
 

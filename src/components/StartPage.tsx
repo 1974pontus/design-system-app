@@ -1,9 +1,10 @@
 import { Row, Col } from "antd";
-import React, { Component, CSSProperties } from "react";
-import { ProductData } from "../mockAPI";
-
+import React from "react";
+import productData, { ProductData } from "../mockAPI";
+import StartPageProductDisplay from "./StartPageProductDisplay"
 interface Props {
   product: ProductData
+
 }
 
 interface State {
@@ -11,10 +12,9 @@ interface State {
 }
 
 class StartPage extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-
-  }
+  /* constructor(props: Props) {
+  super(props)
+ } */
 
   render() {
     return (
@@ -28,6 +28,7 @@ class StartPage extends React.Component<Props, State> {
                 height: "25rem",
                 width: "100%"
               }}
+              alt="bedroom with a warm yellow painted wall"
               src="https://www.auro.se/fileadmin/_processed_/csm_Varmgul_Anne_Jeppson_e0200f7f6e.jpg"
             ></img>
           </Col>
@@ -53,29 +54,28 @@ class StartPage extends React.Component<Props, State> {
             den lilla nedtoningeni nyanserna som behövs för att väggarna ska
             kunna målas i en tydlig kulör utan att bli grälla. Sätt igång, måla
             vad du vill, väggar och tak, barnens rum, skafferi eller garage, med
-            en modern ekologisk färg.{" "}
+            en modern ekologisk färg.
           </Col>
         </Row>
 
         <Row style={{ textAlign: "center", margin: "2rem"}} justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            <img src={this.props.product.roomImg}/>
-            <button>ADD TO CART</button>
+            <StartPageProductDisplay product={productData[0]}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 2
+          <StartPageProductDisplay product={productData[1]}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 3
+          <StartPageProductDisplay product={productData[2]}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 4
+          <StartPageProductDisplay product={productData[3]}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 5
+          <StartPageProductDisplay product={productData[4]}/>
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            Produkt 6
+          <StartPageProductDisplay product={productData[5]}/>
           </Col>
         </Row>
       </div>
