@@ -1,7 +1,7 @@
 import { Row, Col, Button } from 'antd';
 import React, { CSSProperties } from 'react';
 import { ProductData } from '../mockAPI'
-import { findByLabelText } from '@testing-library/react';
+
 
 interface Props {
     Product: (ProductData)
@@ -31,6 +31,7 @@ class ProductInfo extends React.Component<Props, State>{
                     <p>{this.props.Product.stock}</p>
                     <h3>Pris {this.props.Product.price} kr/st</h3>
                     <Button block>Lägg i varukorg</Button>
+                     {/* <AddToCartButton /> */}
                 </Col>
             </Row>
             </div>

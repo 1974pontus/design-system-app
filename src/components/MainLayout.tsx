@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 import { Col, Layout } from "antd";
 import Header from "./Header";
-// import pic from './img/tres_commas.jpg'
 //as renames BrowserRouter to Router
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-
 import ProductCartView from "./ProductCartView";
 import ProductInfo from "./ProductInfo";
-// import ShopingCard from './ShopingCart';
 import Footer from "./Footer";
 import StartPage from "./StartPage";
 import productData, { ProductData } from "../mockAPI";
@@ -39,7 +36,7 @@ const MainLayout = () => {
   return (
     //everything that is insite Router will have the abillity to use routing
     <Router>
-      <div className="App">
+      <div className="App" style={overallStyle}>
         <Layout style={{ height: "100vh" }}>
           {/* Here should all the components for the home/shoping page be */}
 
@@ -68,8 +65,8 @@ const MainLayout = () => {
           <Route path="/ProductInfo">
             <Link to="/">
               <Header />
-            </Link>
-            <ProductInfo />
+            </Link> 
+            <ProductInfo Product={product} />
           </Route>
 
           {/* A <Switch> looks through its children <Route>s and
@@ -93,6 +90,12 @@ const MainLayout = () => {
 
 export default MainLayout;
 
+
+
+const overallStyle: CSSProperties = {
+  position: 'relative',
+  minHeight: '100vh'
+  }
 /* return (
   <div className="App">
     <Layout>
@@ -102,3 +105,12 @@ export default MainLayout;
       </Layout>
       
   </div> */
+ 
+
+
+
+
+
+
+
+
