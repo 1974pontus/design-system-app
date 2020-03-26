@@ -65,7 +65,7 @@ const MainLayout = () => {
           <Route path="/ProductInfo">
             <Link to="/">
               <Header />
-            </Link>
+            </Link> 
             <ProductInfo Product={product} />
           </Route>
 

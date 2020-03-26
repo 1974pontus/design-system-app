@@ -2,16 +2,16 @@ import sommarmalvaThumb from "./img/sommarmalvaThumb.png"
 
 export interface ProductData {
     productName: string;
-    artNr: string;
-    productInfo: string;
-    size: string
-    consumption: string
-    stock: string
+    artNr?: string;
+    productInfo?: string;
+    size?: string
+    consumption?: string
+    stock?: string
     price: number;
     productImg: string;
-    productThumbImg: string
-    colorImg: string;
-    roomImg: string;
+    productThumbImg?: string
+    colorImg?: string;
+    roomImg?: string;
     alt: string;
 }
 
