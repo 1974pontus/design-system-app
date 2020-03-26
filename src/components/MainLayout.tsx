@@ -69,7 +69,7 @@ const MainLayout = () => {
             <Link to="/">
               <Header />
             </Link>
-            <ProductInfo />
+            {/* <ProductInfo /> */}
           </Route>
 
           {/* A <Switch> looks through its children <Route>s and
