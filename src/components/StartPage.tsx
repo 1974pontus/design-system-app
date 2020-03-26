@@ -12,8 +12,8 @@ interface State {
 }
 
 class StartPage extends React.Component<Props, State> {
-  // constructor(props: Props) {
-  //   super(props)
+  constructor(props: Props) {
+    super(props)
 
   }
 
@@ -84,5 +84,4 @@ class StartPage extends React.Component<Props, State> {
     );
   }
 }
-
 export default StartPage;
