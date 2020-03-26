@@ -2,26 +2,29 @@ import { Badge } from 'antd';
 import { ShoppingOutlined } from '@ant-design/icons';
 import React from 'react';
 
+interface Props {
+ 
+}
 
-class ShopCounter extends React.Component {
+interface State {
+ count: number,
+ show: boolean,
+
+}
+
+class ShopCounter extends React.Component<Props, State> {
   state = {
-    count: 5,
+    count: 1,
     show: true,
-  };
-
-  onChange = (show: boolean) => {
-    this.setState({ show });
   };
 
   render() {
     return (
-      <div>
         <div>
-          <Badge style={{ backgroundColor: '#52c41a' }} count={this.state.count}>
+          <Badge style={{ backgroundColor: '#52c41a' }}  count={this.state.count}>
             <ShoppingOutlined style={{fontSize: '1.7rem'}}/>
           </Badge>
         </div>
-      </div>
     );
     
   }
@@ -29,3 +32,8 @@ class ShopCounter extends React.Component {
 }
 
 export default ShopCounter
+
+
+
+
+  

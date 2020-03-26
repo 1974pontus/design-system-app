@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { Row, Col, Button, Badge } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
@@ -52,7 +52,7 @@ class OrderTotal extends React.Component<Props, State> {
         <div className="order-title">
           <Row gutter={[8, 16]}>
             <Col span={2}></Col>
-            <Col span={14}>Produkter</Col>
+            <Col span={15}>Produkter</Col>
             <Col span={3}>Antal</Col>
             <Col span={3}>Pris</Col>
             <Col span={2}></Col>
@@ -61,13 +61,14 @@ class OrderTotal extends React.Component<Props, State> {
         <div className="order-items">
           <Row gutter={[8, 16]}>
             <Col span={2}>
-              <img src={this.props.product.productThumbImg} alt={this.props.product.alt} />
+              <img style={productImage} src={this.props.product.productImg} alt={this.props.product.alt} />
             </Col>
-            <Col span={14}>{this.props.product.productName}</Col>
+            {/* <Col span={14}>Produkt{this.props.product.productName}</Col> */}
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
-              <PlusCircleOutlined onClick={this.increase} />
               <Badge count={this.state.count}></Badge>
+              <PlusCircleOutlined onClick={this.increase} />
+            
               {/* <Text count={this.state.count} strong>
                 1
               </Text> */}
@@ -98,3 +99,10 @@ class OrderTotal extends React.Component<Props, State> {
 }
 
 export default OrderTotal;
+
+
+const productImage: CSSProperties = {
+  width: '5rem',
+  height: '5rem',
+  objectFit: 'cover'
+}

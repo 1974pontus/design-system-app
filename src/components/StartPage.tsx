@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import React from "react";
 import { ProductData } from "../mockAPI";
 
+
 interface Props {
   product: ProductData
 }

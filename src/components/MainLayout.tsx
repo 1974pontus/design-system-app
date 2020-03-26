@@ -14,7 +14,7 @@ import productData, { ProductData } from '../mockAPI';
 
 
 const MainLayout = () => {
-  const [product, setProduct] = useState<ProductData>(productData[0])
+  const [product, setProduct] = useState<ProductData>(productData[5])
 
   const handleProductSelected = (product: ProductData) => {
     setProduct(product)
