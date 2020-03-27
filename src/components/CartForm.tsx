@@ -1,62 +1,23 @@
-import React, { CSSProperties } from "react";
-import { Row, Col, Button, Badge } from "antd";
+import React from "react";
+import { Row, Col, Button } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
-import {
-  DeleteOutlined,
-  MinusCircleOutlined,
-  PlusCircleOutlined
-} from "@ant-design/icons";
-import { ProductData } from "../mockAPI";
+import CartItemRow from "./CartItemRow";
+import { CartItem } from "../context";
 
 interface Props {
-  product: ProductData
+  cartItems: CartItem[]
 }
-
-interface State {
-  count: number,
-  show: boolean
-  sum: number
-}
-
+interface State {}
 
 class CartForm extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
-
-    this.state = {
-      count: 1, 
-      show: false,
-      sum: 0
-    }
   }
 
-  totalCost = () => {
-    let a = this.props.product.price
-    let b = this.props.product.price
-    const sum =  a + b
-    console.log(sum)
-  }
-
-  increase = () => {
-    const count = this.state.count + 1;
-    this.setState({ count });
-  };
-
-  decline = () => {
-    let count = this.state.count - 1;
-    if (count < 0) {
-      count = 0;
-    }
-    this.setState({ count });
-  };
-
-  onChange = (show: boolean) => {
-    this.setState({ show });
-  };
+  
 
   render() {
-    this.totalCost()
     return (
       <div className="order-wrapper">
         <div className="order-title">
@@ -68,32 +29,13 @@ class CartForm extends React.Component<Props, State> {
             <Col span={2}></Col>
           </Row>
         </div>
-        <div className="order-items">
-          <Row gutter={[8, 16]}>
-            <Col span={2}>
-              <img style={productImage} src={this.props.product.productImg} alt={this.props.product.alt} />
-            </Col>
-            <Col span={14}>Produkt{this.props.product.productName}</Col>
-            <Col span={3}>
-              <MinusCircleOutlined onClick={this.decline} />
-              <Badge count={this.state.count}></Badge>
-              <PlusCircleOutlined onClick={this.increase} />
-            
-              {/* <Text count={this.state.count} strong>
-                1
-              </Text> */}
-            </Col>
-
-            <Col span={3}>{this.props.product.price} kr</Col>
-            <Col span={2}>
-              <DeleteOutlined />
-            </Col>
-          </Row>
-        </div>
+        
+        {this.props.cartItems.map((cartItem) => <CartItemRow cartItem={cartItem}/>)}  
+          
         <div className="otder-footer">
           <Row gutter={[8, 16]}>
             <Col span={2}></Col>
-            <Col span={14}>
+            <Col span={15}>
               <Button type="primary" htmlType="submit">
                 PRESENTKORT
               </Button>
@@ -111,8 +53,3 @@ class CartForm extends React.Component<Props, State> {
 export default CartForm;
 
 
-const productImage: CSSProperties = {
-  width: '5rem',
-  height: '5rem',
-  objectFit: 'cover'
-}
