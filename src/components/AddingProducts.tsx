@@ -58,7 +58,6 @@ state = {
     );
     
   }
-  mountNode: any
 }
 
 export default AddingProducts
