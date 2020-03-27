@@ -19,7 +19,7 @@ class Header extends Component<Props, State> {
                     <Col span={12}> <h1>Mini Colorini</h1> </Col> 
                 </Link> 
 
-                <Link to="/OrderTotal"> 
+                <Link to="/order-total"> 
                     <Col span={12}> <ShopCounter />  </Col>
                 </Link>
             </nav>

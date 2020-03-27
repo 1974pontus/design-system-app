@@ -1,13 +1,12 @@
-import React, { useState, CSSProperties } from "react";
-import { Col, Layout } from "antd";
+import React, { CSSProperties } from "react";
+import { Layout } from "antd";
 import Header from "./Header";
 //as renames BrowserRouter to Router
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ProductCartView from "./ProductCartView";
 import ProductInfo from "./ProductInfo";
 import Footer from "./Footer";
 import StartPage from "./StartPage";
-import productData, { ProductData } from "../mockAPI";
 
 
 const MainLayout = () => {
@@ -43,15 +42,7 @@ const overallStyle: CSSProperties = {
   position: 'relative',
   minHeight: '100vh'
   }
-/* return (
-  <div className="App">
-    <Layout>
-        <Header />
-        <StartPage />
-        <Footer />
-      </Layout>
-      
-  </div> */
+
  
 
 

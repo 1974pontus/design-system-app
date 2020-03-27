@@ -17,6 +17,8 @@ class StartPageProductDisplay extends React.Component<Props, State> {
     render() {
       return ( 
         <div>
+
+          {/* så här gör man om man vill att rätt artikel ska synas i URL */}
             <Link to={"/product-info/" + this.props.product.artNr}>   
               <img style={{ width: "10rem"}} src={this.props.product.productImg} alt={this.props.product.alt}/>
               <h3>{this.props.product.productName}</h3>

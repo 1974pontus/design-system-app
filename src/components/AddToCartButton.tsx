@@ -1,7 +1,5 @@
-import React, { CSSProperties } from 'react'
-// import { Link } from 'react-router-dom'
+import React from 'react'
 import { Button } from 'antd'
-// import { PlusOutlined } from '@ant-design/icons';
 import { ProductData } from '../mockAPI'
 import { CartConsumer } from '../context';
 

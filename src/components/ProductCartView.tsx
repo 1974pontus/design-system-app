@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react'
-import OrderTotal from './OrderTotal';
+import OrderTotal from './CartForm';
 import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';

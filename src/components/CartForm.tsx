@@ -20,7 +20,7 @@ interface State {
 }
 
 
-class OrderTotal extends React.Component<Props, State> {
+class CartForm extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
@@ -73,7 +73,7 @@ class OrderTotal extends React.Component<Props, State> {
             <Col span={2}>
               <img style={productImage} src={this.props.product.productImg} alt={this.props.product.alt} />
             </Col>
-            {/* <Col span={14}>Produkt{this.props.product.productName}</Col> */}
+            <Col span={14}>Produkt{this.props.product.productName}</Col>
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
               <Badge count={this.state.count}></Badge>
@@ -108,7 +108,7 @@ class OrderTotal extends React.Component<Props, State> {
   }
 }
 
-export default OrderTotal;
+export default CartForm;
 
 
 const productImage: CSSProperties = {

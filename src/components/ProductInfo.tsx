@@ -1,6 +1,6 @@
-import { Row, Col, Button } from 'antd';
+import { Row, Col} from 'antd';
 import React, { CSSProperties } from 'react';
-import productData, { ProductData } from '../mockAPI'
+import productData from '../mockAPI'
 import AddToCartButton from './AddToCartButton';
 import { RouteComponentProps } from 'react-router-dom';
 

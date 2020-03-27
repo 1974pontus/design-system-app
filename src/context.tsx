@@ -20,6 +20,8 @@ const CartContext = React.createContext<CartState>({
   deleteProductFromCart: (product: ProductData) => {},
 })
 
+
+// CartProvider ansvarar för att uppdatera kundvagnen
 export class CartProvider extends React.Component<CartProps, CartState> {
   constructor(props: CartProps) {
     super(props)

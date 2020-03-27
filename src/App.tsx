@@ -4,6 +4,7 @@ import MainLayout from "./components/MainLayout"
 import { BrowserRouter as Router } from 'react-router-dom';
 import { CartProvider } from "./context";
 
+//Här deklarerar vi CartProvider för att ha tillgång i hela Appen.
 
   const App = () => {
     return (
