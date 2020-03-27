@@ -1,42 +1,44 @@
-import { Row, Col, Button } from 'antd';
+import { Row, Col} from 'antd';
 import React, { CSSProperties } from 'react';
-import { ProductData } from '../mockAPI'
+import productData from '../mockAPI'
+import AddToCartButton from './AddToCartButton';
+import { RouteComponentProps } from 'react-router-dom';
 
 
-interface Props {
-    Product: (ProductData)
-  }
+interface Props extends RouteComponentProps<{ artNr: string }> {}
 
-interface State {
- 
-}
+interface State {}
 
 class ProductInfo extends React.Component<Props, State>{
     render(){
-        return(
-            <div style={infoWrapper} >
-            <Row>
-                <Col xs={{ span: 24}} md={{ span: 24 }} lg={{ span: 12 }}>
-                    <img style={productImage} src={this.props.Product.productImg} alt={this.props.Product.alt}/>
-                    <img style={productImage} src={this.props.Product.colorImg} alt={this.props.Product.alt}/>
-                    <img style={productImage} src={this.props.Product.roomImg} alt={this.props.Product.alt}/>
-                </Col>
+      const product = productData.find((product) => product.artNr === this.props.match.params.artNr)
+      if (!product) {
+        return <h3>Produkten finns inte i vårat lager</h3>
+      }
 
-                <Col xs={{ span: 18 }} md={{ span: 24 }} lg={{ span: 12 }}>
-                    <h1>{this.props.Product.productName}</h1>
-                    <p>{this.props.Product.artNr}</p>
-                    <p>{this.props.Product.productInfo}</p>
-                    <p>{this.props.Product.size}</p>
-                    <p>{this.props.Product.consumption}</p>
-                    <p>{this.props.Product.stock}</p>
-                    <h3>Pris {this.props.Product.price} kr/st</h3>
-                    <Button block>Lägg i varukorg</Button>
-                     {/* <AddToCartButton /> */}
-                </Col>
-            </Row>
-            </div>
-        )
-      }  
+      return(
+        <div style={infoWrapper} >
+          <Row>
+              <Col xs={{ span: 24}} md={{ span: 24 }} lg={{ span: 12 }}>
+                  <img style={productImage} src={product.productImg} alt={product.alt}/>
+                  <img style={productImage} src={product.colorImg} alt={product.alt}/>
+                  <img style={productImage} src={product.roomImg} alt={product.alt}/>
+              </Col>
+
+              <Col xs={{ span: 18 }} md={{ span: 24 }} lg={{ span: 12 }}>
+                  <h1>{product.productName}</h1>
+                  <p>{product.artNr}</p>
+                  <p>{product.productInfo}</p>
+                  <p>{product.size}</p>
+                  <p>{product.consumption}</p>
+                  <p>{product.stock}</p>
+                  <h3>Pris {product.price} kr/st</h3>
+                  <AddToCartButton product={product} />
+              </Col>
+          </Row>
+        </div>
+      )
+    }  
 }
 
 export default ProductInfo

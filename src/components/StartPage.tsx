@@ -1,20 +1,12 @@
 import { Row, Col } from "antd";
 import React from "react";
-import productData, { ProductData } from "../mockAPI";
+import productData from "../mockAPI";
 import StartPageProductDisplay from "./StartPageProductDisplay"
-interface Props {
-  product: ProductData
 
-}
-
-interface State {
-
-}
+interface Props {}
+interface State {}
 
 class StartPage extends React.Component<Props, State> {
-  /* constructor(props: Props) {
-  super(props)
- } */
 
   render() {
     return (
@@ -59,24 +51,12 @@ class StartPage extends React.Component<Props, State> {
         </Row>
 
         <Row style={{ textAlign: "center", margin: "2rem"}} justify="center" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-            <StartPageProductDisplay product={productData[0]}/>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-          <StartPageProductDisplay product={productData[1]}/>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-          <StartPageProductDisplay product={productData[2]}/>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-          <StartPageProductDisplay product={productData[3]}/>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-          <StartPageProductDisplay product={productData[4]}/>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
-          <StartPageProductDisplay product={productData[5]}/>
-          </Col>
+          {/* map köllar igeeeenöm igenom alla goa grejer och skapar en go grej. */}
+          {productData.map((product) => (
+            <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }}>
+              <StartPageProductDisplay product={product}/>
+            </Col>
+          ))}
         </Row>
       </div>
     );

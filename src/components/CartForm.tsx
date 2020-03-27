@@ -20,14 +20,14 @@ interface State {
 }
 
 
-class OrderTotal extends React.Component<Props, State> {
+class CartForm extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
 
     this.state = {
       count: 1, 
       show: false,
-      sum: 765
+      sum: 0
     }
   }
 
@@ -35,7 +35,7 @@ class OrderTotal extends React.Component<Props, State> {
     let a = this.props.product.price
     let b = this.props.product.price
     const sum =  a + b
-    this.setState({ sum })
+    console.log(sum)
   }
 
   increase = () => {
@@ -56,6 +56,7 @@ class OrderTotal extends React.Component<Props, State> {
   };
 
   render() {
+    this.totalCost()
     return (
       <div className="order-wrapper">
         <div className="order-title">
@@ -72,7 +73,7 @@ class OrderTotal extends React.Component<Props, State> {
             <Col span={2}>
               <img style={productImage} src={this.props.product.productImg} alt={this.props.product.alt} />
             </Col>
-            {/* <Col span={14}>Produkt{this.props.product.productName}</Col> */}
+            <Col span={14}>Produkt{this.props.product.productName}</Col>
             <Col span={3}>
               <MinusCircleOutlined onClick={this.decline} />
               <Badge count={this.state.count}></Badge>
@@ -98,7 +99,7 @@ class OrderTotal extends React.Component<Props, State> {
               </Button>
             </Col>
             <Col span={3}>Summa:</Col>
-            <Col span={3}>{this.state.sum} kr</Col>
+            <Col span={3}> kr</Col>
             <Col span={2}></Col>
           </Row>
         </div>
@@ -107,7 +108,7 @@ class OrderTotal extends React.Component<Props, State> {
   }
 }
 
-export default OrderTotal;
+export default CartForm;
 
 
 const productImage: CSSProperties = {
