@@ -4,9 +4,10 @@ import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
 import { CartConsumer } from '../context';
-// import { Slider, Form } from 'antd';
 
-interface Props {}
+interface Props {
+  product: ProductData
+}
 interface State {}
 
 class ProductCartView extends React.Component<Props, State> {
@@ -18,7 +19,7 @@ class ProductCartView extends React.Component<Props, State> {
           <div style={checkoutWrapper}>
               <h1>Kassa</h1>
               {/* <Form.Item name="slider" label="Slider">
-            <Slider
+            <Slider vertical
               marks={{
                 0: 'PRODUKTER',
                 33: 'DINA UPPGIFTER',
@@ -27,7 +28,7 @@ class ProductCartView extends React.Component<Props, State> {
               }}
             />
           </Form.Item> */}
-              {/* <OrderTotal product={items}/> */}
+              <CartForm cartItems={items} />
               <h1>Dina uppgifter</h1>
               <BillingForm />
               <h1>Fraktsätt</h1>
