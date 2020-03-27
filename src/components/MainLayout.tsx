@@ -13,26 +13,6 @@ import productData, { ProductData } from "../mockAPI";
 const MainLayout = () => {
   const [product] = useState<ProductData>(productData[5]);
 
-  // const handleProductSelected = (product: ProductData) => {
-  //   setProduct(product)
-  // }
-
-  // useState(() => {
-  //   if (product.productName !== "Sommarmalva") {
-  //     localStorage.setItem("product",JSON.stringify(product))
-  //     console.log(product)
-  //   }
-
-  // }, );
-
-  // useEffect(() => {
-  //   const product: ProductData | null = JSON.parse(
-  //     localStorage.getItem("product") || "null"
-  //   );
-  //   console.log(product)
-  //   setProduct(product || productData[0])
-
-  // }, [])
   return (
     //everything that is insite Router will have the abillity to use routing
     <Router>

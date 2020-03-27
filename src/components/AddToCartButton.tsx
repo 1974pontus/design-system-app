@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import React, { Component } from 'react'
 // import { Link } from 'react-router-dom'
 import { Button } from 'antd'
 // import { PlusOutlined } from '@ant-design/icons';
@@ -16,9 +16,12 @@ interface Props {
 interface State {
     count: number,
     show: boolean,
+    addToCard: {}
+
 }
 
-class AddToCartButton extends React.Component<Props, State> {
+class AddToCartButton extends Component<Props, State> {
+ 
     increase = () => {
         const count = this.state.count + 1;
         this.setState({ count });
@@ -31,13 +34,11 @@ class AddToCartButton extends React.Component<Props, State> {
         
       };
 
-    state = {
-        count: 1,
-        show: true,
-      };
-    
+   
     
     render(){
+
+        
         return(
             <div>
             {/* <Link to="/OrderTotal">
