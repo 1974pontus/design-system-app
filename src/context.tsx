@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductData } from './mockAPI'
 
-interface CartItem {
+export interface CartItem {
   product: ProductData
   quantity: number
 }
@@ -34,12 +34,34 @@ export class CartProvider extends React.Component<CartProps, CartState> {
   }
 
   addProductToCart = (product: ProductData) => {
-    alert('add product' + product.productName)
+    // Clone to state array so that we don't mutate the state (which is prohibited in React)
+    const clonedItems: CartItem[] = Object.assign([], this.state.items)
+
+    // Check if product is already in cart and increase the quantity
+    for (const item of clonedItems) {
+      if (product.artNr === item.product.artNr) {
+        item.quantity++
+        this.setState({ items: clonedItems })
+        return
+      }
+    }
+    
+    // Otherwise add a whole new cart item
+    clonedItems.push({ product, quantity: 1 })
+    this.setState({ items: clonedItems })
+  }
+
+  deleteProductFromCart = (product: ProductData) => {
+    alert('delete product')
     // update state
   }
-  deleteProductFromCart = (product: ProductData) => {
-    alert('delete product' + product.productName)
-    // update state
+
+  getTotalPrice = () => {
+    let sum = 0
+    for (const item of this.state.items) {
+      sum += item.product.price * item.quantity
+    }
+    return sum
   }
 
   render() {
