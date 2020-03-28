@@ -7,6 +7,7 @@ import { CartItem } from "../context";
 
 interface Props {
   cartItems: CartItem[]
+  cartItem: CartItem
 }
 interface State {}
 
@@ -16,6 +17,8 @@ class CartForm extends React.Component<Props, State> {
   
 
   render() {
+    const { cartItem } = this.props
+    const { product } = cartItem
     return (
       <div className="order-wrapper">
         <div className="order-title">
@@ -39,7 +42,7 @@ class CartForm extends React.Component<Props, State> {
               </Button>
             </Col>
             <Col span={3}>Summa:</Col>
-            <Col span={3}> kr</Col>
+            <Col span={3}>{product.price * cartItem.quantity} kr</Col>
             <Col span={2}></Col>
           </Row>
         </div>
