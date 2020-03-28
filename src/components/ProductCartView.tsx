@@ -4,6 +4,7 @@ import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
 import { CartConsumer } from '../context';
+import TotalCartForm from './TotalSum'
 
 interface Props {
   product: ProductData
@@ -34,6 +35,10 @@ class ProductCartView extends React.Component<Props, State> {
               <h1>Fraktsätt</h1>
               <ShippingForm />
               <h1>Betalsätt</h1>
+
+              <h1>Att betala</h1>
+              <TotalCartForm />
+
           </div>
         )}
       </CartConsumer>
