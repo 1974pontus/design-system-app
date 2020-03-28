@@ -3,12 +3,11 @@ import CartForm from './CartForm';
 import ShippingForm from './ShippingForm';
 import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
-import { CartConsumer, CartItem } from '../context';
+import { CartConsumer } from '../context';
 import TotalCartForm from './TotalSum'
 
 interface Props {
   product: ProductData
-  cartItem: CartItem;
 }
 interface State {}
 
@@ -20,7 +19,7 @@ class ProductCartView extends React.Component<Props, State> {
         {({ items }) => (
           <div style={checkoutWrapper}>
               <h1>Kassa</h1>
-              <CartForm cartItem={this.props.cartItem} cartItems={items} />
+              <CartForm cartItems={items} />
               <h1>Dina uppgifter</h1>
               <BillingForm />
               <h1>Fraktsätt</h1>
