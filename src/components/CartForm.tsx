@@ -11,8 +11,6 @@ interface Props {
 interface State {}
 
 class CartForm extends React.Component<Props, State> {
-
-
   
 
   render() {

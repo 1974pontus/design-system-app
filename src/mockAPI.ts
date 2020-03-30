@@ -57,7 +57,7 @@ const productData: ProductData[] = [
         productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-126-vaggfarg-555-mellangra.jpg"),
         productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-126-vaggfarg-555-mellangra-2.jpg"),
-        roomImg: (".https://www.auro.se/fileadmin/_processed_/csm_Steel-1_3856f6161d.jpg"),
+        roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_Steel-1_3856f6161d.jpg"),
         alt: "Väggfärg Mellangrå",
     },
 
@@ -89,7 +89,7 @@ const productData: ProductData[] = [
         productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-196-vaggfarg-555-turkos-patricia.jpg"),
         productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-196-vaggfarg-555-turkos-patricia-2.jpg"),
-        roomImg: (".https://www.auro.se/fileadmin/_processed_/csm_turkos-patricia_488d48829e.jpg"),
+        roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_turkos-patricia_488d48829e.jpg"),
         alt: "Väggfärg Turkos Patricia",
     },
 

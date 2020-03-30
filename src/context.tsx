@@ -55,8 +55,20 @@ export class CartProvider extends React.Component<CartProps, CartState> {
   }
 
   deleteProductFromCart = (product: ProductData) => {
-    alert('delete product')
+    //alert('delete product')
+     const clonedItems: CartItem[] = Object.assign([], this.state.items)
     // update state
+    for (const item of clonedItems) {
+      if (product.artNr === item.product.artNr ) {
+       
+        this.setState({ items: clonedItems })
+        return (item.quantity ? item.quantity-- : item.quantity <= 0 )
+      }
+    }
+    
+    // Otherwise add a whole new cart item
+    clonedItems.push({ product, quantity: 1 })
+    this.setState({ items: clonedItems })
   }
 
   getTotalPrice = () => {
