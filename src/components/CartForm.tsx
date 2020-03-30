@@ -5,16 +5,20 @@ import "../App.css";
 import CartItemRow from "./CartItemRow";
 import { CartItem, CartConsumer } from "../context";
 
+
+
 interface Props {
   cartItems: CartItem[]
 }
 interface State {}
 
 class CartForm extends React.Component<Props, State> {
+
+
   
 
   render() {
-    // const { sum } = this.props
+  
     return (
       
       <div className="order-wrapper">
@@ -31,19 +35,17 @@ class CartForm extends React.Component<Props, State> {
         {this.props.cartItems.map((cartItem) => <CartItemRow cartItem={cartItem}/>)}  
           <div className="otder-footer">
         <CartConsumer> 
-        {() => (
-          <Row gutter={[8, 16]}>
-            <Col span={2}></Col>
-            <Col span={15}>
-              <Button type="primary" htmlType="submit">
-                PRESENTKORT
-              </Button>
-            </Col>
-            <Col span={3}>Summa:</Col>
-        <Col span={3}>kr</Col>
-            <Col span={2}></Col>
-          </Row>
-        )}
+        {({ sum }) => (<Row gutter={[8, 16]}>
+              <Col span={2}></Col>
+              <Col span={15}>
+                <Button type="primary" htmlType="submit">
+                  PRESENTKORT
+                </Button>
+              </Col>
+              <Col span={3}>Summa:</Col>
+              <Col span={3}>{sum}kr</Col>
+              <Col span={2}></Col>
+            </Row>)}
           </CartConsumer>
         </div>
       </div>

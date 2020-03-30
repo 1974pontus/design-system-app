@@ -13,13 +13,15 @@ interface CartState {
   addProductToCart: (product: ProductData) => void
   deleteProductFromCart: (product: ProductData) => void
   getTotalPrice: (sum: number) => void
+
 }
 
 const CartContext = React.createContext<CartState>({
   items: [],
   addProductToCart: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
-  getTotalPrice: () => {},
+  getTotalPrice: (sum: number) => {},
+
 })
 
 
@@ -47,6 +49,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return
       }
+      this.getTotalPrice()
     }
     
     // Otherwise add a whole new cart item
@@ -64,6 +67,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return (item.quantity ? item.quantity-- : item.quantity <= 0 )
       }
+      this.getTotalPrice()
     }
     
     // Otherwise add a whole new cart item
