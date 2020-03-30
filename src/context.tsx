@@ -56,10 +56,10 @@ export class CartProvider extends React.Component<CartProps, CartState> {
      const clonedItems: CartItem[] = Object.assign([], this.state.items)
     // update state
     for (const item of clonedItems) {
-      if (product.artNr === item.product.artNr) {
-        item.quantity-- 
+      if (product.artNr === item.product.artNr && item.quantity < 0 ) {
+       
         this.setState({ items: clonedItems })
-        return
+        return (item.quantity ? item.quantity-- : null)
       }
     }
     
