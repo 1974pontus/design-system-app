@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { ProductData } from "../../mockAPI";
 import { Link } from "react-router-dom";
 import AddToCartButton from "../AddToCartButton";
@@ -12,7 +12,7 @@ interface State {
 }
 
 
-class StartPageProductDisplay extends React.Component<Props, State> {
+class StartPageProductDisplay extends Component<Props, State> {
 
     render() {
       return ( 
