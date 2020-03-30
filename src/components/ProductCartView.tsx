@@ -5,6 +5,7 @@ import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
 import { CartConsumer } from '../context';
 import TotalCartForm from './TotalSum'
+import PaymentForm from './PaymentAlternative';
 
 interface Props {
   product: ProductData
@@ -16,7 +17,7 @@ class ProductCartView extends React.Component<Props, State> {
   render() {
     return (
       <CartConsumer>
-        {({ items }) => (
+        {({ items, }) => (
           <div style={checkoutWrapper}>
               <h1>Kassa</h1>
               <CartForm cartItems={items} />
@@ -25,7 +26,7 @@ class ProductCartView extends React.Component<Props, State> {
               <h1>Fraktsätt</h1>
               <ShippingForm />
               <h1>Betalsätt</h1>
-
+              <PaymentForm />
               <h1>Att betala</h1>
               <TotalCartForm />
 

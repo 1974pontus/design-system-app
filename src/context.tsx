@@ -12,12 +12,14 @@ interface CartState {
   items: CartItem[]
   addProductToCart: (product: ProductData) => void
   deleteProductFromCart: (product: ProductData) => void
+  getTotalPrice: (sum: number) => void
 }
 
 const CartContext = React.createContext<CartState>({
   items: [],
   addProductToCart: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
+  getTotalPrice: () => {},
 })
 
 
@@ -29,7 +31,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     this.state = {
       items: [],
       addProductToCart: this.addProductToCart,
-      deleteProductFromCart: this.deleteProductFromCart
+      deleteProductFromCart: this.deleteProductFromCart,
+      getTotalPrice: this.getTotalPrice
     }
   }
 
@@ -61,6 +64,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     for (const item of this.state.items) {
       sum += item.product.price * item.quantity
     }
+    console.log(sum)
     return sum
   }
 

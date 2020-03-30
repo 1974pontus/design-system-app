@@ -3,7 +3,7 @@ import { Row, Col, Button } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
 import CartItemRow from "./CartItemRow";
-import { CartItem } from "../context";
+import { CartItem, CartConsumer } from "../context";
 
 interface Props {
   cartItems: CartItem[]
@@ -16,7 +16,9 @@ class CartForm extends React.Component<Props, State> {
   
 
   render() {
+    // const { sum } = this.props
     return (
+      
       <div className="order-wrapper">
         <div className="order-title">
           <Row gutter={[8, 16]}>
@@ -29,8 +31,9 @@ class CartForm extends React.Component<Props, State> {
         </div>
         
         {this.props.cartItems.map((cartItem) => <CartItemRow cartItem={cartItem}/>)}  
-          
-        <div className="otder-footer">
+          <div className="otder-footer">
+        <CartConsumer> 
+        {() => (
           <Row gutter={[8, 16]}>
             <Col span={2}></Col>
             <Col span={15}>
@@ -39,9 +42,11 @@ class CartForm extends React.Component<Props, State> {
               </Button>
             </Col>
             <Col span={3}>Summa:</Col>
-            <Col span={3}> kr</Col>
+        <Col span={3}>kr</Col>
             <Col span={2}></Col>
           </Row>
+        )}
+          </CartConsumer>
         </div>
       </div>
     );
