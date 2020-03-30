@@ -35,7 +35,8 @@ export default Header
 const headerWraper: CSSProperties = {
   padding: '2rem',
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  backgroundColor: 'white'
   //TODO--- fixa så att dom är centrerade verticalt
 }
 

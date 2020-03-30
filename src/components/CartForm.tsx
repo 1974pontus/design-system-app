@@ -11,9 +11,9 @@ interface Props {
 interface State {}
 
 class CartForm extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-  }
+  // constructor(props: Props) {
+  //   super(props)
+  // }
 
   
 
