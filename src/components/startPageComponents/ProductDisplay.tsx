@@ -1,7 +1,7 @@
 import React from "react";
-import { ProductData } from "../mockAPI";
+import { ProductData } from "../../mockAPI";
 import { Link } from "react-router-dom";
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "../AddToCartButton";
 
 interface Props {
     product: (ProductData)
