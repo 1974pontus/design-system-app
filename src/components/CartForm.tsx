@@ -51,5 +51,3 @@ class CartForm extends React.Component<Props, State> {
 }
 
 export default CartForm;
-
-

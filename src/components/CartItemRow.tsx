@@ -22,8 +22,9 @@ class CartItemRow extends React.Component<Props, State> {
       <CartConsumer>
         {({ addProductToCart, deleteProductFromCart }) => (
           <Row gutter={[8, 16]}>
-            <Col span={2}>{
-            <img style={productImage} src={product.productImg} alt={product.alt}/>}</Col>
+            <Col span={2}>
+              <img style={productImage} src={product.productImg} alt={product.alt}/>
+            </Col>
             <Col span={15}>
                 {product.productName}
             </Col>
