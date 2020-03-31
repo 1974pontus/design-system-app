@@ -35,9 +35,9 @@ class CartForm extends React.Component<Props, State> {
           <Row gutter={[8, 16]}>
             <Col span={2}></Col>
             <Col span={15}>
-              <Button type="primary" htmlType="submit">
+            {/*   <Button type="primary" htmlType="submit">
                 PRESENTKORT
-              </Button>
+              </Button> */}
             </Col>
             <Col span={3}>Summa:</Col>
         <Col span={3}>kr</Col>
