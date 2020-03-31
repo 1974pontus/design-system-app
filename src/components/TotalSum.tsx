@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 import "../App.css";
 import { CartConsumer } from "../context";
 
-
 interface Props {}
 interface State {}
 
@@ -14,17 +13,11 @@ class TotalCartForm extends React.Component<Props, State> {
       <CartConsumer>
         {({ getTotalPriceInclShipper }) => (
           <Row gutter={[8, 16]}>
-            <Col span={6}>
-            </Col>
-            <Col span={11}>
-                Total summa inklusive frakt: 
-            </Col>
-            <Col span={3}>
-            </Col>
-
-        <Col span={3}> {getTotalPriceInclShipper()}kr</Col>
-            <Col span={1}>
-            </Col>
+            <Col span={6}></Col>
+            <Col span={11}>Total summa inklusive frakt:</Col>
+            <Col span={3}></Col>
+            <Col span={3}>{getTotalPriceInclShipper()}kr</Col>
+            <Col span={1}></Col>
           </Row>
         )}
       </CartConsumer>
@@ -33,7 +26,3 @@ class TotalCartForm extends React.Component<Props, State> {
 }
 
 export default TotalCartForm;
-
-
-
-
