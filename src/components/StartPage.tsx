@@ -29,7 +29,7 @@ class StartPage extends React.Component<Props, State> {
           ))}
         </Row>
       </div>
-    );
+    )
   }
 }
 
