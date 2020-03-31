@@ -1,48 +1,37 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import 'antd/dist/antd.css';
-import { List, Avatar, Radio } from 'antd';
-import postnord from '../img/postnord.jpeg'
-import dhl from '../img/DHL.jpg'
+import { Radio } from 'antd';
+import { RadioChangeEvent } from 'antd/lib/radio';
+// import klarna from '../img/klarna-app-logo.png'
 
 
-const data = [
-  {
-    title: 'Klarna',
-    description: 'Betala sen',
-    avatar: postnord
-  },
-  {
-    title: 'Swish',
-    description: 'Betala nu',
-    avatar: postnord
-  },
-  {
-    title: 'Visa/Mastercard',
-    description: 'betala nu också',
-    avatar: dhl
-  },
-  
-];
 
-function PaymentForm() {
+
+class PaymentForm extends React.Component{
+  onChange: ((e: RadioChangeEvent) => void) | undefined;
+ 
+  render() {
     return (
-      <div>
-        <List
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={item => (
-      <List.Item>
-        <Radio></Radio>
-        <List.Item.Meta
-        avatar={<Avatar src={item.avatar} />}
-          title={<a href="https://ant.design">{item.title}</a>}
-          description={item.description}
-        />
-      </List.Item>
-    )}
-  />
+      <Radio.Group size="large" onChange={this.onChange} defaultValue="a"  >
+       <div style={flexDirection}>
+        <Radio.Button value="a" name="payment" style={payment}> Switch</Radio.Button>
+        <Radio.Button value="b" name="payment"> Klarna</Radio.Button>
+        <Radio.Button value="c" name="payment">BetalKort</Radio.Button>
       </div>
+      </Radio.Group>
     );
   }
 
+}
 export default PaymentForm
+
+const flexDirection: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%'
+}
+
+const payment: CSSProperties = {
+  background : 'pink',
+  width: '130%'
+}
