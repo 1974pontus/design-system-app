@@ -1,0 +1,9 @@
+textBG{
+    position: fixed; 
+    right: 0;
+    top: 6rem;
+    padding: 2rem;
+    background: #F1F2F5;
+    height: 100%;
+    width: 50%;
+}
