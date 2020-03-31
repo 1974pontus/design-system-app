@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { ProductData } from './mockAPI'
 import shippingData, { ShippingData } from './shippingData'
 
@@ -32,6 +32,11 @@ const CartContext = React.createContext<CartState>({
 
 // CartProvider ansvarar för att uppdatera kundvagnen
 export class CartProvider extends React.Component<CartProps, CartState> {
+  props: any
+  setState(arg0: { items: CartItem[] }) {
+    throw new Error("Method not implemented.")
+  }
+  state: any
   constructor(props: CartProps) {
     super(props)
 
