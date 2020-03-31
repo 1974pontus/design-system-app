@@ -1,5 +1,6 @@
 import React from 'react'
 import { ProductData } from './mockAPI'
+import { ShippingData } from './shippingData'
 
 export interface CartItem {
   product: ProductData
@@ -10,17 +11,21 @@ interface CartProps {}
 
 interface CartState {
   items: CartItem[]
+  shippingData: ShippingData[]
+  getTotalPriceInclShipper: () => number
   addProductToCart: (product: ProductData) => void
   deleteProductFromCart: (product: ProductData) => void
-  getTotalPrice: (sum: number) => void
+  getTotalPrice: () => number
 
 }
 
 const CartContext = React.createContext<CartState>({
   items: [],
+  shippingData: [],
+  getTotalPriceInclShipper: () => 0,
   addProductToCart: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
-  getTotalPrice: (sum: number) => {},
+  getTotalPrice: () => 0,
 
 })
 
@@ -32,6 +37,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
 
     this.state = {
       items: [],
+      shippingData: [],
+      getTotalPriceInclShipper: this.getTotalPriceInclShipper,
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
       getTotalPrice: this.getTotalPrice
@@ -49,7 +56,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return
       }
-      this.getTotalPrice()
+    
     }
     
     // Otherwise add a whole new cart item
@@ -67,7 +74,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return (item.quantity ? item.quantity-- : item.quantity <= 0 )
       }
-      this.getTotalPrice()
+      
     }
     
     // Otherwise add a whole new cart item
@@ -82,6 +89,11 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     }
     console.log(sum)
     return sum
+  }
+
+  getTotalPriceInclShipper = () => {
+    
+    return this.getTotalPrice + (this.state.shippingData)
   }
 
   render() {

@@ -35,7 +35,7 @@ class CartForm extends React.Component<Props, State> {
         {this.props.cartItems.map((cartItem) => <CartItemRow cartItem={cartItem}/>)}  
           <div className="otder-footer">
         <CartConsumer> 
-        {({ sum }) => (<Row gutter={[8, 16]}>
+        {({ getTotalPrice }) => (<Row gutter={[8, 16]}>
               <Col span={2}></Col>
               <Col span={15}>
                 <Button type="primary" htmlType="submit">
@@ -43,7 +43,7 @@ class CartForm extends React.Component<Props, State> {
                 </Button>
               </Col>
               <Col span={3}>Summa:</Col>
-              <Col span={3}>{sum}kr</Col>
+              <Col span={3}>{getTotalPrice()}kr</Col>
               <Col span={2}></Col>
             </Row>)}
           </CartConsumer>
