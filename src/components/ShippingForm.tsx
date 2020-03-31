@@ -28,13 +28,13 @@ function ShippingForm() {
     return (
       <div>
         <List
-    itemLayout="horizontal"
-    dataSource={data}
-    renderItem={item => (
-      <List.Item>
-        <Radio></Radio>
-        <List.Item.Meta
-        avatar={<Avatar src={item.avatar} />}
+          itemLayout="horizontal"
+          dataSource={data}
+          renderItem={item => (
+          <List.Item>
+            <Radio></Radio>
+          <List.Item.Meta
+          avatar={<Avatar src={item.avatar} />}
           title={<a href="https://ant.design">{item.title}</a>}
           description={item.description}
         />
