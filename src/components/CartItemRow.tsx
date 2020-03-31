@@ -20,7 +20,7 @@ class CartItemRow extends React.Component<Props, State> {
     const { product } = cartItem
     return (
       <CartConsumer>
-        {({ addProductToCart, deleteProductFromCart }) => (
+        {({ addProductToCart, deleteProductFromCart, deleteCartItemRow }) => (
           <Row gutter={[8, 16]}>
             <Col span={2}>
               <img style={productImage} src={product.productImg} alt={product.alt}/>
@@ -36,9 +36,7 @@ class CartItemRow extends React.Component<Props, State> {
 
             <Col span={3}>{product.price * cartItem.quantity}</Col>
             <Col span={1}>
-              <DeleteOutlined
-                onClick={() => deleteProductFromCart(product)}
-              />
+              <DeleteOutlined onClick={() => deleteCartItemRow(product)}/>
             </Col>
           </Row>
         )}
