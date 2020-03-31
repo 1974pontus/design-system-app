@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Input } from 'antd';
 interface Props {
 
 }
@@ -11,9 +11,10 @@ interface State {
 class FirstPaymentComponent extends React.Component<Props, State> {
   render() {
     return (
-      <div>
- hej
-      </div>
+        <Input
+        placeholder="hej"
+        suffix="V"
+      />
     );
   }
 }
