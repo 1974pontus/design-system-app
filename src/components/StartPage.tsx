@@ -3,7 +3,6 @@ import React from "react";
 import productData from "../mockAPI";
 import ProductDisplay from "./startPageComponents/ProductDisplay";
 import FirstIntroText from "./startPageComponents/FirstIntroText";
-import SecondIntroText from "./startPageComponents/SecondIntroText";
 import IntroImg from "./startPageComponents/IntroImg";
 
 interface Props {}
@@ -15,7 +14,7 @@ class StartPage extends React.Component<Props, State> {
       <div>
         <IntroImg />
         <FirstIntroText />
-        <SecondIntroText />
+       
         
         <Row
           style={{ textAlign: "center", margin: "2rem" }}
