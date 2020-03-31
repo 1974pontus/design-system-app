@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProductData } from './mockAPI'
-import { ShippingData } from './shippingData'
+import shippingData, { ShippingData } from './shippingData'
 
 export interface CartItem {
   product: ProductData
@@ -11,7 +11,7 @@ interface CartProps {}
 
 interface CartState {
   items: CartItem[]
-  shippingData: ShippingData[]
+  shippingData: ShippingData
   getTotalPriceInclShipper: () => number
   addProductToCart: (product: ProductData) => void
   deleteProductFromCart: (product: ProductData) => void
@@ -21,7 +21,7 @@ interface CartState {
 
 const CartContext = React.createContext<CartState>({
   items: [],
-  shippingData: [],
+  shippingData: shippingData[0],
   getTotalPriceInclShipper: () => 0,
   addProductToCart: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
@@ -37,7 +37,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
 
     this.state = {
       items: [],
-      shippingData: [],
+      shippingData: shippingData[0],
       getTotalPriceInclShipper: this.getTotalPriceInclShipper,
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
@@ -93,7 +93,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
 
   getTotalPriceInclShipper = () => {
     
-    return this.getTotalPrice + (this.state.shippingData)
+    return this.getTotalPrice() + (this.state.shippingData.price)
   }
 
   render() {
