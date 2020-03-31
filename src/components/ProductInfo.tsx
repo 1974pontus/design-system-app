@@ -3,6 +3,7 @@ import React, { CSSProperties } from 'react';
 import productData from '../mockAPI'
 import AddToCartButton from './AddToCartButton';
 import { RouteComponentProps } from 'react-router-dom';
+import ProductNotFind from './startPageComponents/ProductNotDFind';
 
 
 interface Props extends RouteComponentProps<{ artNr: string }> {}
@@ -13,7 +14,7 @@ class ProductInfo extends React.Component<Props, State>{
     render(){
       const product = productData.find((product) => product.artNr === this.props.match.params.artNr)
       if (!product) {
-        return <h3>Produkten finns inte i vårat lager</h3>
+        return <ProductNotFind />
       }
 
       return(
