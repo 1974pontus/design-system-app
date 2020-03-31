@@ -1,6 +1,7 @@
 
-import React from 'react';
-import { Col, Row } from 'antd';
+import React, { CSSProperties } from 'react';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -8,30 +9,32 @@ function ProductNotFind() {
     
     
     return (
-        <Row>
-        <Col xs={{ span: 24 }} md={{ span: 20, offset: 2 }}>
-        <img
-        style={{
-        //   objectFit: "cover",
-        //   objectPosition: "50% 80%",
-        //   height: "25rem",
-        //   width: "100%"
-        }}
-        alt="bedroom with a warm yellow painted wall"
-        src="https://www.auro.se/fileadmin/_processed_/csm_Varmgul_Anne_Jeppson_e0200f7f6e.jpg"
-      ></img>
-        </Col>
-      </Row>
+        <Link to="/">  
+                <h3 style={text}>Opps something whent wrong, please go back to find your dream colorini </h3>
+                <img
+                    style={{
+                    width: '100vw',
+                    height: '100vh',
+                    objectFit:'cover'
+                    }}
+                    alt="empty room with white paint"
+                    src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2795&q=80"
+                    > 
+                </img>
+        </Link> 
     )
 }
 
 export default ProductNotFind
 
-// const productImage: CSSProperties = {
-//     width: '15rem',
-//     height: '14rem',
-//     objectFit: 'cover'
-//   }
+  const text: CSSProperties = {
+        position: 'relative',
+        top: '19rem',
+        textAlign: 'center',
+        marginTop: '-4rem',
+        color: '#252824'
+       
+  }
 
 
   
