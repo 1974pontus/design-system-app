@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Radio, Input, Row, Col } from "antd";
+import { Radio } from "antd";
 import FirstPaymentComponent from './FirstPaymentComponent'
 import SecondPaymentComponent from './SecondPaymentComponent'
 import ThirdPaymentComponent from './ThirdPaymentComponent'
