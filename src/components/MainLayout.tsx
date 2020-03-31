@@ -15,16 +15,17 @@ const MainLayout = () => {
     //everything that is insite Router will have the abillity to use routing
     <Router>
       <div className="App" style={overallStyle}>
-        <Layout style={{ height: "100vh" }}>
-          {/* Here should all the components for the home/shoping page be */}
+        <Layout style={{ height: "100vh", background: 'white'}}>
           <Header />
 
+
           {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
-          <Switch>
-            <Route exact path="/" component={StartPage} />
-            <Route path="/order-total" component={ProductCartView} />
-            <Route path="/product-info/:artNr" component={ProductInfo} />
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={StartPage} />
+          <Route path="/checkout" component={ProductCartView} />
+          <Route path="/product-info/:artNr" component={ProductInfo} />
+        </Switch>
+
           
           <Footer />
         
