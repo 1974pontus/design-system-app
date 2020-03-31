@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { ProductData } from './mockAPI'
 import shippingData, { ShippingData } from './shippingData'
 
@@ -34,6 +34,11 @@ const CartContext = React.createContext<CartState>({
 
 // CartProvider ansvarar för att uppdatera kundvagnen
 export class CartProvider extends React.Component<CartProps, CartState> {
+  props: any
+  setState(arg0: { items: CartItem[] }) {
+    throw new Error("Method not implemented.")
+  }
+  state: any
   constructor(props: CartProps) {
     super(props)
 
@@ -77,9 +82,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return (item.quantity ? item.quantity-- : item.quantity <= 0 )
       }
-      
     }
-
     this.setState({ items: clonedItems })
   }
   
@@ -92,7 +95,6 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     if ( indexOfRow !== -1 ){
       clonedItems.splice( indexOfRow, 1)
       this.setState({ items: clonedItems })
-
     }
   }
 
