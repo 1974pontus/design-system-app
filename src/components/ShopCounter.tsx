@@ -3,22 +3,17 @@ import { ShoppingOutlined } from '@ant-design/icons';
 import React from 'react';
 import { CartConsumer } from '../context';
 
-interface Props {
- 
-}
+interface Props {}
 
 interface State {
  count: number,
  show: boolean,
-
-
 }
 
 class ShopCounter extends React.Component<Props, State> {
   state = {
     count: 1,
     show: true,
-  
   };
 
   render() {
@@ -31,8 +26,7 @@ class ShopCounter extends React.Component<Props, State> {
             </Badge>
           )}
         </CartConsumer>
-    );
-    
+    ) 
   }
 }
 
