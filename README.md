@@ -1,9 +1,10 @@
 
-## WebShop
+## Mini Colorini
 
 Project setting up a webshop with React + Typescript + Ant Design ❤️
+We build a mini paintwebbshop called Mini Colorini that shows 6 colors carfully picked colors to be exposed for a limited time.
 
-❤️ the Tres Comas team
+❤️ the Mini Colorini team
 
 
 ## Get started 🚀
