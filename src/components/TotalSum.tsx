@@ -14,9 +14,9 @@ class TotalCartForm extends React.Component<Props, State> {
       <CartConsumer>
         {({ getTotalPriceInclShipper }) => (
           <Row gutter={[8, 16]}>
-            <Col span={5}>
+            <Col span={6}>
             </Col>
-            <Col span={12}>
+            <Col span={11}>
                 Total summa inklusive frakt: 
             </Col>
             <Col span={3}>
