@@ -3,13 +3,9 @@ import { Col} from "antd";
 import { Link } from "react-router-dom";
 import ShopCounter from "./ShopCounter";
 
+interface Props {}
+interface State {}
 
-interface Props {
-}
-interface State {
-
-  
-}
 class Header extends Component<Props, State> {
 
 
@@ -25,15 +21,9 @@ class Header extends Component<Props, State> {
                 <Link to="/checkout" style={{position: 'fixed', right: '1rem'}}> 
                     <Col span={12}> <ShopCounter /> </Col>
                 </Link>
-
-                
-                    {/* <h2 style={{ position: 'fixed', top: 30 }}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
             </nav>
-            
-    
         )
     }
-
 }
 
 export default Header
@@ -42,8 +32,7 @@ export default Header
 const headerWraper: CSSProperties = {
   padding: '2rem',
   display: 'flex',
-  justifyContent: 'space-between',
-  //TODO--- fixa så att dom är centrerade verticalt
+  justifyContent: 'space-between'
 }
 
 const h1: CSSProperties = {

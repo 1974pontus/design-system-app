@@ -40,7 +40,7 @@ class ProductInfo extends React.Component<Props, State>{
         </div>
       )
     }  
-}
+  }
 
 export default ProductInfo
 

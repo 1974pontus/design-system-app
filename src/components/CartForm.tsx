@@ -20,7 +20,6 @@ class CartForm extends React.Component<Props, State> {
   render() {
   
     return (
-      
       <div className="order-wrapper">
         <div className="order-title">
           <Row gutter={[8, 16]}>
@@ -45,7 +44,7 @@ class CartForm extends React.Component<Props, State> {
           </CartConsumer>
         </div>
       </div>
-    );
+    )
   }
 }
 

@@ -80,9 +80,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return (item.quantity ? item.quantity-- : item.quantity <= 0 )
       }
-      
     }
-
     this.setState({ items: clonedItems })
   }
   
@@ -95,7 +93,6 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     if ( indexOfRow !== -1 ){
       clonedItems.splice( indexOfRow, 1)
       this.setState({ items: clonedItems })
-
     }
   }
 
