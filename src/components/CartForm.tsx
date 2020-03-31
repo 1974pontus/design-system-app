@@ -16,7 +16,6 @@ class CartForm extends React.Component<Props, State> {
   render() {
     // const { sum } = this.props
     return (
-      
       <div className="order-wrapper">
         <div className="order-title">
           <Row gutter={[8, 16]}>
@@ -36,14 +35,14 @@ class CartForm extends React.Component<Props, State> {
             <Col span={2}></Col>
             <Col span={15}></Col>
             <Col span={3}>Summa:</Col>
-        <Col span={3}>kr</Col>
+            <Col span={3}>kr</Col>
             <Col span={2}></Col>
           </Row>
         )}
           </CartConsumer>
         </div>
       </div>
-    );
+    )
   }
 }
 
