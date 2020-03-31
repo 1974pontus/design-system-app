@@ -10,8 +10,6 @@ interface State {}
 
 class TotalCartForm extends React.Component<Props, State> {
   render() {
-    // const { cartItem } = this.props
-    // const { product } = cartItem
     return (
       <CartConsumer>
         {({ getTotalPriceInclShipper }) => (

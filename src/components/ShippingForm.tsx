@@ -7,7 +7,6 @@ interface Props {
   shippingData: ShippingData[]
 }
 
-
 function ShippingForm(props: Props) {
   return (
     <div>
