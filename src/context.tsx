@@ -14,6 +14,7 @@ interface CartState {
   shippingData: ShippingData
   getTotalPriceInclShipper: () => number
   addProductToCart: (product: ProductData) => void
+  deleteCartItemRow: (product: ProductData) => void
   deleteProductFromCart: (product: ProductData) => void
   getTotalPrice: () => number
 
@@ -24,6 +25,7 @@ const CartContext = React.createContext<CartState>({
   shippingData: shippingData[0],
   getTotalPriceInclShipper: () => 0,
   addProductToCart: (product: ProductData) => {},
+  deleteCartItemRow: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
   getTotalPrice: () => 0,
 
