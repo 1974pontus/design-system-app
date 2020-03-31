@@ -30,8 +30,8 @@ class ProductCartView extends React.Component<Props, State> {
               <h1>Betalsätt</h1>
               <PaymentForm />
               <h1>Att betala</h1>
-              <TotalCartForm />
-
+              <TotalCartForm  />
+              
           </div>
         )}
       </CartConsumer>

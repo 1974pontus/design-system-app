@@ -41,6 +41,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
       getTotalPriceInclShipper: this.getTotalPriceInclShipper,
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
+      deleteCartItemRow: this.deleteCartItemRow,
       getTotalPrice: this.getTotalPrice
     }
   }
@@ -69,17 +70,28 @@ export class CartProvider extends React.Component<CartProps, CartState> {
      const clonedItems: CartItem[] = Object.assign([], this.state.items)
     // update state
     for (const item of clonedItems) {
-      if (product.artNr === item.product.artNr ) {
+      if (product.artNr === item.product.artNr) {
        
         this.setState({ items: clonedItems })
         return (item.quantity ? item.quantity-- : item.quantity <= 0 )
       }
       
     }
-    
-    // Otherwise add a whole new cart item
-    clonedItems.push({ product, quantity: 1 })
+
     this.setState({ items: clonedItems })
+  }
+  
+    deleteCartItemRow = (product: ProductData) => {
+    // Clone to state array so that we don't mutate the state (which is prohibited in React)
+    const clonedItems: CartItem[] = Object.assign([], this.state.items)
+   
+
+    const indexOfRow = clonedItems.findIndex((item) => product.artNr === item.product.artNr) 
+    if ( indexOfRow !== -1 ){
+      clonedItems.splice( indexOfRow, 1)
+      this.setState({ items: clonedItems })
+
+    }
   }
 
   getTotalPrice = () => {
