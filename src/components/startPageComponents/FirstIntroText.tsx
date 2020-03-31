@@ -11,7 +11,7 @@ class FirstIntroText extends React.Component<Props, State> {
 
     render() {
       return ( 
-        <div style={{backgroundColor: '#F1F2F5', padding:'2rem 1rem 2rem 1rem'}}>
+        <div style={{backgroundColor: '#F1F2F5', padding:'2rem 1rem 2rem 1rem', width:'100vw'}}>
         <Row style={{ textAlign: "center", margin: "2rem"}}>
           <Col span={20} offset={2}>
           Mini Colorini är tillverkare av ekologiska färger och
