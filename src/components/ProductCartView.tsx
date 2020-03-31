@@ -5,7 +5,7 @@ import BillingForm from './BillingForm';
 import { ProductData } from '../mockAPI';
 import { CartConsumer } from '../context';
 import TotalCartForm from './TotalSum'
-import PaymentForm from './PaymentAlternative';
+import PaymentForm from './productCartviewComponents/PaymentForm'
 
 interface Props {
   product: ProductData
