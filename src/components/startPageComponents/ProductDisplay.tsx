@@ -16,7 +16,7 @@ class StartPageProductDisplay extends Component<Props, State> {
 
     render() {
       return ( 
-        <div>
+        <div style={{padding: '1.5rem 1.5rem 2rem 1.5rem'}}>
 
           {/* så här gör man om man vill att rätt artikel ska synas i URL */}
             <Link to={"/product-info/" + this.props.product.artNr}>   
