@@ -9,14 +9,44 @@
   
 }
 
-
-
 .order-wrapper {
   margin: 3rem;
- 
   padding: 2rem;
   text-decoration-line: underline;
 }
 
 
+.positionFixed{
+  position: fixed; 
+  right: 0;
+  top: 4rem;
+  padding: 2rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 980px) {
+  .positionFixed {
+    position: static;
+    bottom: 5rem;
+    width: 100%
+  }
+}
+
+.loggo{
+  font-size: 1.5rem; 
+  z-index: 1;
+  color: white;
+  animation: back 6s ease-in infinite alternate;
+}
+
+@keyframes back {
+  from {
+      color: black;
+  }
+
+  to {
+    color: #1690FF;
+  } 
+
+}
 
