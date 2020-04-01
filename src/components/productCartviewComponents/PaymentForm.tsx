@@ -1,7 +1,9 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Collapse, Form, Input, InputNumber, Select } from 'antd';
-
+import { Collapse, Form, Input, InputNumber, Select, Avatar } from 'antd';
+import {
+  CreditCardFilled
+} from "@ant-design/icons";
 
 interface Props {
   
@@ -40,7 +42,7 @@ render()
   return (
     
 <Collapse accordion defaultActiveKey={['1']} onChange={this.callback}>
-    <Panel header="Swish" key="1">
+    <Panel header="Swish" key="1" extra={<Avatar shape="square" size="large" src={("https://pbs.twimg.com/profile_images/1196324788475695104/HUAVlXnu_400x400.jpg")} />}>
    
      <Form >
          <Form.Item 
@@ -48,11 +50,12 @@ render()
          /*  hasFeedback validateStatus="success"  */ 
           help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
          >
+           
       <Input id="Phonenumber" maxLength={10} pattern="[0-9]" />
     </Form.Item>
       </Form>
     </Panel>
-    <Panel header="Kortbetalning" key="2">
+  <Panel header="Kortbetalning" key="2" extra={ <Avatar shape="square" size="large" src={("https://www.clipartkey.com/mpngs/m/25-250385_credit-card-payment-icon-png.png")} />}>
     <Form>
     <Form.Item 
           label="Kortnummer" 
@@ -81,7 +84,7 @@ render()
     </Form.Item>
       </Form>
     </Panel>
-    <Panel header="Bankbetalning" key="3">
+    <Panel header="BankID" key="3" extra={<Avatar  shape="square" size="large" src={("https://www.postkodlotteriet.se/images/18.5ee58f3a16d5d8d351a4c4b/1570533262841/20191007%20-%20BankID%20logo%203-2.png")}/>}>
 <Form>
   <Form.Item
   label="Bank för direktbetalning"   
