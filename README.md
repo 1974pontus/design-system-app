@@ -2,7 +2,7 @@
 ## Mini Colorini
 
 Project setting up a webshop with React + Typescript + Ant Design ❤️
-We build a mini paintwebbshop called Mini Colorini that shows six carfully picked colors to be exposed for a limited time.
+We build a webshop called Mini Colorini that shows six carfully picked colors to be exposed for a limited time.
 
 ❤️ the Mini Colorini team
 
