@@ -51,7 +51,7 @@ render()
           help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
          >
            
-      <Input id="Phonenumber" maxLength={10} pattern="[0-9]" />
+      <Input id="Phonenumber" maxLength={10} pattern="[0-9]" style={{width: '10rem'}} />
     </Form.Item>
       </Form>
     </Panel>
@@ -62,7 +62,7 @@ render()
           /* hasFeedback validateStatus="success"   */
           help="Du kan betala med ditt VISA, Mastercard eller American Express kort."
          >
-      <Input id="Cardnumber" minLength={13} maxLength={16} pattern="[0-9]" />
+      <Input id="Cardnumber" minLength={13} maxLength={16} pattern="[0-9]" style={{width: '13rem'}}  />
     </Form.Item >
     <Form layout="inline" style={{padding: ".5rem 0 1rem 0" }}>
       <Form.Item label="Månad">
@@ -81,7 +81,7 @@ render()
           label="CVC2"   
           help="Du finner CVC2-koden på backsidan av ditt bankkort."
          >
-      <Input id="CVC2" minLength={3} maxLength={4} pattern="[0-9]"/>
+      <Input id="CVC2" minLength={3} maxLength={4} pattern="[0-9]" style={{width: '6rem'}} />
     </Form.Item>
       </Form>
       <Avatar style={{paddingTop: "1rem" }} shape="square" size="large" src={("https://www.kicksbroz.com/wp-content/uploads/2019/03/visa-5-logo-png-transparent.png")} />
