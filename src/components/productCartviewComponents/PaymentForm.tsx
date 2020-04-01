@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Collapse, Form, Input, InputNumber } from 'antd';
+import { Collapse, Form, Input, InputNumber, Select } from 'antd';
 
 
 interface Props {
@@ -11,6 +11,10 @@ interface State {
 }
 
 const { Panel } = Collapse;
+const { Option } = Select;
+
+
+
 class PaymentForm extends React.Component<Props, State> {
   
   state = {
@@ -37,13 +41,14 @@ render()
     
 <Collapse accordion defaultActiveKey={['1']} onChange={this.callback}>
     <Panel header="Swish" key="1">
-    <Form >
+   
+     <Form >
          <Form.Item 
           label="Telefonnummer" 
-          hasFeedback validateStatus="success"  
+         /*  hasFeedback validateStatus="success"  */ 
           help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
          >
-      <Input id="Phonenumber" />
+      <Input id="Phonenumber" maxLength={10} pattern="[0-9]" />
     </Form.Item>
       </Form>
     </Panel>
@@ -51,33 +56,49 @@ render()
     <Form>
     <Form.Item 
           label="Kortnummer" 
-          hasFeedback validateStatus="success"  
+          /* hasFeedback validateStatus="success"   */
           help="Du kan betala med ditt VISA, Mastercard eller American Express kort."
          >
-      <Input id="Phonenumber" />
+      <Input id="Cardnumber" minLength={13} maxLength={16} pattern="[0-9]" />
     </Form.Item>
       <Form.Item label="Månad">
-        <Form.Item name="input-number" noStyle>
+        <Form.Item name="mounth" noStyle>
           <InputNumber min={1} max={12} />
         </Form.Item>
         
       </Form.Item>
       <Form.Item label="År">
-        <Form.Item name="input-number" noStyle>
+        <Form.Item name="Year" noStyle>
           <InputNumber min={20} max={34} />
         </Form.Item>
        
       </Form.Item>
       <Form.Item 
-          label="CVC2" 
-          hasFeedback validateStatus="success"  
+          label="CVC2"   
           help="Du finner CVC2-koden på backsidan av ditt bankkort."
          >
-      <Input id="CVC2" />
+      <Input id="CVC2" minLength={3} maxLength={4} pattern="[0-9]"/>
     </Form.Item>
       </Form>
     </Panel>
-    <Panel header="Klarna" key="3">
+    <Panel header="Bankbetalning" key="3">
+<Form>
+  <Form.Item
+  label="Bank för direktbetalning"   
+  help="Vid köp hänvisas du till din bank där du utför betalningen. Efter betalning hänvisas du tillbaka till Mini Colorini där du får ditt kvitto."
+  >
+    <Input.Group>
+      <Select defaultValue="Länsförsäkringar" style={{width: '10rem'}} >
+      <Option value="Länsförsäkringar">Länsförsäkringar</Option>
+        <Option value="Handelsbanken">Handelsbanken</Option>
+        <Option value="SEB">SEB</Option>
+        <Option value="Swebank">Swebank</Option>
+        <Option value="Nordea">Nordea</Option>
+      </Select>
+    </Input.Group>
+    </Form.Item>
+    </Form>
+
     </Panel>
   </Collapse>
 
