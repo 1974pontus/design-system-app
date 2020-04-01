@@ -4,29 +4,38 @@ import productData from '../mockAPI'
 import AddToCartButton from './AddToCartButton';
 import { RouteComponentProps } from 'react-router-dom';
 import ProductNotFind from './startPageComponents/ProductNotDFind';
-
-
+import "../App.css";
 interface Props extends RouteComponentProps<{ artNr: string }> {}
 
-interface State {}
+interface State {
+  matches: boolean
+}
+
+
 
 class ProductInfo extends React.Component<Props, State>{
+
+// constructor(props: Readonly<Props>) {
+//   super(props)
+//   this.state = { matches: window.matchMedia("(max-width: 768px)").matches };
+// }
     render(){
       const product = productData.find((product) => product.artNr === this.props.match.params.artNr)
       if (!product) {
         return <ProductNotFind />
       }
 
+      // const minWith = if (window.matchMedia)
+
       return(
         <div style={infoWrapper} >
           <Row>
-              <Col xs={{ span: 24}} md={{ span: 24 }} lg={{ span: 12 }}>
+              <Col xs={{ span: 24}} md={{ span: 12}} lg={{ span: 12 }}>
                   <img style={productImage} src={product.productImg} alt={product.alt}/>
                   <img style={productImage} src={product.colorImg} alt={product.alt}/>
                   <img style={productImage} src={product.roomImg} alt={product.alt}/>
               </Col>
-
-              <Col xs={{ span: 18 }} md={{ span: 24 }} lg={{ span: 12 }}>
+              <Col className="positionFixed" xs={{ span: 24 }} md={{ span:24 }} lg={{ span: 24 }}>
                   <h1>{product.productName}</h1>
                   <p>{product.artNr}</p>
                   <p>{product.productInfo}</p>
@@ -34,7 +43,7 @@ class ProductInfo extends React.Component<Props, State>{
                   <p>{product.consumption}</p>
                   <p>{product.stock}</p>
                   <h3>Pris {product.price} kr/st</h3>
-                  <AddToCartButton product={product} />
+                  <AddToCartButton product={product}  />
               </Col>
           </Row>
         </div>
@@ -45,13 +54,20 @@ class ProductInfo extends React.Component<Props, State>{
 export default ProductInfo
 
 const productImage: CSSProperties = {
-    width: '15rem',
-    height: '14rem',
-    objectFit: 'cover'
+    width: '30rem',
+    height: '30rem',
+    objectFit: 'cover',
+    padding: '1rem'
   }
 
   const infoWrapper: CSSProperties = {
-    margin:'3rem',
+    padding:'3rem',
+    display: 'flex',
+    justifyItems: 'column'
   }
+
+  
+
+
   
  

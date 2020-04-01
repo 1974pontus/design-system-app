@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react"
 import { ProductData } from './mockAPI'
+import shippingData, { ShippingData } from './shippingData'
 
 export interface CartItem {
   product: ProductData
@@ -10,18 +11,24 @@ interface CartProps {}
 
 interface CartState {
   items: CartItem[]
+  shippingData: ShippingData
+  getTotalPriceInclShipper: () => number
   addProductToCart: (product: ProductData) => void
-  deleteProductFromCart: (product: ProductData) => void
   deleteCartItemRow: (product: ProductData) => void
-  getTotalPrice: (sum: number) => void
+  deleteProductFromCart: (product: ProductData) => void
+  getTotalPrice: () => number
+
 }
 
 const CartContext = React.createContext<CartState>({
   items: [],
+  shippingData: shippingData[0],
+  getTotalPriceInclShipper: () => 0,
   addProductToCart: (product: ProductData) => {},
-  deleteProductFromCart: (product: ProductData) => {},
   deleteCartItemRow: (product: ProductData) => {},
-  getTotalPrice: () => {},
+  deleteProductFromCart: (product: ProductData) => {},
+  getTotalPrice: () => 0,
+
 })
 
 
@@ -32,6 +39,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
 
     this.state = {
       items: [],
+      shippingData: shippingData[0],
+      getTotalPriceInclShipper: this.getTotalPriceInclShipper,
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
       deleteCartItemRow: this.deleteCartItemRow,
@@ -50,6 +59,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
         this.setState({ items: clonedItems })
         return
       }
+    
     }
     
     // Otherwise add a whole new cart item
@@ -90,6 +100,11 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     }
     console.log(sum)
     return sum
+  }
+
+  getTotalPriceInclShipper = () => {
+    
+    return this.getTotalPrice() + (this.state.shippingData.price)
   }
 
   render() {
