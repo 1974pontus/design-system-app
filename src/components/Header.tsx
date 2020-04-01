@@ -18,7 +18,7 @@ class Header extends Component<Props, State> {
                     <Col span={24}> <h1 style={h1}>Mini Colorini </h1> </Col> 
                 </Link> 
 
-                <Link to="/checkout" style={{position: 'fixed', right: '1rem'}}> 
+                <Link to="/checkout" style={{position: 'fixed', right: '1rem', zIndex:1 }}> 
                     <Col span={12}> <ShopCounter /> </Col>
                 </Link>
             </nav>
@@ -36,7 +36,8 @@ const headerWraper: CSSProperties = {
 }
 
 const h1: CSSProperties = {
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    zIndex:1
   }
 
 
