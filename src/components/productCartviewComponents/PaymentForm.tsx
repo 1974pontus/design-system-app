@@ -1,7 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Collapse, Form, Input, InputNumber } from 'antd';
-import ThirdPaymentComponent from './ThirdPaymentComponent'
 
 
 interface Props {
@@ -79,7 +78,6 @@ render()
       </Form>
     </Panel>
     <Panel header="Klarna" key="3">
-      <ThirdPaymentComponent />
     </Panel>
   </Collapse>
 
