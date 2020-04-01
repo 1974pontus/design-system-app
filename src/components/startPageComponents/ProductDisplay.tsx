@@ -3,13 +3,14 @@ import { ProductData } from "../../mockAPI";
 import { Link } from "react-router-dom";
 import AddToCartButton from "../AddToCartButton";
 
+
+
+
 interface Props {
     product: (ProductData)
 }
 
-interface State {
-
-}
+interface State {}
 
 
 class StartPageProductDisplay extends Component<Props, State> {
@@ -26,6 +27,7 @@ class StartPageProductDisplay extends Component<Props, State> {
             </Link> 
             <AddToCartButton product={this.props.product} />
         </div>
+     
       )
     }
 }
