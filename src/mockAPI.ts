@@ -33,7 +33,6 @@ const productData: ProductData[] = [
         alt: "Väggfärg Marmorvit",
         style: {
             background: '#F3F3F3',
-            width: '50%'
           },
     },
 

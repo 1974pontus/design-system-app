@@ -21,7 +21,7 @@ class ShopCounter extends React.Component<Props, State> {
 
         <CartConsumer>
           {({ items })  => (
-            <Badge style={{color: '#EBD497'}} count={items.length}>
+            <Badge style={{background: '#1690FF', color: 'black'}} count={items.length}>
               <ShoppingOutlined style={{fontSize: '1.7rem', color: 'black'}} />
             </Badge>
           )}
