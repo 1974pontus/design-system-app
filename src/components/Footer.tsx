@@ -18,8 +18,8 @@ class Footer extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Row style={{ textAlign: "center" }}>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
+        <Row style={{ textAlign: "center",padding: '2rem'}} >
+          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }} >
             Mini Colorini
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
@@ -29,7 +29,7 @@ class Footer extends React.Component<Props, State> {
             Tel. 040-643 164 00
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
-            <a href="mailto:info@minicolorini.se">info@minicolorini.se</a>
+            <a className="loggo" href="mailto:info@minicolorini.se">info@minicolorini.se</a>
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
               <FacebookOutlined style={{ marginLeft: "1rem" }} />
             </a>
@@ -47,11 +47,3 @@ class Footer extends React.Component<Props, State> {
 }
 
 export default Footer;
-// const footer: CSSProperties = {
-   
-//     position: 'absolute',
-//     bottom: '0',
-//     width: '100%',
-//     height: '2.5rem ',
-//    marginBottom: '4rem'
-//   }
