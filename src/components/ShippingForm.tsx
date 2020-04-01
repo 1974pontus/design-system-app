@@ -4,33 +4,35 @@ import { List, Avatar, Radio } from "antd";
 import { ShippingData } from "../shippingData";
 import { RadioChangeEvent } from "antd/lib/radio";
 
+
 interface Props {
-  shippingData: ShippingData[]
+  shippingData: ShippingData[];
 }
 
-interface State {
-  value: number;
+interface State { 
+  value: number
 }
 
 class ShippingForm extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
 
     this.state = {
       value: 1
-    };
-
+    }
   }
-
   onChange = (e: RadioChangeEvent) => {
-    console.log("radio checked", e.target.value, this.props.shippingData[2]);
+    console.log('radio checked', e.target.value, this.props.shippingData[0]);
     this.setState({
       value: e.target.value
-    });
-  };
+    })
+  }
 
   render() {
+    
+
     return (
+      
       <div>
         <List
           itemLayout="horizontal"

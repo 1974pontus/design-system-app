@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AddToCartButton from "../AddToCartButton";
 
 interface Props {
-    product: (ProductData)
+    product: ProductData
 }
 
 interface State {
