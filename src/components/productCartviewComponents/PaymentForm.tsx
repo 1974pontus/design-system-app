@@ -42,7 +42,7 @@ render()
   return (
     
 <Collapse accordion defaultActiveKey={['1']} onChange={this.callback}>
-    <Panel header="Swish" key="1" extra={<Avatar shape="square" size="large" src={("https://pbs.twimg.com/profile_images/1196324788475695104/HUAVlXnu_400x400.jpg")} />}>
+    <Panel header="Swish" key="1" extra={<Avatar shape="square" src={("https://pbs.twimg.com/profile_images/1196324788475695104/HUAVlXnu_400x400.jpg")} />}>
    
      <Form >
          <Form.Item 
@@ -55,7 +55,7 @@ render()
     </Form.Item>
       </Form>
     </Panel>
-  <Panel header="Kortbetalning" key="2" extra={ <Avatar shape="square" size="large" src={("https://www.clipartkey.com/mpngs/m/25-250385_credit-card-payment-icon-png.png")} />}>
+  <Panel header="Kortbetalning" key="2" extra={ <Avatar shape="square" src={("https://www.clipartkey.com/mpngs/m/25-250385_credit-card-payment-icon-png.png")} />}>
     <Form>
     <Form.Item 
           label="Kortnummer" 
@@ -63,7 +63,8 @@ render()
           help="Du kan betala med ditt VISA, Mastercard eller American Express kort."
          >
       <Input id="Cardnumber" minLength={13} maxLength={16} pattern="[0-9]" />
-    </Form.Item>
+    </Form.Item >
+    <Form layout="inline" style={{padding: ".5rem 0 1rem 0" }}>
       <Form.Item label="Månad">
         <Form.Item name="mounth" noStyle>
           <InputNumber min={1} max={12} />
@@ -74,8 +75,8 @@ render()
         <Form.Item name="Year" noStyle>
           <InputNumber min={20} max={34} />
         </Form.Item>
-       
       </Form.Item>
+      </Form>
       <Form.Item 
           label="CVC2"   
           help="Du finner CVC2-koden på backsidan av ditt bankkort."
@@ -83,8 +84,13 @@ render()
       <Input id="CVC2" minLength={3} maxLength={4} pattern="[0-9]"/>
     </Form.Item>
       </Form>
+      <Avatar style={{paddingTop: "1rem" }} shape="square" size="large" src={("https://www.kicksbroz.com/wp-content/uploads/2019/03/visa-5-logo-png-transparent.png")} />
+      <Avatar style={{paddingTop: "1rem" }} shape="square"  size="large" src={("https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/206_Mastercard_Credit_Card_logo_logos-512.png")} />
+      <Avatar style={{paddingTop: "1rem" }} shape="square"  size="large" src={("https://cdn3.iconfinder.com/data/icons/payment-methods-18/512/Americanexpress_american_express_debit-512.png")} />
+
+      
     </Panel>
-    <Panel header="BankID" key="3" extra={<Avatar  shape="square" size="large" src={("https://www.postkodlotteriet.se/images/18.5ee58f3a16d5d8d351a4c4b/1570533262841/20191007%20-%20BankID%20logo%203-2.png")}/>}>
+    <Panel header="BankID" key="3" extra={<Avatar  shape="square" src={("https://www.postkodlotteriet.se/images/18.5ee58f3a16d5d8d351a4c4b/1570533262841/20191007%20-%20BankID%20logo%203-2.png")}/>}>
 <Form>
   <Form.Item
   label="Bank för direktbetalning"   
