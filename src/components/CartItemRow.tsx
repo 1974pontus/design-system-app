@@ -20,26 +20,27 @@ class CartItemRow extends React.Component<Props, State> {
     const { product } = cartItem
     return (
       <CartConsumer>
+       
+
         {({ addProductToCart, deleteProductFromCart, deleteCartItemRow }) => (
           <Row gutter={[8, 16]}>
-            <Col span={7}>
+            <Col sm={24} md={7} lg={7}>
               <img style={productImage} src={product.productImg} alt={product.alt}/>
             </Col>
-            <Col span={5}>
+            <Col  sm={12} md={5} lg={5}>
               {product.productName}
             </Col>
             
-            <Col span={5}>
-             
+            <Col sm={8} md={5} lg={5}>
               <MinusCircleOutlined onClick={() => deleteProductFromCart(product)}/>
               <Badge>{cartItem.quantity}</Badge>
               <PlusCircleOutlined onClick={() => addProductToCart(product)}/>
             </Col>
 
-            <Col span={5}>
-              {product.price * cartItem.quantity}
+            <Col sm={8} md={5} lg={5}>
+              {product.price * cartItem.quantity} sek
             </Col>
-            <Col span={2}>
+            <Col sm={24} md={2} lg={2}>
               <DeleteOutlined onClick={() => deleteCartItemRow(product)}/>
             </Col>
           </Row>

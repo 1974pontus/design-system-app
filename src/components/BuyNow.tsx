@@ -13,7 +13,7 @@ class BuyNow extends React.Component<Props> {
   render() {
       
     return (
-        <Link to={"/order-confirmation"}>  
+         <Link to={"/order-confirmation-page"}>  
             <CartConsumer>
                 {({ getTotalPriceInclShipper }) => (
                 <ButtonGroup>
@@ -23,7 +23,7 @@ class BuyNow extends React.Component<Props> {
                 </ButtonGroup>
                 )}
             </CartConsumer>
-        </Link>
+         </Link>
       
     )
   } 

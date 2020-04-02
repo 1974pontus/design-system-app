@@ -26,6 +26,7 @@ const MainLayout = () => {
           <Route path="/checkout" component={ProductCartView} />
           <Route path="/product-info/:artNr" component={ProductInfo} />
           {/* <Route path="/order-confirmation" component={OrderConfirmation} />  */}
+        
         </Switch>
 
           
