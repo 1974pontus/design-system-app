@@ -6,20 +6,16 @@ import {
   InstagramOutlined
 } from "@ant-design/icons";
 
-interface Props {
+interface Props {}
 
-}
-
-interface State {
-
-}
+interface State {}
 
 class Footer extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Row style={{ textAlign: "center",padding: '2rem'}} >
-          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }} >
+        <Row style={{ textAlign: "center", padding: "2rem" }}>
+          <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
             Mini Colorini
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
@@ -29,14 +25,28 @@ class Footer extends React.Component<Props, State> {
             Tel. 040-643 164 00
           </Col>
           <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 5 }}>
-            <a className="loggo" href="mailto:info@minicolorini.se">info@minicolorini.se</a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+            <a className="loggo" href="mailto:info@minicolorini.se">
+              info@minicolorini.se
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FacebookOutlined style={{ marginLeft: "1rem" }} />
             </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <InstagramOutlined style={{ marginLeft: "1rem" }} />
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <TwitterOutlined style={{ marginLeft: "1rem" }} />
             </a>
           </Col>

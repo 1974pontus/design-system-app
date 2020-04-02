@@ -16,31 +16,32 @@ interface State {}
 
 class CartItemRow extends React.Component<Props, State> {
   render() {
-    const { cartItem } = this.props
-    const { product } = cartItem
+    const { cartItem } = this.props;
+    const { product } = cartItem;
     return (
       <CartConsumer>
         {({ addProductToCart, deleteProductFromCart, deleteCartItemRow }) => (
           <Row gutter={[8, 16]}>
             <Col span={7}>
-              <img style={productImage} src={product.productImg} alt={product.alt}/>
+              <img
+                style={productImage}
+                src={product.productImg}
+                alt={product.alt}
+              />
             </Col>
-            <Col span={5}>
-              {product.productName}
-            </Col>
-            
-            <Col span={5}>
-             
-              <MinusCircleOutlined onClick={() => deleteProductFromCart(product)}/>
-              <Badge>{cartItem.quantity}</Badge>
-              <PlusCircleOutlined onClick={() => addProductToCart(product)}/>
-            </Col>
+            <Col span={5}>{product.productName}</Col>
 
             <Col span={5}>
-              {product.price * cartItem.quantity}
+              <MinusCircleOutlined
+                onClick={() => deleteProductFromCart(product)}
+              />
+              <Badge>{cartItem.quantity}</Badge>
+              <PlusCircleOutlined onClick={() => addProductToCart(product)} />
             </Col>
+
+            <Col span={5}>{product.price * cartItem.quantity}</Col>
             <Col span={2}>
-              <DeleteOutlined onClick={() => deleteCartItemRow(product)}/>
+              <DeleteOutlined onClick={() => deleteCartItemRow(product)} />
             </Col>
           </Row>
         )}

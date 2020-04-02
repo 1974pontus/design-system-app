@@ -38,7 +38,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
               <Col span={5}>Antal</Col>
               <Col span={5}>Pris</Col>
             </Row>
-{/* 
+            {/* 
             <Row gutter={[8, 16]}>
               <Col span={2}>
                 <img
@@ -55,7 +55,8 @@ class OrderConfirmationPage extends React.Component<Props, State> {
               </Col>
 
               <Col span={5}>{product.price * cartItem.quantity}</Col> 
-              */}<Row>
+              */}
+            <Row>
               <h5>Total</h5>
               <h1>
                 {" "}

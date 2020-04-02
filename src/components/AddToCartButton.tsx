@@ -1,17 +1,15 @@
-import React from 'react'
-import { Button } from 'antd'
-import { ProductData } from '../mockAPI'
-import { CartConsumer } from '../context';
-
+import React from "react";
+import { Button } from "antd";
+import { ProductData } from "../mockAPI";
+import { CartConsumer } from "../context";
 
 const ButtonGroup = Button.Group;
 
 interface Props {
-  product: ProductData
+  product: ProductData;
 }
 
 class AddToCartButton extends React.Component<Props> {
-    
   render() {
     return (
       <CartConsumer>
@@ -23,11 +21,8 @@ class AddToCartButton extends React.Component<Props> {
           </ButtonGroup>
         )}
       </CartConsumer>
-    )
-  } 
+    );
+  }
 }
 
-export default AddToCartButton
-
-
-  
+export default AddToCartButton;

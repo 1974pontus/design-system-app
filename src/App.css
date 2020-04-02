@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 .billing {
   display: flex;
@@ -6,7 +6,6 @@
   justify-content: center;
   margin: 3rem;
   padding: 2rem;
-  
 }
 
 .order-wrapper {
@@ -15,8 +14,8 @@
   text-decoration-line: underline;
 }
 
-.positionFixed{
-  position: fixed; 
+.positionFixed {
+  position: fixed;
   right: 0;
   top: 4rem;
   padding: 2rem;
@@ -27,7 +26,7 @@
   .positionFixed {
     position: static;
     bottom: 5rem;
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -35,23 +34,21 @@
   .positionFixed {
     position: static;
     bottom: 5rem;
-    width: 100%
+    width: 100%;
   }
 }
 
-.loggo{
+.loggo {
   color: white;
   animation: back 6s ease-in infinite alternate;
 }
 
 @keyframes back {
   from {
-      color: black;
+    color: black;
   }
 
   to {
-    color: #1690FF;
-  } 
-
+    color: #1690ff;
+  }
 }
-

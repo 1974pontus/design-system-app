@@ -1,6 +1,8 @@
 import React from "react";
 import { ProductData } from "./mockAPI";
-import shippingData, { ShippingData } from "./components/productCartviewComponents/shippingData";
+import shippingData, {
+  ShippingData
+} from "./components/productCartviewComponents/shippingData";
 
 export interface CartItem {
   product: ProductData;
@@ -108,8 +110,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     for (const id of shippingData) {
       this.setState({ selectedShipping: id });
     }
-    console.log(id)
-    return id
+    console.log(id);
+    return id;
   };
 
   render() {
