@@ -55,3 +55,4 @@ export default ProductCartView
 const checkoutWrapper: CSSProperties = {
   margin:'3rem'
 }
+
