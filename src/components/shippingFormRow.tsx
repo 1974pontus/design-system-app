@@ -3,9 +3,7 @@ import "antd/dist/antd.css";
 import "../App.css";
 import "antd/dist/antd.css";
 import { List, Avatar, Radio } from "antd";
-
-import { CartConsumer } from "../context";
-import shippingData, { ShippingData } from "../shippingData";
+import { ShippingData } from "../shippingData";
 
 interface Props {
     item: ShippingData
