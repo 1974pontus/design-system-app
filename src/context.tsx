@@ -17,7 +17,6 @@ interface CartState {
   deleteCartItemRow: (product: ProductData) => void;
   deleteProductFromCart: (product: ProductData) => void;
   getTotalPrice: () => number;
-  setSelectedShipping: (id: string) => void;
 }
 
 const CartContext = React.createContext<CartState>({
@@ -28,7 +27,6 @@ const CartContext = React.createContext<CartState>({
   deleteCartItemRow: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
   getTotalPrice: () => 0,
-  setSelectedShipping: (id: string) => {}
 });
 
 // CartProvider ansvarar för att uppdatera kundvagnen
@@ -44,7 +42,6 @@ export class CartProvider extends React.Component<CartProps, CartState> {
       deleteProductFromCart: this.deleteProductFromCart,
       deleteCartItemRow: this.deleteCartItemRow,
       getTotalPrice: this.getTotalPrice,
-      setSelectedShipping: this.setSelectedShipping
     };
   }
 
@@ -104,13 +101,6 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     return this.getTotalPrice() + this.state.selectedShipping.price;
   };
 
-  setSelectedShipping = (id: string) => {
-    for (const id of shippingData) {
-      this.setState({ selectedShipping: id });
-    }
-    console.log(id)
-    return id
-  };
 
   render() {
     return (
