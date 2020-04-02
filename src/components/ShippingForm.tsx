@@ -1,32 +1,43 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { List, Avatar, Radio } from "antd";
-import { ShippingData } from "../shippingData";
+import shippingData, { ShippingData } from "../shippingData";
+import { CartConsumer } from "../context";
 
 interface Props {
-  shippingData: ShippingData[]
+  shippingData: ShippingData[];
 }
 
+interface State {}
 
-function ShippingForm(props: Props) {
-  return (
-    <div>
-      <List
-        itemLayout="horizontal"
-        dataSource={props.shippingData}
-        renderItem={item => (
-          <List.Item>
-            <Radio></Radio>
-            <List.Item.Meta
-              avatar={<Avatar src={item.avatar} />}
-              title={<a href="https://ant.design">{item.title}</a>}
-              description={item.description}
+class ShippingForm extends React.Component<Props, State> {
+  render() {
+    return (
+      <CartConsumer>
+        {({ setSelectedShipping, selectedShipping }) => (
+          <Radio.Group
+            onChange={e => setSelectedShipping(e.target.value)}
+            value={selectedShipping.id}
+          >
+            <List
+              itemLayout="horizontal"
+              dataSource={shippingData}
+              renderItem={item => (
+                <List.Item>
+                  <Radio value={item.id}></Radio>
+                  <List.Item.Meta
+                    avatar={<Avatar src={item.avatar} />}
+                    title={<a href="https://ant.design">{item.title}</a>}
+                    description={item.description}
+                  />
+                </List.Item>
+              )}
             />
-          </List.Item>
+          </Radio.Group>
         )}
-      />
-    </div>
-  );
+      </CartConsumer>
+    );
+  }
 }
 
 export default ShippingForm;

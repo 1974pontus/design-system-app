@@ -12,7 +12,8 @@ interface Props {
   product: ProductData
   shippingData: ShippingData[]
 }
-interface State {}
+interface State {
+}
 
 class ProductCartView extends React.Component<Props, State> {
 

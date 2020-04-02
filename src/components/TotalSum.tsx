@@ -5,14 +5,11 @@ import "../App.css";
 import { CartConsumer } from "../context";
 import BuyNow from "./BuyNow";
 
-
 interface Props {}
 interface State {}
 
 class TotalCartForm extends React.Component<Props, State> {
   render() {
-    // const { cartItem } = this.props
-    // const { product } = cartItem
     return (
       <CartConsumer>
         {({ getTotalPriceInclShipper }) => (
