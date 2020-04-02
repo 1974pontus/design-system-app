@@ -24,9 +24,34 @@ class BuyNow extends React.Component<Props> {
                 )}
             </CartConsumer>
          </Link>
-      
     )
   } 
 }
 
 export default BuyNow
+
+// const BuyButton = ({ articleNumber, quantity, 
+//     nodeIdToShowNotification, notificationMessage, 
+//     hash, add }) => (
+// <button onClick={() => add({ articleNumber, quantity, 
+//     nodeIdToShowNotification, notificationMessage, 
+//     hash })} 
+// >Add to cart</button>
+// )
+
+// export default connect(() => ({ }), { add })(BuyButton);
+
+
+// const PayButton = ({ onPayClick }) => (
+//     <button
+//       type='button'
+//       className='cart-pay-button'
+//       onClick={() => onPayClick()}
+//     >
+//       Pay now
+//     </button>
+//   );
+  
+//   PayButton.PropTypes = {
+//     onPayClick: PropTypes.func.isRequired,
+//   };
