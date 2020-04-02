@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import "antd/dist/antd.css";
 import { Radio } from "antd";
-import { ShippingData } from "../shippingData";
+import { ShippingData } from "./shippingData";
 import ShippingFormRow from "./shippingFormRow";
 
-import {CartContext} from "../context"
+import {CartContext} from "../../context"
 
 interface Props {
   shippingData: ShippingData[];

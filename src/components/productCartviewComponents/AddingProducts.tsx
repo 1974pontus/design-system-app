@@ -1,26 +1,24 @@
-import { Button } from 'antd';
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
-import React from 'react';
+import { Button } from "antd";
+import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
+import React from "react";
 // import { ButtonGroupProps } from 'antd/lib/button';
 
 const ButtonGroup = Button.Group;
 
-
 interface Props {
-    // BottonGrup: React.SFC<ButtonGroupProps>
-    increase: ()=> void,
-    decline: ()=> void
+  // BottonGrup: React.SFC<ButtonGroupProps>
+  increase: () => void;
+  decline: () => void;
 }
 interface State {
-    count: number,
-    show: boolean,
+  count: number;
+  show: boolean;
 }
 
 class AddingProducts extends React.Component {
- 
-state = {
+  state = {
     count: 5,
-    show: true,
+    show: true
   };
 
   increase = () => {
@@ -56,8 +54,7 @@ state = {
         </div>
       </div>
     );
-    
   }
 }
 
-export default AddingProducts
+export default AddingProducts;
