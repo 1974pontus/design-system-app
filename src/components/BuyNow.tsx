@@ -6,9 +6,7 @@ import { CartConsumer } from '../context';
 
 const ButtonGroup = Button.Group;
 
-interface Props {
-
-}
+interface Props {}
 
 class BuyNow extends React.Component<Props> {
     
