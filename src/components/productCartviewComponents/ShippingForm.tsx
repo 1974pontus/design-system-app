@@ -1,43 +1,35 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "antd/dist/antd.css";
-import { List, Avatar, Radio } from "antd";
-import shippingData, { ShippingData } from "./shippingData";
-import { CartConsumer } from "../../context";
+import { Radio } from "antd";
+import { ShippingData } from "./shippingData";
+import ShippingFormRow from "./shippingFormRow";
+
+import {CartContext} from "../../context"
 
 interface Props {
   shippingData: ShippingData[];
 }
 
-interface State {}
+export default function ShippingForm(props: Props) {
+  const [value, setValue] = useState(1);
+  const { setSelectedShipping } = useContext(CartContext)
 
-class ShippingForm extends React.Component<Props, State> {
-  render() {
-    return (
-      <CartConsumer>
-        {({ setSelectedShipping, selectedShipping }) => (
-          <Radio.Group
-            onChange={e => setSelectedShipping(e.target.value)}
-            value={selectedShipping.id}
-          >
-            <List
-              itemLayout="horizontal"
-              dataSource={shippingData}
-              renderItem={item => (
-                <List.Item>
-                  <Radio value={item.id}></Radio>
-                  <List.Item.Meta
-                    avatar={<Avatar src={item.avatar} />}
-                    title={<a href="https://ant.design">{item.title}</a>}
-                    description={item.description}
-                  />
-                </List.Item>
-              )}
-            />
-          </Radio.Group>
-        )}
-      </CartConsumer>
-    );
-  }
+  const onChange = (e: any) => {
+    console.log("value", e.target.value);
+    
+    setValue(e.target.value);
+  };
+  
+  useEffect(() => { 
+    setSelectedShipping(value - 1); // offset to 0 index
+    console.log(value)
+  }, [value]);
+
+  return (
+    <Radio.Group onChange={onChange} value={value} defaultValue={[1]}>
+      <ShippingFormRow item={props.shippingData[0]}></ShippingFormRow>
+      <ShippingFormRow item={props.shippingData[1]}></ShippingFormRow>
+      <ShippingFormRow item={props.shippingData[2]}></ShippingFormRow>
+    </Radio.Group>
+  );
 }
-
-export default ShippingForm;

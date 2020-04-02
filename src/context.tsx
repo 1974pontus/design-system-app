@@ -14,23 +14,23 @@ interface CartProps {}
 interface CartState {
   items: CartItem[];
   selectedShipping: ShippingData;
+  setSelectedShipping: (shippingId: number) => void;
   getTotalPriceInclShipper: () => number;
   addProductToCart: (product: ProductData) => void;
   deleteCartItemRow: (product: ProductData) => void;
   deleteProductFromCart: (product: ProductData) => void;
   getTotalPrice: () => number;
-  setSelectedShipping: (id: string) => void;
 }
 
-const CartContext = React.createContext<CartState>({
+export const CartContext = React.createContext<CartState>({
   items: [],
   selectedShipping: shippingData[0],
+  setSelectedShipping: () => {},
   getTotalPriceInclShipper: () => 0,
   addProductToCart: (product: ProductData) => {},
   deleteCartItemRow: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
   getTotalPrice: () => 0,
-  setSelectedShipping: (id: string) => {}
 });
 
 // CartProvider ansvarar för att uppdatera kundvagnen
@@ -41,13 +41,17 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     this.state = {
       items: [],
       selectedShipping: shippingData[0],
+      setSelectedShipping: this.setSelectedShipping,
       getTotalPriceInclShipper: this.getTotalPriceInclShipper,
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
       deleteCartItemRow: this.deleteCartItemRow,
       getTotalPrice: this.getTotalPrice,
-      setSelectedShipping: this.setSelectedShipping
     };
+  }
+
+  setSelectedShipping = (shippingId: number) => {
+    this.setState({ selectedShipping: shippingData[shippingId] })
   }
 
   addProductToCart = (product: ProductData) => {
@@ -106,15 +110,9 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     return this.getTotalPrice() + this.state.selectedShipping.price;
   };
 
-  setSelectedShipping = (id: string) => {
-    for (const id of shippingData) {
-      this.setState({ selectedShipping: id });
-    }
-    console.log(id);
-    return id;
-  };
 
   render() {
+    console.log("context state", this.state)
     return (
       <CartContext.Provider value={this.state}>
         {this.props.children}
