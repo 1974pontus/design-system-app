@@ -35,7 +35,3 @@ class TotalCartForm extends React.Component<Props, State> {
 }
 
 export default TotalCartForm;
-
-
-
-
