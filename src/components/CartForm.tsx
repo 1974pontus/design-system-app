@@ -22,14 +22,14 @@ class CartForm extends React.Component<Props, State> {
     return (
       <div className="order-wrapper">
         <div className="order-title">
-          <Row gutter={[8, 16]}>
-            <Col span={2}></Col>
-            <Col span={15}>Produkter</Col>
-            <Col span={3}>Antal</Col>
-            <Col span={3}>Pris</Col>
+           <Row gutter={[8, 16]}>
+            <Col span={7}></Col>
+            <Col span={5}>Produkt</Col>
+            <Col span={5}>Antal</Col>
+            <Col span={5}>Pris</Col>
             <Col span={2}></Col>
           </Row>
-        </div>
+        </div> 
         
         {this.props.cartItems.map((cartItem) => <CartItemRow cartItem={cartItem}/>)}  
           <div className="otder-footer">

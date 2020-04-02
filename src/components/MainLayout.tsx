@@ -7,6 +7,7 @@ import ProductCartView from "./ProductCartView";
 import ProductInfo from "./ProductInfo";
 import Footer from "./Footer";
 import StartPage from "./StartPage";
+//import OrderConfirmation from "./OrderConfirmation";
 
 
 const MainLayout = () => {
@@ -24,6 +25,7 @@ const MainLayout = () => {
           <Route exact path="/" component={StartPage} />
           <Route path="/checkout" component={ProductCartView} />
           <Route path="/product-info/:artNr" component={ProductInfo} />
+          {/* <Route path="/order-confirmation" component={OrderConfirmation} />  */}
         </Switch>
 
           
