@@ -30,7 +30,7 @@ export const CartContext = React.createContext<CartState>({
   addProductToCart: (product: ProductData) => {},
   deleteCartItemRow: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
-  getTotalPrice: () => 0,
+  getTotalPrice: () => 0
 });
 
 // CartProvider ansvarar för att uppdatera kundvagnen
@@ -46,13 +46,13 @@ export class CartProvider extends React.Component<CartProps, CartState> {
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
       deleteCartItemRow: this.deleteCartItemRow,
-      getTotalPrice: this.getTotalPrice,
+      getTotalPrice: this.getTotalPrice
     };
   }
 
   setSelectedShipping = (shippingId: number) => {
-    this.setState({ selectedShipping: shippingData[shippingId] })
-  }
+    this.setState({ selectedShipping: shippingData[shippingId] });
+  };
 
   addProductToCart = (product: ProductData) => {
     // Clone to state array so that we don't mutate the state (which is prohibited in React)
@@ -110,9 +110,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
     return this.getTotalPrice() + this.state.selectedShipping.price;
   };
 
-
   render() {
-    console.log("context state", this.state)
+    console.log("context state", this.state);
     return (
       <CartContext.Provider value={this.state}>
         {this.props.children}

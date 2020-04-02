@@ -26,7 +26,7 @@ export default function ShippingForm(props: Props) {
   }, [value]);
 
   return (
-    <Radio.Group onChange={onChange} value={value} defaultValue={[1]}>
+    <Radio.Group onChange={onChange} value={value} defaultValue={1}>
       <ShippingFormRow item={props.shippingData[0]}></ShippingFormRow>
       <ShippingFormRow item={props.shippingData[1]}></ShippingFormRow>
       <ShippingFormRow item={props.shippingData[2]}></ShippingFormRow>
