@@ -35,13 +35,17 @@ const tailFormItemLayout = {
   }
 };
 
-const BillingForm = () => {
+interface Props {
+  onFinish: any
+}
+
+const BillingForm = (props: Props) => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+ /*  const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
     console.log(values.phone)
-  };
+  }; */
 
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
@@ -63,7 +67,7 @@ const BillingForm = () => {
       {...formItemLayout}
       form={form}
       name="register"
-      onFinish={onFinish}
+      onFinish={props.onFinish}
       initialValues={{
         residence: ["Sverige", "Västra Götaland", "Göteborg"],
         prefix: "46"
