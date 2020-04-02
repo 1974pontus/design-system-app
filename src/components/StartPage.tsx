@@ -14,8 +14,7 @@ class StartPage extends React.Component<Props, State> {
       <div>
         <IntroImg />
         <FirstIntroText />
-       
-        
+
         <Row
           style={{ textAlign: "center", margin: "2rem" }}
           justify="center"
@@ -29,7 +28,7 @@ class StartPage extends React.Component<Props, State> {
           ))}
         </Row>
       </div>
-    )
+    );
   }
 }
 

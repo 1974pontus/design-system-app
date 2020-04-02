@@ -1,10 +1,10 @@
 import React, { CSSProperties } from 'react'
-import CartForm from './CartForm';
-import ShippingForm from './ShippingForm';
-import BillingForm from './BillingForm';
+import CartForm from './productCartviewComponents/CartForm';
+import ShippingForm from './productCartviewComponents/ShippingForm';
+import BillingForm from './productCartviewComponents/BillingForm';
 import { ProductData } from '../mockAPI';
 import { CartConsumer } from '../context';
-import TotalCartForm from './TotalSum'
+import TotalCartForm from './productCartviewComponents/TotalSum'
 import PaymentForm from './productCartviewComponents/PaymentForm';
 import shippingData, { ShippingData } from '../shippingData';
 

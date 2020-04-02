@@ -1,39 +1,35 @@
-import { Badge } from 'antd';
-import { ShoppingOutlined } from '@ant-design/icons';
-import React from 'react';
-import { CartConsumer } from '../context';
+import { Badge } from "antd";
+import { ShoppingOutlined } from "@ant-design/icons";
+import React from "react";
+import { CartConsumer } from "../context";
 
 interface Props {}
 
 interface State {
- count: number,
- show: boolean,
+  count: number;
+  show: boolean;
 }
 
 class ShopCounter extends React.Component<Props, State> {
   state = {
     count: 1,
-    show: true,
+    show: true
   };
 
   render() {
     return (
-
-        <CartConsumer>
-          {({ items })  => (
-            <Badge style={{background: '#1690FF', color: 'black'}} count={items.length}>
-              <ShoppingOutlined style={{fontSize: '1.7rem', color: 'black'}} />
-            </Badge>
-          )}
-        </CartConsumer>
-    ) 
+      <CartConsumer>
+        {({ items }) => (
+          <Badge
+            style={{ background: "#1690FF", color: "black" }}
+            count={items.length}
+          >
+            <ShoppingOutlined style={{ fontSize: "1.7rem", color: "black" }} />
+          </Badge>
+        )}
+      </CartConsumer>
+    );
   }
 }
 
-export default ShopCounter
-
-
-
-
-
-  
+export default ShopCounter;
