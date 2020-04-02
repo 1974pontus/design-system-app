@@ -43,7 +43,7 @@ class PaymentForm extends React.Component<Props, State> {
         >
           <Form>
             <Form.Item
-              name={['phonenumber']} 
+              name={['phone']} 
               rules={[{ type: 'number', min: 10, max: 10 }]}
               label="Telefonnummer"
               /*  hasFeedback validateStatus="success"  */
@@ -51,7 +51,7 @@ class PaymentForm extends React.Component<Props, State> {
               help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
             >
               <Input
-                id="Phonenumber"
+                id="phone"
                 maxLength={10}
                 pattern="[0-9]"
                 style={{ width: "10rem" }}
@@ -72,6 +72,16 @@ class PaymentForm extends React.Component<Props, State> {
           }
         >
           <Form>
+          <Form.Item
+              label="Kortinnehavare"
+            >
+              <Input
+                id="name"
+                name="name"
+                /* pattern="[0-9]" */
+                style={{ width: "15rem" }}
+              />
+            </Form.Item>
             <Form.Item
               label="Kortnummer"
               /* hasFeedback validateStatus="success"   */
@@ -109,6 +119,7 @@ class PaymentForm extends React.Component<Props, State> {
                 style={{ width: "6rem" }}
               />
             </Form.Item>
+            
           </Form>
           <Avatar
             style={{ paddingTop: "1rem" }}
