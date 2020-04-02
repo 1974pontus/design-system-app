@@ -28,7 +28,7 @@ class OrderConfirmation extends React.Component<Props, State> {
             <Col span={24}>
                 <h1>Mini Colorini</h1>
                 <h3>Tack för att du handlar hos Mini Colorini</h3>
-        <h6>Ditt Ordernummer:{orderNumber}</h6>
+                <h6>Ditt Ordernummer:{orderNumber}</h6>
        
                 
                 
