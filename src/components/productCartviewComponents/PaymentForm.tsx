@@ -2,18 +2,23 @@ import React from "react";
 import "antd/dist/antd.css";
 import { Collapse, Form, Input, InputNumber, Select, Avatar } from "antd";
 
-interface Props {}
+interface Props {
+  phone: string
+}
 
 interface State {}
+
 
 const { Panel } = Collapse;
 const { Option } = Select;
 
 class PaymentForm extends React.Component<Props, State> {
+ 
   state = {
     key: 1
   };
 
+  
   callback(key: any) {
     console.log(key);
   }
@@ -27,6 +32,7 @@ class PaymentForm extends React.Component<Props, State> {
   }; */
 
   render() {
+    console.log(this.props.phone)
     return (
       <Collapse accordion defaultActiveKey={["1"]} onChange={this.callback}>
         <Panel
@@ -38,7 +44,9 @@ class PaymentForm extends React.Component<Props, State> {
               src={
                 "https://pbs.twimg.com/profile_images/1196324788475695104/HUAVlXnu_400x400.jpg"
               }
+              
             />
+            
           }
         >
           <Form>
@@ -47,11 +55,12 @@ class PaymentForm extends React.Component<Props, State> {
               rules={[{ type: 'number', min: 10, max: 10 }]}
               label="Telefonnummer"
               /*  hasFeedback validateStatus="success"  */
-
               help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
             >
               <Input
                 id="phone"
+                defaultValue={this.props.phone}
+                placeholder={this.props.phone}
                 maxLength={10}
                 pattern="[0-9]"
                 style={{ width: "10rem" }}
