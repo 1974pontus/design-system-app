@@ -1,13 +1,13 @@
 import React from 'react'
 import { Button } from 'antd'
-import { ProductData } from '../mockAPI'
+
 import { CartConsumer } from '../context';
 
 
 const ButtonGroup = Button.Group;
 
 interface Props {
-  product: ProductData
+
 }
 
 class BuyNow extends React.Component<Props> {
@@ -17,7 +17,7 @@ class BuyNow extends React.Component<Props> {
       <CartConsumer>
         {({ getTotalPriceInclShipper }) => (
           <ButtonGroup>
-            <Button onClick={() => getTotalPriceInclShipper()}>
+            <Button type="primary" onClick={() => getTotalPriceInclShipper()}>
               Slutför köp
             </Button>
           </ButtonGroup>

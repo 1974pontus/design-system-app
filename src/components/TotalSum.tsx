@@ -3,7 +3,6 @@ import { Row, Col } from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
 import { CartConsumer } from "../context";
-import BuyNow from "./BuyNow";
 
 
 interface Props {}
@@ -27,7 +26,6 @@ class TotalCartForm extends React.Component<Props, State> {
 
         <Col span={3}> {getTotalPriceInclShipper()}kr</Col>
             <Col span={1}>
-              <BuyNow {...getTotalPriceInclShipper()} />
             </Col>
           </Row>
         )}
