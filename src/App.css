@@ -31,6 +31,14 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .positionFixed {
+    position: static;
+    bottom: 5rem;
+    width: 100%
+  }
+}
+
 .loggo{
   color: white;
   animation: back 6s ease-in infinite alternate;

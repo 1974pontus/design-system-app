@@ -62,8 +62,7 @@ const productImage: CSSProperties = {
 
   const infoWrapper: CSSProperties = {
     padding:'3rem',
-    display: 'flex',
-    justifyItems: 'column'
+   
   }
 
   

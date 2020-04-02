@@ -7,7 +7,7 @@ import AddToCartButton from "../AddToCartButton";
 
 
 interface Props {
-    product: (ProductData)
+    product: ProductData
 }
 
 interface State {}
