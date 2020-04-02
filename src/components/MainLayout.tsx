@@ -7,7 +7,7 @@ import ProductCartViewPage from "./ProductCartViewPage";
 import Footer from "./Footer";
 import StartPage from "./StartPage";
 import ProductInfoPage from "./ProductInfoPage";
-//import OrderConfirmationPage from "./OrderConfirmationPage";
+import OrderConfirmationPage from "./OrderConfirmationPage";
 
 
 const MainLayout = () => {
@@ -25,7 +25,7 @@ const MainLayout = () => {
           <Route exact path="/" component={StartPage} />
           <Route path="/checkout" component={ProductCartViewPage} />
           <Route path="/product-info/:artNr" component={ProductInfoPage} />
-          {/* <Route path="/order-confirmation" component={OrderConfirmationPage} />  */}
+          <Route path="/order-confirmation" component={OrderConfirmationPage} /> 
         </Switch>
 
           

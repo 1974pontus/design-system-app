@@ -8,7 +8,7 @@ const ButtonGroup = Button.Group;
 
 interface Props {}
 
-class BuyNow extends React.Component<Props> {
+class BuyNowButton extends React.Component<Props> {
     
   render() {
       
@@ -29,4 +29,4 @@ class BuyNow extends React.Component<Props> {
   } 
 }
 
-export default BuyNow
+export default BuyNowButton
