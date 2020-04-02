@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductData } from "./mockAPI";
-import shippingData, { ShippingData } from "./shippingData";
+import shippingData, { ShippingData } from "./components/productCartviewComponents/shippingData";
 
 export interface CartItem {
   product: ProductData;

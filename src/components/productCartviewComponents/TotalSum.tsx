@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Col } from "antd";
 import "antd/dist/antd.css";
-import "../App.css";
-import { CartConsumer } from "../context";
+import "../../App.css";
+import { CartConsumer } from "../../context";
 import BuyNow from "./BuyNow";
 
 interface Props {}

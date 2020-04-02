@@ -1,5 +1,5 @@
-import postnord from "./img/postnord.jpeg";
-import dhl from "./img/DHL.jpg";
+import postnord from "../../img/postnord.jpeg";
+import dhl from "../../img/DHL.jpg";
 
 export interface ShippingData {
     id: string

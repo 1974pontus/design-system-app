@@ -1,9 +1,9 @@
 import React from "react";
 import { Row, Col } from "antd";
 import "antd/dist/antd.css";
-import "../App.css";
+import "../../App.css";
 import CartItemRow from "./CartItemRow";
-import { CartItem, CartConsumer } from "../context";
+import { CartItem, CartConsumer } from "../../context";
 
 
 

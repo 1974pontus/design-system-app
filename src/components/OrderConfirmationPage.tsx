@@ -15,7 +15,7 @@ interface Props {
 }
 interface State {}
 
-class OrderConfirmation extends React.Component<Props, State> {
+class OrderConfirmationPage extends React.Component<Props, State> {
   render() {
     const { cartItem } = this.props
     const { product } = cartItem
@@ -81,7 +81,7 @@ class OrderConfirmation extends React.Component<Props, State> {
   }
 }
 
-export default OrderConfirmation;
+export default OrderConfirmationPage;
 
 const productImage: CSSProperties = {
   width: "5rem",

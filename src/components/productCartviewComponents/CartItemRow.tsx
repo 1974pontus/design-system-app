@@ -1,13 +1,13 @@
 import React, { CSSProperties } from "react";
 import { Row, Col, Badge } from "antd";
 import "antd/dist/antd.css";
-import "../App.css";
+import "../../App.css";
 import {
   DeleteOutlined,
   MinusCircleOutlined,
   PlusCircleOutlined
 } from "@ant-design/icons";
-import { CartConsumer, CartItem } from "../context";
+import { CartConsumer, CartItem } from "../../context";
 
 interface Props {
   cartItem: CartItem;

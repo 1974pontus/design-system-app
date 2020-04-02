@@ -1,4 +1,4 @@
-import sommarmalvaThumb from "./img/sommarmalvaThumb.png"
+
 import { CSSProperties } from "react"
 
 export interface ProductData {
@@ -10,7 +10,6 @@ export interface ProductData {
     stock?: string
     price: number;
     productImg: string;
-    productThumbImg?: string
     colorImg?: string;
     roomImg?: string;
     alt: string;
@@ -27,7 +26,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 385, 
         productImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-101-vaggfarg-555-marmorvit_a848138c12.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-101-vaggfarg-555-marmorvit-2_a6668cce34.jpg"),
         roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_IMG_4726-kopia_dd51c87c4f.jpg"),
         alt: "Väggfärg Marmorvit",
@@ -45,7 +43,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 445, 
         productImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-131-vaggfarg-555-sandsten_6112741cd5.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-131-vaggfarg-555-sandsten-2_ea6ebf1c6a.png"),
         roomImg: ("https://www.auro.se/fileadmin/_processed_/csm__MG_0410_69fa6342e5.jpg"),
         alt: "Väggfärg Sandsten",
@@ -63,7 +60,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 445, 
         productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-126-vaggfarg-555-mellangra.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-126-vaggfarg-555-mellangra-2.jpg"),
         roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_Steel-1_3856f6161d.jpg"),
         alt: "Väggfärg Mellangrå",
@@ -81,7 +77,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 445,
         productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-181-vaggfarg-555-varmgul.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-181-vaggfarg-555-varmgul-2_ae15390422.png"),
         roomImg: ("https://i.pinimg.com/564x/19/1b/1f/191b1fabac1ef624a166957c22e5c035.jpg"),
         alt: "Väggfärg Varmgul",
@@ -101,7 +96,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 445, 
         productImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-196-vaggfarg-555-turkos-patricia.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-196-vaggfarg-555-turkos-patricia-2.jpg"),
         roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_turkos-patricia_488d48829e.jpg"),
         alt: "Väggfärg Turkos Patricia",
@@ -121,7 +115,6 @@ const productData: ProductData[] = [
         stock: "Tillverkas på beställning",
         price: 495,  
         productImg: ("https://www.auro.se/fileadmin/_processed_/csm_458-206-vaggfarg-555-mork-jade_2442c10af2.jpg"),
-        productThumbImg: `url(${sommarmalvaThumb})`,
         colorImg: ("https://www.auro.se/fileadmin/filemount/produktbilder/farg-ytbehandling/farg/vaggfarg-555/458-206-vaggfarg-555-mork-jade-2.jpg"),
         roomImg: ("https://www.auro.se/fileadmin/_processed_/csm_Jade-1_6b1fa680cf.jpg"),
         alt: "Väggfärg Mörk Jade",

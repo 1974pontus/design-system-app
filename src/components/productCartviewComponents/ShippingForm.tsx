@@ -1,8 +1,8 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { List, Avatar, Radio } from "antd";
-import shippingData, { ShippingData } from "../shippingData";
-import { CartConsumer } from "../context";
+import shippingData, { ShippingData } from "./shippingData"
+import { CartConsumer } from "../../context";
 
 interface Props {
   shippingData: ShippingData[];

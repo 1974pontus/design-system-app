@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
-import { CartConsumer } from '../context';
+import { CartConsumer } from '../../context';
 import { Link } from 'react-router-dom';
 
 

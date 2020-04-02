@@ -14,7 +14,7 @@ interface State {
 
 
 
-class ProductInfo extends React.Component<Props, State>{
+class ProductInfoPage extends React.Component<Props, State>{
 
 // constructor(props: Readonly<Props>) {
 //   super(props)
@@ -52,7 +52,7 @@ class ProductInfo extends React.Component<Props, State>{
     }  
   }
 
-export default ProductInfo
+export default ProductInfoPage
 
 const productImage: CSSProperties = {
     width: '30rem',
