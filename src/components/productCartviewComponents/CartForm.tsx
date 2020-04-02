@@ -30,12 +30,9 @@ class CartForm extends React.Component<Props, State> {
         <div className="otder-footer">
           <CartConsumer>
             {({ getTotalPrice }) => (
-              <Row gutter={[8, 16]}>
-                <Col span={2}></Col>
-                <Col span={15}></Col>
-                <Col span={3}>Summa:</Col>
-                <Col span={3}>{getTotalPrice()}kr</Col>
-                <Col span={2}></Col>
+                  <Row justify="space-between" align="bottom">
+                <Col span={12}></Col>
+                <Col span={12} style={{textAlign: "right"}}>Summa: {getTotalPrice()}kr</Col>
               </Row>
             )}
           </CartConsumer>

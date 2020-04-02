@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import CartForm from './productCartviewComponents/CartForm';
 import ShippingForm from './productCartviewComponents/ShippingForm';
 import BillingForm from './productCartviewComponents/BillingForm';
@@ -7,6 +7,7 @@ import { CartConsumer } from '../context';
 import TotalCartForm from './productCartviewComponents/TotalSum'
 import PaymentForm from './productCartviewComponents/PaymentForm';
 import shippingData, { ShippingData } from '../shippingData';
+import { Divider, Row, Col } from 'antd';
 
 interface Props {
   product: ProductData
@@ -31,19 +32,36 @@ class ProductCartView extends React.Component<Props, State> {
     return (
       <CartConsumer>
         {({ items, }) => (
-          <div style={checkoutWrapper}>
-              <h1>Kassa</h1>
-              <CartForm cartItems={items} />
-              <h1>Dina uppgifter</h1>
-              <BillingForm onFinish={this.onFinish}/>
-              <h1>Fraktsätt</h1>
-              <ShippingForm shippingData={shippingData}/>
-              <h1>Betalsätt</h1>
-              <PaymentForm phone={this.state.phone}/>
-              <h1>Att betala</h1>
+            <Row justify="center" align="top">
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
+              Kassa
+              </Divider>
+              <Col sm={24} md={12} lg={16}>
+                <CartForm cartItems={items} />
+              </Col>
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
+               Dina uppgifter
+              </Divider>
+              <Col sm={24} lg={12}>
+                <BillingForm onFinish={this.onFinish}/>
+              </Col>
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '0 0 2rem 2rem'}}>
+              Fraktsätt
+              </Divider>
+              <Col sm={24} lg={6}>
+                <ShippingForm shippingData={shippingData}/>
+              </Col>
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' , padding: '2rem 0'}}>
+              Betalsätt
+              </Divider>
+              <Col sm={24} lg={12}>
+                <PaymentForm phone={this.state.phone}/>
+              </Col>
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '2rem 0' }}>
+              Att betala
+              </Divider>
               <TotalCartForm  />
-              
-          </div>
+            </Row>
         )}
       </CartConsumer>
     );
@@ -52,7 +70,4 @@ class ProductCartView extends React.Component<Props, State> {
 
 export default ProductCartView
 
-const checkoutWrapper: CSSProperties = {
-  margin:'3rem'
-}
 
