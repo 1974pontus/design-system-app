@@ -1,8 +1,10 @@
 import React, { CSSProperties } from "react";
-import { Row, Col} from "antd";
+import { Row, Col, Button} from "antd";
 import "antd/dist/antd.css";
 import "../App.css";
 import { CartConsumer, CartItem } from "../context";
+import { Link } from "react-router-dom";
+
 
 interface Props {
   cartItem: CartItem;
@@ -15,8 +17,15 @@ class OrderConfirmation extends React.Component<Props, State> {
     const { product } = cartItem
     return (
       <CartConsumer>
+
         {({ getTotalPriceInclShipper }) => (
             <div>
+        <Row>
+            <Col span={24}>
+                <h1>Tack gör din Colorini beställning</h1>
+                <h6>Ditt Ordernummer: </h6>
+            </Col>
+        </Row>
 
             <Row gutter={[8, 16]}>
                 <Col span={2}></Col>
@@ -42,8 +51,18 @@ class OrderConfirmation extends React.Component<Props, State> {
             <Col span={5}>{product.price * cartItem.quantity}</Col>
             <h1>  Total summa inklusive frakt:  {getTotalPriceInclShipper()}kr</h1>
           </Row>
-            </div>
+              <Row>
+            <Col span={24}>
+                <h1>Vi Hoppas du blir nöjd med din colorini.</h1> 
+                <h3>Happy Painting</h3>   
+                <Link to={"/"}>  
+                    <Button type="primary">Klar</Button>
+                </Link> 
+            </Col>
+        </Row>
+        </div>
         )}
+
       </CartConsumer>
     );
   }
