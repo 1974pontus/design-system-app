@@ -5,7 +5,10 @@ import "../App.css";
 import { CartConsumer, CartItem } from "../context";
 import { Link } from "react-router-dom";
 
-
+let orderNumber = new Uint32Array(1);
+  window.crypto.getRandomValues(orderNumber);
+  for (var i = 0; i < orderNumber.length; i++) {
+}
 
 interface Props {
   cartItem: CartItem;
@@ -25,7 +28,8 @@ class OrderConfirmation extends React.Component<Props, State> {
             <Col span={24}>
                 <h1>Mini Colorini</h1>
                 <h3>Tack för att du handlar hos Mini Colorini</h3>
-                <h6>Ditt Ordernummer: </h6>
+                <h6>Ditt Ordernummer:{orderNumber}</h6>
+       
                 
                 
             </Col>
