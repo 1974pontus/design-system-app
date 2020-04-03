@@ -27,6 +27,11 @@ class ProductCartView extends React.Component<Props, State> {
       shouldRedirect: false
     }
   }
+
+  pay = async() => {
+    new Promise(res => setTimeout(res, 2000) ).then(res => this.sumbitForm()) 
+  }
+
   sumbitForm =() => {
     console.log('hej')
        //redirect state
@@ -48,8 +53,8 @@ class ProductCartView extends React.Component<Props, State> {
         {({ items, }) => (
 
             <Row justify="center" align="top">
-              <Form onFinish={this.sumbitForm}>
-              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
+              <Form onFinish={this.pay}>
+              <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }} >
               Kassa
               </Divider>
               <Col sm={24} md={12} lg={16}>
@@ -71,7 +76,7 @@ class ProductCartView extends React.Component<Props, State> {
               Betalsätt
               </Divider>
               <Col sm={24} lg={12}>
-                <PaymentForm phone={this.state.phone}/>
+                {/* <PaymentForm phone={this.state.phone}/> */}
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '2rem 0' }}>
               Att betala
