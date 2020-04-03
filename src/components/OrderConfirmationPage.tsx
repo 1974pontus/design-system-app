@@ -23,9 +23,10 @@ class OrderConfirmationPage extends React.Component<Props, State> {
           OrderBekräftelse
          </Divider>
           <Row  justify="center" align="top" style={{ textAlign: 'center', padding: '2rem'}} >
-            <Col span={8}>
+            <Col span={12}>
               <h1>Mini Colorini</h1>
               <h4>Tack för att du handlar hos Mini Colorini</h4>
+              <hr></hr>
               <h4>Ditt Ordernummer:</h4>
               <h4>{orderNumber}</h4>
             </Col>
@@ -58,10 +59,11 @@ class OrderConfirmationPage extends React.Component<Props, State> {
        </Divider>
       
        <Row  justify="center" align="top" style={{ textAlign: 'center', padding: '2rem'}}>
-          <Col span={8}>
+          <Col span={12}>
             <h4>Vi Hoppas du blir nöjd med din colorini.</h4>
+            <hr></hr>
             <h4>Happy Painting</h4>
-          
+            <br></br>
               <Link to={"/"}> 
               <Button type="primary" onClick={() => clearCart()}>Shoppa vidare</Button>
               </Link>
