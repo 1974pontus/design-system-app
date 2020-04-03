@@ -27,7 +27,7 @@ class IntroImg extends React.Component<Props, State> {
                 <img
                   style={StartPageImage}
                   src="https://www.auro.se/fileadmin/filemount/miljobilder/auro/pastellbla.jpg"
-                  alt="bedroom with a warm yellow painted wall"
+                  alt="pastel blue background with a lush flower"
                 ></img>
               </Col>
             </Row>
@@ -38,7 +38,7 @@ class IntroImg extends React.Component<Props, State> {
                 <img
                   style={StartPageImage}
                   src="https://www.auro.se/fileadmin/filemount/miljobilder/auro/liljevit.jpg"
-                  alt="bedroom with a warm yellow painted wall"
+                  alt="lily white background with wheat in front"
                 ></img>
               </Col>
             </Row>
