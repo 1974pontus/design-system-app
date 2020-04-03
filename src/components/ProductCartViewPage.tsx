@@ -8,6 +8,7 @@ import TotalCartForm from './productCartviewComponents/TotalSum'
 import PaymentForm from './productCartviewComponents/PaymentForm';
 import shippingData, { ShippingData } from '../shippingData';
 import { Divider, Row, Col, Form } from 'antd';
+import { Redirect } from 'react-router-dom';
 
 interface Props {
   product: ProductData
@@ -15,17 +16,21 @@ interface Props {
 }
 interface State {
   phone: string
+  shouldRedirect: boolean;
 }
 
 class ProductCartView extends React.Component<Props, State> {
   constructor(props:Props) {
     super(props);
-    this.state= {phone: ""}
+    this.state= {
+      phone: "",
+      shouldRedirect: false
+    }
   }
   sumbitForm =() => {
     console.log('hej')
-       //redirect state 
-    
+       //redirect state
+    this.setState({ shouldRedirect: true });
   }
 
   onFinish = (values: any) => {
@@ -35,6 +40,9 @@ class ProductCartView extends React.Component<Props, State> {
  
   };
   render() {
+    if (this.state.shouldRedirect) {
+      return <Redirect to="/order-confirmation" />;
+    }
     return (
       <CartConsumer>
         {({ items, }) => (

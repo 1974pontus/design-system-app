@@ -25,6 +25,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
 
   
   render() {
+    
     /* const { cartItem } = this.props;
     const { product } = cartItem; */
     return (
