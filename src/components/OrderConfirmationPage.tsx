@@ -26,7 +26,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
             <Col span={12}>
               <h1>Mini Colorini</h1>
               <h4>Tack för att du handlar hos oss</h4>
-              |||||||||||||||||||||||||||||||
+              ||||||||||||||||||||||||||||||||
               <h4>Ditt Ordernummer:</h4>
               <h4>{orderNumber}</h4>
             </Col>
@@ -61,7 +61,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
        <Row  justify="center" align="top" style={{ textAlign: 'center', padding: '2rem'}}>
           <Col span={12}>
             <h4>Vi Hoppas du blir nöjd med din colorini.</h4>
-            |||||||||||||||||||||||||||||||
+            ||||||||||||||||||||||||||||||||
             <h4>Happy Painting</h4>
             <br></br>
               <Link to={"/"}> 
