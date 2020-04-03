@@ -24,12 +24,15 @@ class ProductCartView extends React.Component<Props, State> {
   }
   sumbitForm =() => {
     console.log('hej')
+       //redirect state 
+    
   }
 
   onFinish = (values: any) => {
     console.log("Received values of form: ", values);
     console.log(values.phone)
     this.setState({phone: values.phone})
+ 
   };
   render() {
     return (
