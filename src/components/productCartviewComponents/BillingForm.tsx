@@ -17,11 +17,11 @@ const BillingForm = (props: Props) => {
   }; */
 
   const prefixSelector = (
-    <Form.Item name="prefix" noStyle>
+    <Form.Item name="prefix"  noStyle>
       <Select
   
         style={{
-          maxWidth: '50%',
+          width: 70,
           color: 'rgba(0,0,0,.25)'
         }}
       >
