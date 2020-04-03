@@ -144,3 +144,11 @@ const productData: ProductData[] = [
 ];
 
 export default productData;
+
+
+export function createOrder(){
+  // kundvagn 
+  // kunduppgifter
+  // orderinfo
+  
+}
