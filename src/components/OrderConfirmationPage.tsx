@@ -48,29 +48,23 @@ class OrderConfirmationPage extends React.Component<Props, State> {
            </Divider>
           
             <Row  justify="center" align="top">
-              <Col span={2}></Col>
+              <Col span={9}></Col>
               <Col span={5}>Produkt</Col>
               <Col span={5}>Antal</Col>
-              <Col span={5}>Pris</Col>
-            </Row>
-            {/* 
-            <Row gutter={[8, 16]}>
-              <Col span={2}>
-                <img
-                  style={productImage}
-                  src={product.productImg}
-                  alt={product.alt}
-                />
+         
+              <Col span={9}>
+                
+      
               </Col>
 
-              <Col span={5}>{product.productName}</Col>
+              <Col span={5}></Col>
 
               <Col span={5}>
-                <h1>{cartItem.quantity}</h1>
+                <p>{2}</p>
               </Col>
 
-              <Col span={5}>{product.price * cartItem.quantity}</Col> 
-              */}
+              {/* <Col span={5}>{product.price * cartItem.quantity}</Col>  */}
+              </Row>
 
           <Divider orientation="right" style={{ color: '#333', fontWeight: 'normal' }}>
           Total summa inklusive frakt: {getTotalPriceInclShipper()}kr
@@ -104,6 +98,8 @@ const productImage: CSSProperties = {
   height: "5rem",
   objectFit: "cover"
 };
+
+
 
 
 
@@ -148,22 +144,19 @@ const productImage: CSSProperties = {
 //           Beställningöversikt
 //          </Divider>
 //             <Row  justify="center" align="top">
-//                 <Col span={2}></Col>
+//                 <Col span={9}></Col>
 //                 <Col span={5}>Produkt</Col>
 //                 <Col span={5}>Antal</Col>
-//                 <Col span={5}>Pris</Col>
-//             </Row>
-//             <Row  justify="center" align="top">
-//              <Col sm={24} md={12} lg={16}>
+//            
+//              <Col span={9}>
 //               <img
 //                 style={productImage}
 //                 src={product.productImg}
 //                 alt={product.alt}
 //               />
 //             </Col>
-//             <Col>{product.productName}</Col>
-//             <Col>>{cartItem.quantity}</Col>
-//             <Col>{product.price * cartItem.quantity}</Col>
+//             <Col span={5}>{product.productName}</Col>
+//             <Col span={5}>>{cartItem.quantity}</Col>
 //           </Row>
 
 //       <Divider orientation="right" style={{ color: '#333', fontWeight: 'normal' }}>
