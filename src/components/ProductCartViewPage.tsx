@@ -38,12 +38,12 @@ class ProductCartView extends React.Component<Props, State> {
     this.setState({ shouldRedirect: true });
   }
 
-  onFinish = (values: any) => {
+ onFinish = (values: any) => {
     console.log("Received values of form: ", values);
     console.log(values.phone)
-    this.setState({phone: values.phone})
+    /* this.setState({phone: values.phone}) */
  
-  };
+  }; 
   render() {
     if (this.state.shouldRedirect) {
       return <Redirect to="/order-confirmation" />;
@@ -67,7 +67,7 @@ class ProductCartView extends React.Component<Props, State> {
                Dina uppgifter
               </Divider>
               <Col sm={24} lg={12}>
-                <BillingForm onFinish={this.onFinish}/>
+                <BillingForm onFinish={this.onFinish} />
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '0 0 2rem 2rem'}}>
               Fraktsätt

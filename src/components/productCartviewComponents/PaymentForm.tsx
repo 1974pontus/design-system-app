@@ -51,18 +51,18 @@ class PaymentForm extends React.Component<Props, State> {
         >
           
             <Form.Item
-              name={['phone']} 
-              rules={[{ type: 'number', min: 10, max: 10 }]}
+              name={'phone'} 
+              /* rules={[{ type: 'number', min: 10, max: 10 }]} */
               label="Telefonnummer"
               /*  hasFeedback validateStatus="success"  */
               help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
             >
               <Input
-                id="phone"
-                defaultValue={this.props.phone}
+               /*  id="phone" */
+                /* defaultValue={this.props.phone}
                 placeholder={this.props.phone}
                 maxLength={10}
-                pattern="[0-9]"
+                pattern="[0-9]" */
                 style={{ width: "10rem" }}
               />
             </Form.Item>
