@@ -5,7 +5,7 @@ function ProductNotFind() {
   return (
     <Link to="/">
       <h3 style={text}>
-        Opps something whent wrong, please go back to find your dream colorini{" "}
+        Oops nu hamnade vi lite fel, men bilden kommer att guida dig tillbaka till din dröm colorini.
       </h3>
       <img
         style={{
