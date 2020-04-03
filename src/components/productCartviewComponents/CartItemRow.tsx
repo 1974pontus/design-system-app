@@ -24,17 +24,17 @@ class CartItemRow extends React.Component<Props, State> {
 
         {({ addProductToCart, deleteProductFromCart, deleteCartItemRow }) => (
           
-          <Row>
-            <Col>
+          <Row justify="space-around" align="middle">
+            <Col span={5}>
               <img
                 style={productImage}
                 src={product.productImg}
                 alt={product.alt}
               />
             </Col>
-            <Col>{product.productName}</Col>
+            <Col span={5}>{product.productName}</Col>
 
-            <Col>
+            <Col span={5}>
               <MinusCircleOutlined
                 onClick={() => deleteProductFromCart(product)}
               />
@@ -42,8 +42,8 @@ class CartItemRow extends React.Component<Props, State> {
               <PlusCircleOutlined onClick={() => addProductToCart(product)} />
             </Col>
 
-            <Col>{product.price * cartItem.quantity}</Col>
-            <Col>
+            <Col span={5}>{product.price * cartItem.quantity}</Col>
+            <Col span={2}>
               <DeleteOutlined onClick={() => deleteCartItemRow(product)} />
             </Col>
           </Row>

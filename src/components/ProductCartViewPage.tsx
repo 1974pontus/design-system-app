@@ -52,12 +52,15 @@ class ProductCartView extends React.Component<Props, State> {
       <CartConsumer>
         {({ items, }) => (
 
-            <Row justify="center" align="top">
+
+            <Row justify="space-between" align="top" style={{padding: '0 2rem'}} >
+        
               <Form onFinish={this.pay}>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }} >
+
               Kassa
               </Divider>
-              <Col sm={24} md={12} lg={16}>
+              <Col sm={10} md={20} lg={24}>
                 <CartForm cartItems={items} />
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>

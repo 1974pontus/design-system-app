@@ -48,6 +48,7 @@ class ProductInfoPage extends React.Component<Props, State> {
             xs={{ span: 24 }}
             md={{ span: 24 }}
             lg={{ span: 24 }}
+            
           >
             <h1>{product.productName}</h1>
             <p>{product.artNr}</p>
@@ -74,5 +75,5 @@ const productImage: CSSProperties = {
 };
 
 const infoWrapper: CSSProperties = {
-  padding: "3rem"
+  padding: "2rem"
 };
