@@ -3,6 +3,7 @@ import { ProductData } from "./mockAPI";
 import shippingData, {
   ShippingData
 } from "./components/productCartviewComponents/shippingData";
+// import CartItemRow from "./components/productCartviewComponents/CartItemRow";
 
 export interface CartItem {
   product: ProductData;
@@ -20,6 +21,7 @@ interface CartState {
   deleteCartItemRow: (product: ProductData) => void;
   deleteProductFromCart: (product: ProductData) => void;
   getTotalPrice: () => number;
+  clearCart:() => void;
 }
 
 export const CartContext = React.createContext<CartState>({
@@ -30,7 +32,8 @@ export const CartContext = React.createContext<CartState>({
   addProductToCart: (product: ProductData) => {},
   deleteCartItemRow: (product: ProductData) => {},
   deleteProductFromCart: (product: ProductData) => {},
-  getTotalPrice: () => 0
+  getTotalPrice: () => 0,
+  clearCart: () => {}
 });
 
 // CartProvider ansvarar för att uppdatera kundvagnen
@@ -46,7 +49,8 @@ export class CartProvider extends React.Component<CartProps, CartState> {
       addProductToCart: this.addProductToCart,
       deleteProductFromCart: this.deleteProductFromCart,
       deleteCartItemRow: this.deleteCartItemRow,
-      getTotalPrice: this.getTotalPrice
+      getTotalPrice: this.getTotalPrice,
+      clearCart: this.clearCart
     };
   }
 
@@ -97,6 +101,11 @@ export class CartProvider extends React.Component<CartProps, CartState> {
       this.setState({ items: clonedItems });
     }
   };
+
+  clearCart =() => {
+    this.setState({items: []})
+  }
+
 
   getTotalPrice = () => {
     let sum = 0;

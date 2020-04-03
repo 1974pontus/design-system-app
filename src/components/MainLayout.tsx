@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, useEffect } from "react";
 import { Layout } from "antd";
 import Header from "./Header";
 //as renames BrowserRouter to Router
@@ -8,8 +8,29 @@ import Footer from "./Footer";
 import StartPage from "./StartPage";
 import ProductInfoPage from "./ProductInfoPage";
 import OrderConfirmationPage from "./OrderConfirmationPage";
+// import { ProductData } from "../mockAPI";
 
-const MainLayout = () => {
+ const MainLayout = () => {
+//   useEffect(() => { 
+//     if(product.id !== 'mainView' ) {
+//       localStorage.setItem('product', JSON.stringify(product) )
+//       localStorage.setItem('phone', JSON.stringify(phone) )
+//       console.log(product)
+//     }
+
+//     //component did update
+//     //arrayen styr när effekten kommer att köras
+//   }, [profile, phone])
+
+//   useEffect(() => {
+//     const checkOut : ProductData | null = JSON.parse(localStorage.getItem('checkOut') || 'null') 
+//     console.log(checkOut)
+//     setCheckOut(checkOut || ProductData[0])
+   
+//     setName( localStorage.getItem('phone') || '')
+//     //component did mount
+
+//   }, [])
   return (
     //everything that is insite Router will have the abillity to use routing
     <Router>
