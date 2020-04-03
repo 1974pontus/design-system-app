@@ -68,8 +68,8 @@ class ProductInfoPage extends React.Component<Props, State> {
 export default ProductInfoPage;
 
 const productImage: CSSProperties = {
-  width: "30rem",
-  height: "30rem",
+  width: "20rem",
+  height: "20rem",
   objectFit: "cover",
   padding: "1rem"
 };

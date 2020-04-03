@@ -16,9 +16,9 @@
 
 .positionFixed {
   position: fixed;
-  right: 0;
+  right: 2rem;
   top: 4rem;
-  padding: 2rem;
+  /* padding: 2rem; */
   width: 50%;
 }
 
