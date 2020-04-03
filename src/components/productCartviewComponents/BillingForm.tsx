@@ -63,18 +63,8 @@ const BillingForm = (props: Props) => {
 
   return (
     <div className="billing">
-      <Form
-        {...formItemLayout}
-        form={form}
-        name="register"
-        onFinish={props.onFinish}
-        initialValues={{
-          residence: ["Sverige", "Västra Götaland", "Göteborg"],
-          prefix: "46"
-        }}
-        scrollToFirstError
-      >
-        <br />
+    
+    
         <Form.Item
           name="email"
           label="E-mail"
@@ -166,12 +156,8 @@ const BillingForm = (props: Props) => {
             </a>
           </Checkbox>
         </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">
-            Skicka
-          </Button>
-        </Form.Item>
-      </Form>
+    
+      
     </div>
   );
 };

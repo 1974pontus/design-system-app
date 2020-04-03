@@ -7,7 +7,7 @@ import { CartConsumer } from '../context';
 import TotalCartForm from './productCartviewComponents/TotalSum'
 import PaymentForm from './productCartviewComponents/PaymentForm';
 import shippingData, { ShippingData } from '../shippingData';
-import { Divider, Row, Col } from 'antd';
+import { Divider, Row, Col, Form } from 'antd';
 
 interface Props {
   product: ProductData
@@ -22,7 +22,10 @@ class ProductCartView extends React.Component<Props, State> {
     super(props);
     this.state= {phone: ""}
   }
-  
+  sumbitForm =() => {
+    console.log('hej')
+  }
+
   onFinish = (values: any) => {
     console.log("Received values of form: ", values);
     console.log(values.phone)
@@ -32,7 +35,9 @@ class ProductCartView extends React.Component<Props, State> {
     return (
       <CartConsumer>
         {({ items, }) => (
+
             <Row justify="center" align="top">
+              <Form onFinish={this.sumbitForm}>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
               Kassa
               </Divider>
@@ -61,6 +66,7 @@ class ProductCartView extends React.Component<Props, State> {
               Att betala
               </Divider>
               <TotalCartForm  />
+              </Form>
             </Row>
         )}
       </CartConsumer>
