@@ -1,39 +1,8 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Form, Input, Select, Checkbox, Button, Row } from "antd";
+import { Form, Input, Select, Checkbox, Row } from "antd";
 
 const { Option } = Select;
-
-const formItemLayout = {
-  labelCol: {
-    xs: {
-      span: 24
-    },
-    sm: {
-      span: 8
-    }
-  },
-  wrapperCol: {
-    xs: {
-      span: 24
-    },
-    sm: {
-      span: 16
-    }
-  }
-};
-const tailFormItemLayout = {
-  wrapperCol: {
-    xs: {
-      span: 24,
-      offset: 0
-    },
-    sm: {
-      span: 16,
-      offset: 8
-    }
-  }
-};
 
 interface Props {
   onFinish: any;
@@ -63,8 +32,11 @@ const BillingForm = (props: Props) => {
 
   return (
     <div className="billing" >
+        
     
-    <Row justify="center" align="middle">
+ 
+    <Row justify="start" align="middle" >
+      
         <Form.Item
           name="email"
           label="E-mail"
@@ -147,7 +119,6 @@ const BillingForm = (props: Props) => {
         <Form.Item
           name="agreement"
           valuePropName="checked"
-          {...tailFormItemLayout}
         >
           <Checkbox>
             I have read the{" "}
@@ -156,7 +127,6 @@ const BillingForm = (props: Props) => {
             </a>
           </Checkbox>
         </Form.Item>
-    
         </Row>
     </div>
   );
