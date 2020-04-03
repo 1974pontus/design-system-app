@@ -13,26 +13,26 @@ interface State {}
 class CartForm extends React.Component<Props, State> {
   render() {
     return (
-      <div className="order-wrapper">
-        <div className="order-title">
-          <Row gutter={[8, 16]}>
-            <Col span={6}></Col>
+      <div>
+    
+          <Row justify="space-around" align="middle">
+            <Col span={5}></Col>
             <Col span={5}>Produkt</Col>
             <Col span={5}>Antal</Col>
             <Col span={5}>Pris</Col>
-            <Col span={4}></Col>
+            <Col span={2}></Col>
           </Row>
-        </div>
+    
 
         {this.props.cartItems.map(cartItem => (
           <CartItemRow cartItem={cartItem} />
         ))}
-        <div className="otder-footer">
+        <div>
           <CartConsumer>
             {({ getTotalPrice }) => (
                   <Row justify="space-between" align="bottom">
-                <Col span={12}></Col>
-                <Col span={12} style={{textAlign: "right"}}>Summa: {getTotalPrice()}kr</Col>
+                <Col></Col>
+                <Col style={{textAlign: "right"}}>Summa: {getTotalPrice()}kr</Col>
               </Row>
             )}
           </CartConsumer>
