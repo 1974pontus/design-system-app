@@ -44,7 +44,7 @@ class IntroImg extends React.Component<Props, State> {
             </Row>
           </div>
         </Carousel>
-        ,
+        
       </div>
     );
   }
