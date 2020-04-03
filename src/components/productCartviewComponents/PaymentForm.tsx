@@ -49,7 +49,7 @@ class PaymentForm extends React.Component<Props, State> {
             
           }
         >
-          <Form>
+          
             <Form.Item
               name={['phone']} 
               rules={[{ type: 'number', min: 10, max: 10 }]}
@@ -66,7 +66,7 @@ class PaymentForm extends React.Component<Props, State> {
                 style={{ width: "10rem" }}
               />
             </Form.Item>
-          </Form>
+          
         </Panel>
         <Panel
           header="Kortbetalning"
@@ -80,7 +80,7 @@ class PaymentForm extends React.Component<Props, State> {
             />
           }
         >
-          <Form>
+         
           <Form.Item
               label="Kortinnehavare"
             >
@@ -104,8 +104,8 @@ class PaymentForm extends React.Component<Props, State> {
                 style={{ width: "13rem" }}
               />
             </Form.Item>
-            <Form layout="inline" style={{ padding: ".5rem 0 1rem 0" }}>
-              <Form.Item label="Månad">
+            
+              <Form.Item /* style={{ padding: ".5rem 0 1rem 0" }} */ label="Månad">
                 <Form.Item name="mounth" noStyle>
                   <InputNumber min={1} max={12} />
                 </Form.Item>
@@ -115,7 +115,7 @@ class PaymentForm extends React.Component<Props, State> {
                   <InputNumber min={20} max={34} />
                 </Form.Item>
               </Form.Item>
-            </Form>
+           
             <Form.Item
               label="CVC2"
               help="Du finner CVC2-koden på backsidan av ditt bankkort."
@@ -129,7 +129,7 @@ class PaymentForm extends React.Component<Props, State> {
               />
             </Form.Item>
             
-          </Form>
+         
           <Avatar
             style={{ paddingTop: "1rem" }}
             shape="square"
@@ -167,7 +167,7 @@ class PaymentForm extends React.Component<Props, State> {
             />
           }
         >
-          <Form>
+         
             <Form.Item
               label="Bank för direktbetalning"
               help="Vid köp hänvisas du till din bank där du utför betalningen. Efter betalning hänvisas du tillbaka till Mini Colorini där du får ditt kvitto."
@@ -185,7 +185,7 @@ class PaymentForm extends React.Component<Props, State> {
                 </Select>
               </Input.Group>
             </Form.Item>
-          </Form>
+          
         </Panel>
       </Collapse>
     );
