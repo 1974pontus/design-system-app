@@ -79,7 +79,7 @@ class ProductCartView extends React.Component<Props, State> {
               Betalsätt
               </Divider>
               <Col sm={24} lg={12}>
-                {/* <PaymentForm phone={this.state.phone}/> */}
+                <PaymentForm phone={this.state.phone}/>
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '2rem 0' }}>
               Att betala
