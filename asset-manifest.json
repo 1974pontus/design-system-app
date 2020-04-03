@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/design-system-app/static/css/main.b92edf17.chunk.css",
+    "main.js": "/design-system-app/static/js/main.792a9b43.chunk.js",
+    "main.js.map": "/design-system-app/static/js/main.792a9b43.chunk.js.map",
+    "runtime-main.js": "/design-system-app/static/js/runtime-main.38befb97.js",
+    "runtime-main.js.map": "/design-system-app/static/js/runtime-main.38befb97.js.map",
+    "static/css/2.4b6e3ef2.chunk.css": "/design-system-app/static/css/2.4b6e3ef2.chunk.css",
+    "static/js/2.955329ce.chunk.js": "/design-system-app/static/js/2.955329ce.chunk.js",
+    "static/js/2.955329ce.chunk.js.map": "/design-system-app/static/js/2.955329ce.chunk.js.map",
+    "index.html": "/design-system-app/index.html",
+    "precache-manifest.6573fb65871d5ae2f88667b79b40e6d9.js": "/design-system-app/precache-manifest.6573fb65871d5ae2f88667b79b40e6d9.js",
+    "service-worker.js": "/design-system-app/service-worker.js",
+    "static/css/2.4b6e3ef2.chunk.css.map": "/design-system-app/static/css/2.4b6e3ef2.chunk.css.map",
+    "static/css/main.b92edf17.chunk.css.map": "/design-system-app/static/css/main.b92edf17.chunk.css.map",
+    "static/js/2.955329ce.chunk.js.LICENSE.txt": "/design-system-app/static/js/2.955329ce.chunk.js.LICENSE.txt",
+    "static/media/DHL.jpg": "/design-system-app/static/media/DHL.9ca5e463.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38befb97.js",
+    "static/css/2.4b6e3ef2.chunk.css",
+    "static/js/2.955329ce.chunk.js",
+    "static/css/main.b92edf17.chunk.css",
+    "static/js/main.792a9b43.chunk.js"
+  ]
+}
