@@ -19,8 +19,10 @@ const BillingForm = (props: Props) => {
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
       <Select
+  
         style={{
-          width: 70
+          maxWidth: '50%',
+          color: 'rgba(0,0,0,.25)'
         }}
       >
         <Option value="46">+46</Option>
@@ -31,11 +33,8 @@ const BillingForm = (props: Props) => {
   );
 
   return (
-    <div className="billing" >
-        
-    
- 
-    <Row justify="start" align="middle" >
+    <div style={{maxWidth: '20rem'}}>
+    <Row justify="start" align="top" >
       
         <Form.Item
           name="email"
@@ -81,7 +80,7 @@ const BillingForm = (props: Props) => {
               noStyle
               rules={[{ required: true, message: "Street is required" }]}
             >
-              <Input style={{ width: "100%" }} placeholder="Gatuadress" />
+              <Input placeholder="Gatuadress" />
             </Form.Item>
             <Form.Item
               name={["city", "postnummer"]}
