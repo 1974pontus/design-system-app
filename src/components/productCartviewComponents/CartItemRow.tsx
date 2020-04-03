@@ -23,6 +23,7 @@ class CartItemRow extends React.Component<Props, State> {
        
 
         {({ addProductToCart, deleteProductFromCart, deleteCartItemRow }) => (
+          
           <Row>
             <Col>
               <img

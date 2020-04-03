@@ -4,29 +4,38 @@ import "antd/dist/antd.css";
 import "../App.css";
 import { CartConsumer, CartItem } from "../context";
 import { Link } from "react-router-dom";
+import StartPage from "./StartPage";
+import CartForm from "./productCartviewComponents/CartForm";
+
 
 let orderNumber = new Uint32Array(1);
 window.crypto.getRandomValues(orderNumber);
 for (var i = 0; i < orderNumber.length; i++) {}
 
+
+
 interface Props {
-  cartItem: CartItem;
+  cartItem: CartItem
 }
 interface State {}
 
 class OrderConfirmationPage extends React.Component<Props, State> {
+
+ 
+
+  
   render() {
     /* const { cartItem } = this.props;
     const { product } = cartItem; */
     return (
       <CartConsumer>
-        {({ getTotalPriceInclShipper }) => (
+        {({ getTotalPriceInclShipper , clearCart}) => (
           <div>
           <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
             OrderBekräftelse
            </Divider>
             <Row  justify="center" align="top" style={{ textAlign: 'center', padding: '2rem'}} >
-              <Col span={8}>
+              <Col span={12}>
                 <h1>Mini Colorini</h1>
                 <h4>Tack för att du handlar hos Mini Colorini</h4>
                 <h4>Ditt Ordernummer:</h4>
@@ -67,12 +76,13 @@ class OrderConfirmationPage extends React.Component<Props, State> {
            </Divider>
           
            <Row  justify="center" align="top" style={{ textAlign: 'center', padding: '2rem'}}>
-              <Col span={8}>
+              <Col span={12}>
                 <h4>Vi Hoppas du blir nöjd med din colorini.</h4>
                 <h4>Happy Painting</h4>
               
-                  <Link to={"/"}style={{ padding: '1.5rem'}}> 
-                    <Button type="primary">Klar</Button>
+                  <Link to={"/"}> 
+                    <Button type="primary" onClick={() => clearCart()}>
+                      Shoppa vidare</Button>
                   </Link>
         
               </Col>
@@ -82,7 +92,9 @@ class OrderConfirmationPage extends React.Component<Props, State> {
       </CartConsumer>
     );
   }
+
 }
+ 
 
 export default OrderConfirmationPage;
 

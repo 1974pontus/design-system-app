@@ -16,11 +16,11 @@ class CartForm extends React.Component<Props, State> {
       <div className="order-wrapper">
         <div className="order-title">
           <Row gutter={[8, 16]}>
-            <Col span={7}></Col>
+            <Col span={6}></Col>
             <Col span={5}>Produkt</Col>
             <Col span={5}>Antal</Col>
             <Col span={5}>Pris</Col>
-            <Col span={2}></Col>
+            <Col span={4}></Col>
           </Row>
         </div>
 
