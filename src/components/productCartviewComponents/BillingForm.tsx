@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Form, Input, Select, Checkbox, Button } from "antd";
+import { Form, Input, Select, Checkbox, Button, Row } from "antd";
 
 const { Option } = Select;
 
@@ -62,9 +62,9 @@ const BillingForm = (props: Props) => {
   );
 
   return (
-    <div className="billing">
+    <div className="billing" >
     
-    
+    <Row justify="center" align="middle">
         <Form.Item
           name="email"
           label="E-mail"
@@ -157,7 +157,7 @@ const BillingForm = (props: Props) => {
           </Checkbox>
         </Form.Item>
     
-      
+        </Row>
     </div>
   );
 };

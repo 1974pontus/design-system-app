@@ -47,7 +47,7 @@ class ProductCartView extends React.Component<Props, State> {
       <CartConsumer>
         {({ items, }) => (
 
-            <Row justify="center" align="top" >
+            <Row justify="space-between" align="top" >
               <Form onFinish={this.sumbitForm}>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
               Kassa
