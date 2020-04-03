@@ -50,11 +50,11 @@ class ProductCartView extends React.Component<Props, State> {
     }
     return (
       <CartConsumer>
-        {({ items, }) => (
+        {({ items }) => (
 
 
-            <Row justify="space-between" align="top" style={{padding: '0 2rem'}} >
-        
+            <Row justify="center" align="top" style={{padding:"1rem"}} >
+              
               <Form onFinish={this.pay}>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }} >
 
@@ -66,19 +66,20 @@ class ProductCartView extends React.Component<Props, State> {
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' }}>
                Dina uppgifter
               </Divider>
-              <Col sm={24} lg={12}>
+              <Col sm={24} lg={24}>
                 <BillingForm onFinish={this.onFinish} />
               </Col>
+           
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '0 0 2rem 2rem'}}>
               Fraktsätt
               </Divider>
-              <Col sm={24} lg={6}>
+              <Col sm={24} lg={24}>
                 <ShippingForm shippingData={shippingData}/>
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal' , padding: '2rem 0'}}>
               Betalsätt
               </Divider>
-              <Col sm={24} lg={12}>
+              <Col sm={24} lg={24}>
                 <PaymentForm phone={this.state.phone}/>
               </Col>
               <Divider orientation="left" style={{ color: '#333', fontWeight: 'normal', padding: '2rem 0' }}>
