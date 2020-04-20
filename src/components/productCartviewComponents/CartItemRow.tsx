@@ -56,7 +56,7 @@ class CartItemRow extends React.Component<Props, State> {
 export default CartItemRow;
 
 const productImage: CSSProperties = {
-  width: "5rem",
-  height: "5rem",
+  width: "3rem",
+  height: "3rem",
   objectFit: "cover"
 };
