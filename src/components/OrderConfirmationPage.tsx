@@ -36,7 +36,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
           </Divider>
             <Row  justify="center" align="middle">
                 <Col span={9}></Col>
-                <Col span={5}>Produkt</Col>
+                <Col span={7}>Produkt</Col>
                 <Col span={5}>Antal</Col>
           {items.map(item => (
             < > 
@@ -47,7 +47,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
                   alt={item.product.alt}
                 />
               </Col>
-              <Col span={5}>{item.product.productName}</Col>
+              <Col span={7}>{item.product.productName}</Col>
               <Col span={5}>{item.quantity}</Col> 
             </>
             ))} 
@@ -80,7 +80,7 @@ class OrderConfirmationPage extends React.Component<Props, State> {
 export default OrderConfirmationPage;
 
 const productImage: CSSProperties = {
-width: "5rem",
-height: "5rem",
+width: "3rem",
+height: "3rem",
 objectFit: "cover"
 };
