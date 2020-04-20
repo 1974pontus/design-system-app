@@ -54,7 +54,7 @@ const BillingForm = (props: Props) => {
         </Form.Item>
 
         <Form.Item
-          name={["user", "name"]}
+          name={["name"]}
           label="Name"
           rules={[{ required: true }]}
         >
