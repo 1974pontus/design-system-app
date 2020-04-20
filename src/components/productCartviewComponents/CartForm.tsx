@@ -17,9 +17,9 @@ class CartForm extends React.Component<Props, State> {
     
           <Row justify="space-around" align="middle">
             <Col span={5}></Col>
-            <Col span={5}>Produkt</Col>
-            <Col span={5}>Antal</Col>
-            <Col span={5}>Pris</Col>
+            <Col span={7}>Produkt</Col>
+            <Col span={4}>Antal</Col>
+            <Col span={4}>Pris</Col>
             <Col span={2}></Col>
           </Row>
     
