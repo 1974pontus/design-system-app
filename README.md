@@ -21,6 +21,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-[Link to Github](https://github.com/1974pontus/design-system-app)
-[Link to Github-Pages](https://1974pontus.github.io/design-system-app/)
-[Link to Ant](https://ant.design/)
+[Link to Github](https://github.com/1974pontus/design-system-app) <br>
+[Link to Github-Pages](https://1974pontus.github.io/design-system-app/) <br>
+[Link to Ant](https://ant.design/) <br>
