@@ -16,22 +16,6 @@ const BillingForm = (props: Props) => {
     console.log(values.phone)
   }; */
 
-  const prefixSelector = (
-    <Form.Item name="prefix"  noStyle>
-      <Select
-  
-        style={{
-          width: 70,
-          color: 'rgba(0,0,0,.25)'
-        }}
-      >
-        <Option value="46">+46</Option>
-        <Option value="45">+47</Option>
-        <Option value="47">+47</Option>
-      </Select>
-    </Form.Item>
-  );
-
   return (
     <div style={{maxWidth: '20rem'}}>
     <Row justify="start" align="top" >
@@ -54,7 +38,7 @@ const BillingForm = (props: Props) => {
         </Form.Item>
 
         <Form.Item
-          name={["user", "name"]}
+          name={["name"]}
           label="Name"
           rules={[{ required: true }]}
         >
@@ -68,11 +52,6 @@ const BillingForm = (props: Props) => {
               noStyle
               rules={[{ required: true, message: "country is required" }]}
             >
-              <Select placeholder="Select country">
-                <Option value="Sverige">Sverige</Option>
-                <Option value="Norge">Norge</Option>
-                <Option value="Danmark">Danmark</Option>
-              </Select>
             </Form.Item>
 
             <Form.Item
@@ -108,7 +87,6 @@ const BillingForm = (props: Props) => {
           ]}
         >
           <Input
-            addonBefore={prefixSelector}
             style={{
               width: "100%"
             }}
