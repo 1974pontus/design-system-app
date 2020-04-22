@@ -2,7 +2,7 @@ import postnord from "../../img/postnord.jpeg";
 import dhl from "../../img/DHL.jpg";
 
 export interface ShippingData {
-  id: string;
+  id: number;
   alt: string;
   title: string;
   description: string;
@@ -12,7 +12,7 @@ export interface ShippingData {
 
 const shippingData: ShippingData[] = [
   {
-    id: "1",
+    id: 1,
     alt: "PostNord Varubrev",
     title: "PostNord Varubrev",
     description: "kommer när det kommer",
@@ -20,7 +20,7 @@ const shippingData: ShippingData[] = [
     price: 29
   },
   {
-    id: "2",
+    id: 2,
     alt: "PostNord Ombud",
     title: "PostNord Ombud",
     description: "kömmerrrr när det kommer",
@@ -28,7 +28,7 @@ const shippingData: ShippingData[] = [
     price: 39
   },
   {
-    id: "3",
+    id: 3,
     alt: "DHL Ombud",
     title: "DHL Ombud",
     description: "kommer här där det kommer",
