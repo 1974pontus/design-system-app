@@ -51,9 +51,10 @@ class PaymentForm extends React.Component<Props, State> {
         >
           
             <Form.Item
-              name={'phone'} 
+              name="phone"
+              label="Phone Number" 
               /* rules={[{ type: 'number', min: 10, max: 10 }]} */
-              label="Telefonnummer"
+              
               /*  hasFeedback validateStatus="success"  */
               help="Med Swish betalar du din order snabbt och smidigt via din telefon. Kontrollera att telefonnummeret stämmer."
             >

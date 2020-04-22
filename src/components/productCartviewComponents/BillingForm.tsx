@@ -47,13 +47,7 @@ const BillingForm = (props: Props) => {
 
         <Form.Item label="Address">
           <Input.Group compact>
-            <Form.Item
-              name={["address", "country"]}
-              noStyle
-              rules={[{ required: true, message: "country is required" }]}
-            >
-            </Form.Item>
-
+            
             <Form.Item
               name={["address", "street"]}
               noStyle
@@ -96,6 +90,9 @@ const BillingForm = (props: Props) => {
         <Form.Item
           name="agreement"
           valuePropName="checked"
+          rules={[
+            { required: true, message: "You had to approve the terms and conditions" }
+          ]}
         >
           <Checkbox>
             I have read the{" "}
