@@ -2,7 +2,7 @@ import React from "react";
 import { ProductData } from "./mockAPI";
 import shippingData, {
   ShippingData
-} from "./components/productCartviewComponents/shippingData";
+} from "./shippingData";
 // import CartItemRow from "./components/productCartviewComponents/CartItemRow";
 
 export interface CartItem {
