@@ -120,7 +120,7 @@ export class CartProvider extends React.Component<CartProps, CartState> {
   };
 
   render() {
-    console.log("context state", this.state);
+    // console.log("context state", this.state);
     return (
       <CartContext.Provider value={this.state}>
         {this.props.children}

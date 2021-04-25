@@ -15,18 +15,19 @@ export default function ShippingForm(props: Props) {
   const { setSelectedShipping } = useContext(CartContext)
 
   const onChange = (e: any) => {
-    console.log("value", e.target.value);
     
+    // console.log("value", e.target.value);
     setValue(e.target.value);
   };
   
   useEffect(() => { 
     setSelectedShipping(value - 1); // offset to 0 index
-    console.log(value)
+    // console.log(value)
   }, [value]);
-
+  console.log(value)
   return (
-    <Radio.Group onChange={onChange} value={value} defaultValue={1}>
+    <Radio.Group onChange={onChange} value={value} >
+      {/* <Radio value={1}>check</Radio> */}
       <ShippingFormRow item={props.shippingData[0]}></ShippingFormRow>
       <ShippingFormRow item={props.shippingData[1]}></ShippingFormRow>
       <ShippingFormRow item={props.shippingData[2]}></ShippingFormRow>
